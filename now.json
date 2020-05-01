@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "name": "zander.wtf",
+  "alias": "zander.wtf",
+  "routes": [
+    {
+      "src": "/atom.xml",
+      "headers": {
+        "x-zander": "wtf"
+      },
+      "dest": "/scripts/build-rss.js"
+    },
+    {
+      "src": "/public/(.*)",
+      "headers": {
+        "cache-control": "s-maxage=31536000,immutable"
+      },
+      "dest": "/$1"
+    }
+  ],
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    },
+    { "src": "scripts/build-rss.js", "use": "@now/node" }
+  ],
+  "scope": "zander"
+}

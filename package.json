@@ -1,0 +1,49 @@
+{
+  "name": "zander.wtf-2020",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mrmartineau/zander.wtf-2020.git",
+  "author": "Zander Martineau <hi@zander.wtf>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "dev": "gatsby develop",
+    "start": "gatsby serve",
+    "test": "jest",
+    "lint": "eslint './src/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "yarn lint --fix",
+    "format": "prettier --write 'src/**/*.*' '*.json' '*.{js,jsx,ts,tsx}' '*.md'",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@theme-ui/presets": "^0.3.0",
+    "@theme-ui/prism": "^0.3.0",
+    "axios": "^0.19.2",
+    "date-fns": "^2.12.0",
+    "format-number": "^3.0.0",
+    "gatsby": "^2.21.7",
+    "gatsby-plugin-mdx": "^1.2.4",
+    "gatsby-plugin-react-helmet": "^3.3.0",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "gatsby-plugin-typescript": "^2.4.0",
+    "gatsby-source-filesystem": "^2.3.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "remark-emoji": "^2.1.0",
+    "remark-normalize-headings": "^2.0.0",
+    "remark-slug": "^6.0.0",
+    "remark-squeeze-paragraphs": "^4.0.0",
+    "remark-truncate-links": "^1.0.3",
+    "theme-ui": "^0.3.1"
+  },
+  "devDependencies": {
+    "@mrmartineau/scripts": "^0.0.0",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.4",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
+    "typescript": "^3.8.3"
+  }
+}

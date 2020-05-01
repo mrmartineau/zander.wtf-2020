@@ -1,6 +1,6 @@
 ---
 title: Avoid being tracked on the web
-subtitle: A few tips to keep you a bit more invisible
+subtitle: A few tips to keep you a bit more invisible online
 date: Sep 7, 2019
 modified: Sep 7, 2019
 ---
