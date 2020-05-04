@@ -1,0 +1,1 @@
+export { StyledGatsbyLink } from './StyledGatsbyLink'

@@ -1,7 +1,4 @@
 const path = require('path')
-const fs = require('fs')
-const mkdirp = require('mkdirp')
-const slugify = require('@alexcarpenter/slugify')
 
 const DEFAULT_BASE_PATH = '/'
 
