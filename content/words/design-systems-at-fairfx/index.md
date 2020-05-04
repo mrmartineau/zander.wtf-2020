@@ -3,11 +3,12 @@ slug: design-systems-at-fairfx
 title: Design systems at FairFX
 subtitle: How we are improving customer experience through shared code at FairFX
 date: 2018-10-25
+modified: 2020-05-04
 ---
 
-[FairFX](https://fairfx.com/)needed to rapidly develop a new system to replace their Perl monolith codebase to a more nimble React/Node/serverless ecosystem. How could we do it in time…? Would we be able to build it in time?
+~~FairFX~~ now renamed to [Equals](https://equals.co) needed to rapidly develop a new system to replace their Perl monolith codebase to a more nimble React/Node/serverless ecosystem. How could we do it in time…? Would we be able to build it in time?
 
-In collaboration with our Design and UX team, we created a component library built with React and a few other technologies. We started small, but even at this early stage we were able to identify how it would inevitably grow into a full design system for the business. Why do we need a design system? There are many new websites and apps being created and they all need to look, feel and behave the same.**They need to be consistent.**
+In collaboration with our Design and UX team, we created a component library built with React and a few other technologies. We started small, but even at this early stage we were able to identify how it would inevitably grow into a full design system for the business. Why do we need a design system? There are many new websites and apps being created and they all need to look, feel and behave the same. **They need to be consistent.**
 
 ## Consistency
 
@@ -17,7 +18,7 @@ Consistency is key for customer experience; without it, customers will not be ab
 
 [By manucosen at Unsplash.com](https://unsplash.com/photos/n--CMLApjfI)
 
-At the beginning, 🗻_Fuji_started small, we created all the usual suspects: buttons, input fields and textual elements; but is has grown to include so much more. [Design tokens](https://uxdesign.cc/design-tokens-for-dummies-8acebf010d71)were also included from the get-go and we make use of [design system utils](https://github.com/mrmartineau/design-system-utils/), an open source library I created to help reference values from our tokens from anywhere in our apps, specifically in our components.
+At the beginning, 🗻*Fuji* started small, we created all the usual suspects: buttons, input fields and textual elements; but is has grown to include so much more. [Design tokens](https://uxdesign.cc/design-tokens-for-dummies-8acebf010d71)were also included from the get-go and we make use of [design system utils](https://github.com/mrmartineau/design-system-utils/), an open source library I created to help reference values from our tokens from anywhere in our apps, specifically in our components.
 
 Why is it called 🗻 Fuji? It’s a tenuous link to our core business: providing foreign currency for people on their holidays. We asked our employees what their favourite holiday destination was, and Mount Fuji was the response with the most votes.
 
@@ -49,16 +50,16 @@ As with everything on the web, performance is very high priority. Fuji uses [Rol
 
 A design system is so much more than a React component library, but we need a base to start with so we can share common functionality and UX patterns. There are currently 3 teams actively developing 🗻 Fuji and consuming it in their apps for the new platform. We have already seen some amazing results and we see no reason why it won’t continue to do so.
 
-You can see the current version of 🗻 Fuji’s storybook at [https://fuji.fairfx.io/](https://fuji.fairfx.io/), which is always the latest production version. The source-code is closed at the moment 💔, but the [npm package](https://www.npmjs.com/package/@fairfx/fuji) is publicly available 🎉.
+You can see the current version of 🗻 Fuji’s storybook at [fuji.fairfx.io](https://fuji.fairfx.io/), which is always the latest production version. The source-code is closed at the moment 💔, but the [npm package](https://www.npmjs.com/package/@fairfx/fuji) is publicly available 🎉.
 
 If you’d like to use 🗻 Fuji in your app, install it using either of these commands:
 
 ```sh
-npm install @fairfx/fuji
+yarn add @fairfx/fuji
 
 # or
 
-yarn add @fairfx/fuji
+npm install @fairfx/fuji
 ```
 
 There is a simple demo hosted on [Codesandbox](https://codesandbox.io/s/r4p91qj4qn) where you can experiment with 🗻 Fuji yourself. We also plan to release a boilerplate version of Fuji so that you can create your own design system, it will include all the styling, testing, storybook and build tooling — and it will be open-source of course 😁.

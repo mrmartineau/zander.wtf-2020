@@ -3,7 +3,7 @@ slug: rebel-with-a-cors
 title: Rebel with a CORS
 subtitle: How to make your own simple CORS-enabled API from one that has CORS disabled
 date: 2018-02-14
-modified: 2018-02-18
+modified: 2020-05-04
 ---
 
 As a front-end developer, I often consume various 3rd party APIs while developing. These APIs could be for weather, crypto currency prices or the latest XKCD comic.
@@ -66,14 +66,14 @@ All the micro-service needs to do is to pass-through any requests to the origina
 const axios = require('axios')
 const { send } = require('micro')
 const microCors = require('micro-cors')
-const cors = microCors({ allowMethods: \['GET'\] })
+const cors = microCors({ allowMethods: ['GET'] })
 const DOMAIN = 'https://xkcd.com/'
 
 const handler = async function(req, res) {
-const params = req.url
-const path = \`${DOMAIN}${params}\`
-const response = await axios(path)
-send(res, 200, response.data)
+  const params = req.url
+  const path = `${DOMAIN}${params}`
+  const response = await axios(path)
+  send(res, 200, response.data)
 }
 
 module.exports = cors(handler)
@@ -150,7 +150,7 @@ The code for this service is hosted on GitHub at [https://github.com/mrmartineau
 
 ### Hosting your new API
 
-I use [_now_](https://zeit.co/now) by [_zeit_](https://zeit.co) to host my various apps and APIs. _now_ supports the JavaScript language features that this micro-service requires (async/await) as well as HTTPS out of the box. If your hosting does not support these features, you will need to transpile the code back to a version it does support.
+I use [_now_](https://vercel.com/now) by [_Vercel_](https://vercel.com) to host my various apps and APIs. _now_ supports the JavaScript language features that this micro-service requires (async/await) as well as HTTPS out of the box. If your hosting does not support these features, you will need to transpile the code back to a version it does support.
 
 From [comic #1700](https://xkcd.com/1700/)
 
