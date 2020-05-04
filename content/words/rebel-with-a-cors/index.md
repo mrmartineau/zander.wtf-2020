@@ -1,8 +1,9 @@
 ---
+slug: rebel-with-a-cors
 title: Rebel with a CORS
 subtitle: How to make your own simple CORS-enabled API from one that has CORS disabled
-date: Feb 14, 2018
-modified: Feb 20, 2018
+date: 2018-02-14
+modified: 2018-02-18
 ---
 
 As a front-end developer, I often consume various 3rd party APIs while developing. These APIs could be for weather, crypto currency prices or the latest XKCD comic.

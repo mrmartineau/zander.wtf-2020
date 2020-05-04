@@ -12,8 +12,18 @@ module.exports = {
   plugins: [
     'gatsby-plugin-typescript',
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `words`,
+        path: `${__dirname}/content/words`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        defaultLayouts: {
+          default: require.resolve('./src/layouts/article.tsx'),
+        },
         extensions: [`.md`, `.mdx`],
         remarkPlugins: [
           remarkSlug,
@@ -24,21 +34,6 @@ module.exports = {
         gatsbyRemarkPlugins: ['gatsby-remark-embed-gist'],
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `words`,
-        path: `${__dirname}/content/words`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/projects`,
-        name: `projects`,
-      },
-    },
-    `gatsby-plugin-redirects`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-theme-ui`,
   ],

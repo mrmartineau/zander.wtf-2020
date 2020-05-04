@@ -1,8 +1,9 @@
 ---
+slug: lessons-learned-building-design-systems
 title: Lessons learned building design systems
 subtitle: My rules for design system component libraries
-date: Mar 14, 2019
-modified: Mar 26, 2019
+date: 2019-03-14
+modified: 2019-03-26
 ---
 
 Having contributed to a few design systems now, I have found that the same issues appear again and again. Most of the time, these issues can be resolved with a bit of forward planning and some common sense, but the rest of it is down to trial and error. Every team has their own needs from a design system so what works for one person may not work for another. Hopefully, the suggestions in this article can be applied to your design system.

@@ -1,8 +1,9 @@
 ---
+slug: uses
 title: My setup
 subtitle: An overview of my hardware and software setup
-date: Feb 11, 2019
-modified: Apr 22, 2020
+date: 2019-02-11
+modified: 2020-04-22
 ---
 
 I'm a bit of a pedant when it comes to the gear that I use everyday. I like to use good quality things that make my life easier.

@@ -1,7 +1,8 @@
 ---
+slug: design-systems-at-fairfx
 title: Design systems at FairFX
 subtitle: How we are improving customer experience through shared code at FairFX
-date: Mar 26, 2020
+date: 2018-10-25
 ---
 
 [FairFX](https://fairfx.com/)needed to rapidly develop a new system to replace their Perl monolith codebase to a more nimble React/Node/serverless ecosystem. How could we do it in time…? Would we be able to build it in time?

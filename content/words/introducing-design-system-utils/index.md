@@ -1,8 +1,9 @@
 ---
+slug: introducing-design-system-utils
 title: Introducing Design System Utils
 subtitle: Your helping hand to enforce your brand & design system styles with any CSS-in-JS solution
-date: Feb 11, 2018
-modified: Oct 4, 2018
+date: 2018-02-11
+modified: 2018-10-04
 ---
 
 **NOTE:** The content in this post references **version 1.x.x** of [design-system-utils](https://github.com/mrmartineau/design-system-utils). For up-to-date documentation, always use the docs in [the repo](https://github.com/mrmartineau/design-system-utils).
@@ -145,9 +146,11 @@ const designTokens = {...}
 export default new DesignSystem(designTokens)
 ```
 
-## To access your design system, you just need to `import` it to the current file, like so:
+To access your design system, you just need to `import` it to the current file, like so:
 
-import tokens from `./tokens` assuming you exported `default` from your design system file
+```js
+import tokens from `./tokens` // assuming you exported `default` from your design system file
+```
 
 Here is a very simple component using [styled-components](https://styled-components.com/) and some values from the tokens, you should be able to see how easy it is to pull information from the design system.
 

@@ -1,8 +1,8 @@
 ---
+slug: not-tracked-online
 title: Avoid being tracked on the web
 subtitle: A few tips to keep you a bit more invisible online
-date: Sep 7, 2019
-modified: Sep 7, 2019
+date: 2019-08-07
 ---
 
 So, you don't want to be tracked online 🙅 by advertisers & analytics scripts etc? What do you do? You need to block them. There are many different ways to achieve this, but I use a few different tools and services to block all these guys.

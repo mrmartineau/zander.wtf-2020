@@ -1,4 +1,8 @@
 node_modules
 
+# gatsby
+public
+.cache
+
 # Ignore next-mdx-enhanced cache directory
 .mdx-data
