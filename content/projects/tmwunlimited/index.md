@@ -3,7 +3,9 @@ title: TMW Unlimited
 description: Complete redesign and development of TMW's existing website
 link: http://www.tmwunlimited.com/
 metadata:
-  Team: Lorena Teruel
+  - key: Team
+    value: Lorena Teruel
+date: 2016-02-27
 ---
 
 Lorena Teruel and I were given free reign to update TMW's old website. We spent a number of weeks coming up with the strategy, UX and thinking behind the new version of the site.
