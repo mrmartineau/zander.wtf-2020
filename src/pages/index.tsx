@@ -1,9 +1,10 @@
 import { graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Box } from 'theme-ui'
-import { ArticleListItem } from '../components/ArticleListItem'
 import { TitleSeparator } from '../components/TitleSeparator'
 import { Layout } from '../components/Layout'
+import { ArticleList } from '../components/ArticleList'
+import { ProjectsList } from '../components/ProjectsList'
 
 interface HomeProps {
   data: {
@@ -14,6 +15,7 @@ interface HomeProps {
             title: string
             subtitle: string
             date: string
+            dateTimestamp: string
             slug: string
           }
           timeToRead: string
@@ -31,25 +33,14 @@ const Home: FunctionComponent<HomeProps> = ({ data }) => {
   return (
     <Layout>
       <TitleSeparator>Words</TitleSeparator>
-      <Box p={4}>
-        {data.articles.edges.map((item, index) => {
-          const { title, subtitle, date, slug } = item.node.frontmatter
-          return (
-            <ArticleListItem
-              key={index}
-              slug={slug}
-              title={title}
-              subtitle={subtitle}
-              date={date}
-            />
-          )
-        })}
-      </Box>
+      <ArticleList />
 
       <TitleSeparator>Projects</TitleSeparator>
-      <Box p={4}>Project list</Box>
+      <ProjectsList />
+
       <TitleSeparator>Reading</TitleSeparator>
       <Box p={4}>Reading list</Box>
+
       <TitleSeparator>Bookmarks</TitleSeparator>
       <Box p={4}>Bookmarks</Box>
     </Layout>
@@ -67,7 +58,8 @@ export const pageQuery = graphql`
             slug
             title
             subtitle
-            date(formatString: "Do MMM YYYY")
+            date(formatString: "Do MMMM YYYY")
+            dateTimestamp: date
           }
         }
       }

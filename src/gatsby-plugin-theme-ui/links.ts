@@ -1,11 +1,11 @@
 export const links = {
   articleListItem: {
-    p: 2,
+    p: 4,
     display: 'block',
     transition: 'all 200ms ease-in-out ',
     color: 'text',
-    borderBottom: 0,
     '&:link, &:visited': {
+      borderBottom: 0,
       color: 'text',
       textDecoration: 'none',
     },

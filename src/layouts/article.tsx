@@ -1,8 +1,9 @@
 import { graphql } from 'gatsby'
 import React, { FunctionComponent, Fragment } from 'react'
-import { Heading, Box, Container } from 'theme-ui'
+import { Heading, Box, Container, Text } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Layout } from '../components/Layout'
+import { ArticleList } from '../components/ArticleList'
 
 interface ArticleProps {
   data: {
@@ -54,12 +55,16 @@ const Article: FunctionComponent<ArticleProps> = ({ data }) => {
       <article>
         <Container>
           <Box as="header" mb={4}>
-            <Heading as="h1" variant="noteTitle">
+            <Heading as="h1" variant="articleTitle">
               {title}
             </Heading>
-            <Heading as="h2">{subtitle}</Heading>
-            <time dateTime={dateTimestamp}>{date}</time> · Time to read:{' '}
-            {timeToRead} minutes
+            <Heading as="h2" variant="articleSubTitle">
+              {subtitle}
+            </Heading>
+            <Text variant="articleMetadata">
+              <time dateTime={dateTimestamp}>{date}</time> · Time to read:{' '}
+              {timeToRead} minutes
+            </Text>
           </Box>
 
           <MDXRenderer>{body}</MDXRenderer>
@@ -87,9 +92,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
-        date(formatString: "Do MMM YYYY")
+        date(formatString: "Do MMMM YYYY")
         dateTimestamp: date
-        modified(formatString: "Do MMM YYYY")
+        modified(formatString: "Do MMMM YYYY")
         modifiedTimestamp: modified
       }
       timeToRead

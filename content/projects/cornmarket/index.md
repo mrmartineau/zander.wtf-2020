@@ -1,7 +1,7 @@
 ---
 title: Cornmarket
 description: Re-platforming of this Irish institution's website
-metadata:
+info:
   - key: Client
     value: Cornmarket
     link: https://cornmarket.ie

@@ -2,11 +2,12 @@
 title: Barilla
 description: Redesigning and building Barilla’s new global website to fulfil the variety of needs of their 30+ local markets.
 link: https://barilla.com
-metadata:
+info:
   - key: Team
     value: Nic Bell, Simon Kinslow
   - key: TMW Case Study
-    value: https://www.tmwunlimited.com/work/barilla-global-website/
+    value: tmwunlimited.com/work/barilla-global-website/
+    link: https://www.tmwunlimited.com/work/barilla-global-website/
 date: 2016-27-02
 ---
 

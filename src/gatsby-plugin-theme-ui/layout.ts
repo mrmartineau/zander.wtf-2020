@@ -1,5 +1,5 @@
 export const layout = {
   container: {
-    px: 2,
+    width: '90%',
   },
 }

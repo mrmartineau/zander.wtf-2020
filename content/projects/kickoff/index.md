@@ -2,9 +2,12 @@
 title: Kickoff
 description: Front-end framework used on all TMW projects and beyond
 link: http://trykickoff.com/
-metadata:
+info:
+  - key: Repo
+    value: github.com/TryKickoff/kickoff
+    link: https://github.com/TryKickoff/kickoff
   - key: Team
-    value: Ashley Nolan
+    value: Ashley Nolan, Nic Bell and many others
   - key: Project duration
     value: 4+ years
 date: 2014-07-17

@@ -10,7 +10,20 @@ module.exports = {
     siteUrl: `http://zander.wtf/`,
   },
   plugins: [
-    'gatsby-plugin-typescript',
+    `gatsby-plugin-typescript`,
+    // {
+    //   resolve: `gatsby-transformer-json`,
+    //   options: {
+    //     typeName: `Json`, // a fixed string
+    //   },
+    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/content/projects`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,6 +31,8 @@ module.exports = {
         path: `${__dirname}/content/words`,
       },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
