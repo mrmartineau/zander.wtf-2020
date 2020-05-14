@@ -1,8 +1,6 @@
 import React, { FunctionComponent, Fragment } from 'react'
-import { Heading, Box, Flex, Link, Styled, Image } from 'theme-ui'
+import { Heading, Box, Flex, Link, Styled, Image, useThemeUI } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-// import Img from 'gatsby-image'
-
 import { ProjectFrontmatter } from '../ProjectsList/ProjectsList'
 import { ProjectListItemTitle } from '../ProjectListItemTitle'
 import { Separator } from '../Separator'
@@ -16,7 +14,7 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
   frontmatter,
   body,
 }) => {
-  console.log('frontmatter', frontmatter)
+  const { theme } = useThemeUI()
   return (
     <Box
       as="details"
@@ -28,8 +26,10 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
       <Box
         as="summary"
         sx={{
-          p: 4,
-          listStyle: 'none',
+          py: [3, 4],
+          px: [2, 4],
+          overflowX: 'hidden',
+          whiteSpace: 'pre',
           '&::-webkit-details-marker': {
             display: 'none',
           },
@@ -68,9 +68,21 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
           <MDXRenderer>{body}</MDXRenderer>
         </Box>
 
-        <Box sx={{ overflowX: 'auto' }}>
+        <Box
+          sx={{
+            overflowX: 'auto',
+            '::-webkit-scrollbar': { height: '0.5rem' },
+            '::-webkit-scrollbar-track': {
+              backgroundColor: 'background',
+            },
+            '::-webkit-scrollbar-thumb': {
+              backgroundColor: 'background',
+              backgroundImage: `linear-gradient(${theme.colors.background} 0, ${theme.colors.background} 0.25rem, ${theme.colors.text} 0.25rem, ${theme.colors.text} 0.75rem, ${theme.colors.background} 0.75rem)`,
+            },
+          }}
+        >
           {frontmatter.images && (
-            <Flex sx={{}}>
+            <Flex>
               {frontmatter.images.map(item => (
                 <Image
                   src={item.path.childImageSharp.resize.src}
@@ -101,6 +113,7 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
                     sx={{ display: [null, 'flex'], fontSize: 1 }}
                   >
                     <Box
+                      as="dt"
                       sx={{
                         fontStyle: 'italic',
                         display: [null, 'block'],
@@ -112,7 +125,7 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
                     >
                       {key}
                     </Box>
-                    <Box sx={{ mb: 3 }}>
+                    <Box as="dd" sx={{ mb: 3 }}>
                       {link ? <Link href={link}>{value}</Link> : value}
                     </Box>
                   </Box>

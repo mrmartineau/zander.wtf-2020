@@ -1,10 +1,11 @@
 import { graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
-import { Box } from 'theme-ui'
+// import { Box } from 'theme-ui'
 import { TitleSeparator } from '../components/TitleSeparator'
 import { Layout } from '../components/Layout'
 import { ArticleList } from '../components/ArticleList'
 import { ProjectsList } from '../components/ProjectsList'
+import { Feeds } from '../components/Feeds'
 
 interface HomeProps {
   data: {
@@ -32,17 +33,14 @@ const Home: FunctionComponent<HomeProps> = ({ data }) => {
 
   return (
     <Layout>
-      <TitleSeparator>Words</TitleSeparator>
+      <TitleSeparator title="Words" />
       <ArticleList />
 
-      <TitleSeparator>Projects</TitleSeparator>
+      <TitleSeparator title="Projects" />
       <ProjectsList />
 
-      <TitleSeparator>Reading</TitleSeparator>
-      <Box p={4}>Reading list</Box>
-
-      <TitleSeparator>Bookmarks</TitleSeparator>
-      <Box p={4}>Bookmarks</Box>
+      <TitleSeparator title="Feeds" />
+      <Feeds />
     </Layout>
   )
 }

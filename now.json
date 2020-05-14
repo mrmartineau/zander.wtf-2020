@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "name": "zander.wtf",
-  "alias": "zander.wtf",
+  "alias": "zander- wtf-2020",
   "routes": [
     {
       "src": "/atom.xml",
@@ -17,13 +16,6 @@
       },
       "dest": "/$1"
     }
-  ],
-  "builds": [
-    {
-      "src": "next.config.js",
-      "use": "@now/next"
-    },
-    { "src": "scripts/build-rss.js", "use": "@now/node" }
   ],
   "scope": "zander"
 }

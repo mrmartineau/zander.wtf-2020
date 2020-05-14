@@ -39,7 +39,7 @@ export const text = {
 
   projectListItemTitle: {
     pl: '2rem',
-    fontSize: 8,
+    fontSize: [5, 8],
     textTransform: 'uppercase',
     lineHeight: 'none',
     '&:hover,&:focus, [open] &': {
@@ -71,5 +71,26 @@ export const text = {
     fontSize: 4,
     fontWeight: 'body',
     mb: 4,
+  },
+
+  pinboardListItemTitle: {
+    fontFamily: 'body',
+    fontStyle: 'italic',
+    fontSize: 3,
+    fontWeight: 'body',
+    maxWidth: '70ch',
+    mb: 1,
+  },
+
+  pinboardListItemDescription: {
+    fontSize: [1, 2],
+    opacity: '0.8',
+    maxWidth: '70ch',
+  },
+
+  pinboardListItemUrl: {
+    fontFamily: 'mono',
+    fontSize: 1,
+    opacity: '0.6',
   },
 }

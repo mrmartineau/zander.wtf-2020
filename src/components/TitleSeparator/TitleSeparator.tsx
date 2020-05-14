@@ -1,7 +1,13 @@
 import React, { FunctionComponent } from 'react'
 import { Box } from 'theme-ui'
 
-export const TitleSeparator: FunctionComponent = ({ children }) => {
+interface TitleSeparatorProps {
+  title: string
+}
+
+export const TitleSeparator: FunctionComponent<TitleSeparatorProps> = ({
+  title,
+}) => {
   return (
     <Box
       bg="text"
@@ -9,8 +15,9 @@ export const TitleSeparator: FunctionComponent = ({ children }) => {
       p={4}
       pt="12rem"
       sx={{ textTransform: 'uppercase' }}
+      id={encodeURI(title.toLowerCase())}
     >
-      {children}
+      {title}
     </Box>
   )
 }

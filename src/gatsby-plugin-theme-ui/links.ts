@@ -29,4 +29,16 @@ export const links = {
       color: 'text',
     },
   },
+
+  pinboardListItemLink: {
+    color: 'text',
+    p: 4,
+    display: 'block',
+    textDecoration: 'none',
+
+    '&:hover': {
+      color: 'background',
+      bg: 'text',
+    },
+  },
 }

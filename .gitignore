@@ -6,3 +6,5 @@ public
 
 # Ignore next-mdx-enhanced cache directory
 .mdx-data
+
+.vercel

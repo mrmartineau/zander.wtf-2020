@@ -6,7 +6,7 @@ export const Separator: FunctionComponent<{ sx?: any }> = ({ sx }) => {
     <Box
       sx={{
         height: '0.4rem',
-        width: '30%',
+        width: '20%',
         bg: 'text',
         display: 'block',
         my: 4,

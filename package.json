@@ -17,6 +17,8 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@reach/tabs": "^0.10.2",
+    "@theme-ui/color": "^0.3.1",
     "@theme-ui/presets": "^0.3.0",
     "@theme-ui/prism": "^0.3.0",
     "axios": "^0.19.2",
@@ -41,10 +43,12 @@
     "remark-slug": "^6.0.0",
     "remark-squeeze-paragraphs": "^4.0.0",
     "remark-truncate-links": "^1.0.3",
+    "swr": "^0.2.0",
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {
     "@mrmartineau/scripts": "^0.0.0",
+    "@now/node": "^1.6.1",
     "@types/jest": "^25.2.1",
     "@types/node": "^13.13.4",
     "@types/react": "^16.9.34",

@@ -1,4 +1,5 @@
 import { borderWidths } from './borderWidths'
+import { buttons } from './buttons'
 import { colors } from './colors'
 import {
   fonts,
@@ -20,6 +21,7 @@ import { zIndices } from './zIndices'
 
 export default {
   borderWidths,
+  buttons,
   colors,
   fonts,
   fontSizes,

@@ -1,0 +1,1 @@
+export { PinboardFeed } from './PinboardFeed'
