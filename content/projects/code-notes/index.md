@@ -24,4 +24,6 @@ images:
     path: ./note-dark.png
 ---
 
-I created this theme (gatsby-theme-code-notes) because I could not find the perfect app to store all my many code-related notes. Notes are created with Markdown or MDX. You can see my code notes website at notes.zander.wtf
+I created the theme ([gatsby-theme-code-notes](https://github.com/mrmartineau/gatsby-theme-code-notes)) because I could not find the perfect app to store all my many code-related notes. I wanted these notes to be in a public and open format so that they were easily accessible and shareable. Notes are created with Markdown or MDX which allows for much more expressive notes. Of course there's dark mode too 😉!
+
+You can see my code notes website at [notes.zander.wtf](https://notes.zander.wtf).

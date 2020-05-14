@@ -9,6 +9,11 @@ info:
     value: tmwunlimited.com/work/diageo-the-bar
     link: https://www.tmwunlimited.com/work/diageo-the-bar/
 date: 2013-08-22
+images:
+  - name: Home page
+    path: ./home.png
+  - name: Recipe page
+    path: ./recipe.png
 ---
 
 Created a multi-platform consumer Pan-European website aimed at inspiring and educating consumers in the art of making spirits-based mixed drinks and cocktails for any social occasion.

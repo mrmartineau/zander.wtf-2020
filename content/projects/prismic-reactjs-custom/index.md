@@ -11,3 +11,15 @@ info:
     value: npmjs.com/package/prismic-reactjs-custom
     link: https://www.npmjs.com/package/prismic-reactjs-custom
 ---
+
+```jsx
+import { RichText } from 'prismic-reactjs-custom'
+
+const RT = () => (
+  <RichText
+    richText={richTextDataFromPrismic}
+    heading1={yourCustomHeading1}
+    paragraph={yourCustomParagraph}
+  />
+)
+```
