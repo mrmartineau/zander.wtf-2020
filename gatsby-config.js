@@ -8,15 +8,10 @@ module.exports = {
     title: `Zander Martineau`,
     description: `My personal site`,
     siteUrl: `http://zander.wtf/`,
+    author: 'Zander Martineau',
   },
   plugins: [
     `gatsby-plugin-typescript`,
-    // {
-    //   resolve: `gatsby-transformer-json`,
-    //   options: {
-    //     typeName: `Json`, // a fixed string
-    //   },
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
