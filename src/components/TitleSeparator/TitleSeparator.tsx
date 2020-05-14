@@ -14,10 +14,26 @@ export const TitleSeparator: FunctionComponent<TitleSeparatorProps> = ({
       color="background"
       p={4}
       pt="12rem"
-      sx={{ textTransform: 'uppercase' }}
+      sx={{ position: 'relative', textTransform: 'uppercase' }}
       id={encodeURI(title.toLowerCase())}
     >
-      {title}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '100%',
+          left: [2, 4],
+          marginTop: ['-1rem', '-2rem'],
+          display: 'inline-flex',
+          alignItems: 'center',
+          textTransform: 'uppercase',
+          color: 'background',
+          transform: 'rotate(-90deg)',
+          transformOrigin: '0 0',
+          userSelect: 'none',
+        }}
+      >
+        {title}
+      </Box>
     </Box>
   )
 }
