@@ -6,6 +6,9 @@ info:
     value: Prismic CMS, Stimulus.js, .Net, Sass
   - key: Team
     value: Neil Ballinger, Robbie Davies, Matt Noble, Zak Abu Zubair
+  - key: Component library
+    value: All components
+    link: https://www.cornmarket.ie/all/
   - key: Client
     value: Cornmarket
     link: https://cornmarket.ie
