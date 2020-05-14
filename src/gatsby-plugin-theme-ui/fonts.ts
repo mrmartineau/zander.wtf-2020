@@ -1,6 +1,5 @@
 const baseFonts = {
-  sans:
-    '-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
+  sans: `'IBM Plex Sans',-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
   serif: 'Georgia, Cambria, "Times New Roman", Times, serif',
   mono: `'IBM Plex Mono', 'JetBrains Mono', 'Fira Code', 'Input Mono', Menlo, Monaco, Consolas, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Courier New', monospace`,
 }
@@ -8,7 +7,8 @@ const baseFonts = {
 export const fonts = {
   ...baseFonts,
   body: baseFonts.mono,
-  heading: `'Monument Extended'`,
+  heading: baseFonts.mono,
+  title: `Monument, ${baseFonts.sans}`,
   monospace: baseFonts.mono,
 }
 

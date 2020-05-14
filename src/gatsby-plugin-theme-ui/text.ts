@@ -3,6 +3,7 @@ export const text = {
     fontSize: 8,
     mb: 2,
     lineHeight: 'none',
+    fontFamily: 'title',
   },
 
   articleSubTitle: {
@@ -29,17 +30,20 @@ export const text = {
     fontFamily: 'mono',
     fontSize: 1,
     textTransform: 'uppercase',
+    opacity: 0.6,
   },
 
   articleMetadata: {
     fontFamily: 'mono',
     fontSize: 1,
     textTransform: 'uppercase',
+    opacity: 0.6,
   },
 
   projectListItemTitle: {
     pl: '2rem',
     fontSize: [5, 8],
+    fontFamily: 'title',
     textTransform: 'uppercase',
     lineHeight: 'none',
     '&:hover,&:focus, [open] &': {
@@ -68,7 +72,7 @@ export const text = {
   projectListItemDescription: {
     fontFamily: 'body',
     fontStyle: 'italic',
-    fontSize: 4,
+    fontSize: 3,
     fontWeight: 'body',
     mb: 4,
   },
@@ -92,5 +96,26 @@ export const text = {
     fontFamily: 'mono',
     fontSize: 1,
     opacity: '0.6',
+  },
+
+  introTitle: {
+    fontSize: [7, 9],
+    lineHeight: 1,
+    mb: 4,
+    fontFamily: 'title',
+  },
+
+  introSuperTitle: {
+    fontFamily: 'body',
+    fontSize: 1,
+    fontWeight: 'normal',
+    textTransform: 'uppercase',
+    mb: 2,
+  },
+
+  introDescription: {
+    fontFamily: 'body',
+    fontStyle: 'italic',
+    fontSize: [2, 3],
   },
 }

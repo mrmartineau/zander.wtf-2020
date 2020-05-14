@@ -36,7 +36,7 @@ const FeedListItem: FunctionComponent<FeedListItemProps> = ({
         <Text variant="pinboardListItemUrl">{urlString}</Text>{' '}
         {filteredTags.length && (
           <Fragment>
-            <Box mx={2}>•</Box>
+            <Box sx={{ mx: 2, opacity: 0.6 }}>•</Box>
             {filteredTags.map((item, index) => (
               <Fragment>
                 <Text
@@ -44,7 +44,7 @@ const FeedListItem: FunctionComponent<FeedListItemProps> = ({
                   key={`tag-${item}-${index}`}
                   sx={{ mr: 2 }}
                 >
-                  {item}
+                  #{item}
                 </Text>
               </Fragment>
             ))}

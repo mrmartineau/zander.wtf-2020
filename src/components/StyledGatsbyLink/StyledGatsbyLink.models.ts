@@ -1,5 +1,5 @@
 import { SxStyleProp } from 'theme-ui'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 
 export interface StyledGatsbyLinkProps {
   href?: string
@@ -13,5 +13,5 @@ export interface StyledGatsbyLinkProps {
   // Ref: https://blog.andrewbran.ch/polymorphic-react-components/
   // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
-  as: 'a' | Link
+  // as: 'a' | Link
 }

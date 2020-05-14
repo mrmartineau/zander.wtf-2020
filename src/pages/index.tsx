@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
-// import { Box } from 'theme-ui'
+import { Box, Text, Heading } from 'theme-ui'
 import { TitleSeparator } from '../components/TitleSeparator'
 import { Layout } from '../components/Layout'
 import { ArticleList } from '../components/ArticleList'
@@ -33,14 +33,36 @@ const Home: FunctionComponent<HomeProps> = ({ data }) => {
 
   return (
     <Layout>
-      <TitleSeparator title="Words" />
-      <ArticleList />
+      <section>
+        <Box sx={{ p: 4, my: 9 }}>
+          <Heading as="h1" variant="introTitle">
+            <Text variant="introSuperTitle">Hello, my name is Zander</Text>I
+            make websites
+          </Heading>
+          <Box sx={{ maxWidth: '70ch' }}>
+            <Text variant="introDescription">
+              I'm a contract front-end developer based in London. I’m a little
+              bit obsessed with design systems and have far too many
+              side-projects on the go at one time.
+            </Text>
+          </Box>
+        </Box>
+      </section>
 
-      <TitleSeparator title="Projects" />
-      <ProjectsList />
+      <section>
+        <TitleSeparator title="Words" />
+        <ArticleList />
+      </section>
 
-      <TitleSeparator title="Feeds" />
-      <Feeds />
+      <section>
+        <TitleSeparator title="Projects" />
+        <ProjectsList />
+      </section>
+
+      <section>
+        <TitleSeparator title="Feeds" />
+        <Feeds />
+      </section>
     </Layout>
   )
 }

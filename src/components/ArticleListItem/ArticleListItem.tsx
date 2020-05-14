@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from 'react'
-import { Link } from 'gatsby'
 import { Heading, Text } from 'theme-ui'
 import { StyledGatsbyLink } from '../StyledGatsbyLink'
 
@@ -19,7 +18,6 @@ export const ArticleListItem: FunctionComponent<ArticleListItemProps> = ({
   return (
     <StyledGatsbyLink
       to={`/writing/${slug}`}
-      as={Link}
       sx={{ variant: 'links.articleListItem' }}
     >
       <Text variant="articleListItemMetadata">{date}</Text>

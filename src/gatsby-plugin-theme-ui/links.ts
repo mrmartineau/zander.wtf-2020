@@ -16,7 +16,7 @@ export const links = {
   },
 
   nav: {
-    px: 3,
+    px: [2, 3],
     py: 1,
     textTransform: 'uppercase',
     display: 'block',
@@ -24,9 +24,14 @@ export const links = {
     fontFamily: 'mono',
     fontSize: 1,
     transition: 'all 200ms ease-in-out ',
-    '&:hover,&:focus': {
-      bg: 'navHover',
+    cursor: 'pointer',
+    '&:link,&:visited': {
+      borderBottom: 0,
+      textDecoration: 'none',
       color: 'text',
+    },
+    '&:hover,&:focus': {
+      color: 'primary',
     },
   },
 

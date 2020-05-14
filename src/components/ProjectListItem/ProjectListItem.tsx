@@ -19,7 +19,7 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
     <Box
       as="details"
       sx={{
-        borderBottom: '2px solid #fff',
+        borderBottom: '1px solid #fff',
       }}
       // open
     >
@@ -29,10 +29,22 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
           py: [3, 4],
           px: [2, 4],
           overflowX: 'hidden',
-          whiteSpace: 'pre',
+          whiteSpace: ['unset', 'pre'],
+          '&::before': {
+            content: '""',
+          },
           '&::-webkit-details-marker': {
             display: 'none',
           },
+          // '&::-moz-details-marker': {
+          //   display: 'none',
+          // },
+          // '&::details-marker': {
+          //   display: 'none',
+          // },
+          // '&::marker': {
+          //   display: 'none',
+          // },
           '&:hover': {
             cursor: 'pointer',
           },

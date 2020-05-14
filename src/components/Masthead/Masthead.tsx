@@ -1,0 +1,40 @@
+import React, { FunctionComponent } from 'react'
+import { Box } from 'theme-ui'
+import { Link } from 'gatsby'
+import { Logo } from '../Logo'
+import { Nav } from '../Nav'
+
+export const Masthead: FunctionComponent = () => {
+  return (
+    <Box
+      sx={
+        {
+          /* height: '6rem' */
+        }
+      }
+    >
+      <Box
+        sx={{
+          p: 4,
+          // position: 'fixed',
+          // top: 0,
+          // right: 0,
+          // left: 0,
+          // zIndex: 'high',
+          // mixBlendMode: 'exclusion',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
+        <Link to="/">
+          <Logo
+            size="3rem"
+            sx={{ width: ['1.5rem', '2rem'], height: ['1.5rem', '2rem'] }}
+          />
+        </Link>
+        <Nav />
+      </Box>
+    </Box>
+  )
+}
