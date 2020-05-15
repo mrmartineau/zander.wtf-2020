@@ -56,7 +56,7 @@ export const PinboardFeed: FunctionComponent<PinboardFeedProps> = ({
         {newFeedList.map((item, index) => {
           return (
             <PinboardFeedListItem
-              key={`feedItem-${index}`}
+              key={`feedItem-${tag}-${index}`}
               tags={item.t}
               url={item.u}
               title={item.d}

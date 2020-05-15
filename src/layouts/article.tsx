@@ -34,7 +34,6 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
   if (!data) {
     return null
   }
-  console.log('pageContext', pageContext)
 
   const {
     frontmatter: {
@@ -54,7 +53,8 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
       seoData={{
         title,
         description: subtitle,
-        datePublished: date,
+        datePublished: dateTimestamp,
+        dateModified: modifiedTimestamp,
         slug: pageContext.slug,
       }}
       isArticle={true}

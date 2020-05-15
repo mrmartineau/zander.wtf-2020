@@ -1,5 +1,5 @@
 import React, { FunctionComponent, Fragment } from 'react'
-import { Heading, Box, Flex, Link, Styled, Image, useThemeUI } from 'theme-ui'
+import { Heading, Box, Flex, Link, Styled, Image } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { ProjectFrontmatter } from '../ProjectsList/ProjectsList'
 import { ProjectListItemTitle } from '../ProjectListItemTitle'
@@ -14,12 +14,11 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
   frontmatter,
   body,
 }) => {
-  const { theme } = useThemeUI()
   return (
     <Box
       as="details"
       sx={{
-        borderBottom: '1px solid #fff',
+        borderBottom: theme => `1px solid ${theme.colors.text}`,
       }}
       // open
     >
@@ -48,15 +47,8 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
           '&:hover': {
             cursor: 'pointer',
           },
-          '&:hover h3,&:focus h3': {
-            color: 'hsla(0,0%,95%,.01)',
-            textShadow: 'none',
-            MozTextStrokeColor: '#fff',
-            WebkitTextStrokeColor: '#fff',
-            textStrokeColor: '#fff',
-            MozTextStrokeWidth: '1px',
-            WebkitTextStrokeWidth: '1px',
-            textStrokeWidth: '1px',
+          '&:hover h3, &:focus h3': {
+            variant: 'text.projectListItemTitleActive',
           },
         }}
       >
@@ -73,7 +65,7 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
           p: 4,
         }}
       >
-        <Box sx={{ maxWidth: '70ch' }}>
+        <Box sx={{ maxWidth: 'contentMaxWidth' }}>
           <Heading variant="projectListItemDescription" as="h4">
             {frontmatter.description}
           </Heading>
@@ -89,7 +81,8 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
             },
             '::-webkit-scrollbar-thumb': {
               backgroundColor: 'background',
-              backgroundImage: `linear-gradient(${theme.colors.background} 0, ${theme.colors.background} 0.25rem, ${theme.colors.text} 0.25rem, ${theme.colors.text} 0.75rem, ${theme.colors.background} 0.75rem)`,
+              backgroundImage: theme =>
+                `linear-gradient(${theme.colors.background} 0, ${theme.colors.background} 0.25rem, ${theme.colors.text} 0.25rem, ${theme.colors.text} 0.75rem, ${theme.colors.background} 0.75rem)`,
             },
           }}
         >
@@ -116,7 +109,7 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
         {frontmatter.info && (
           <Fragment>
             <Separator />
-            <Box sx={{ maxWidth: '70ch' }}>
+            <Box sx={{ maxWidth: 'contentMaxWidth' }}>
               <Styled.h4>Project info</Styled.h4>
               <dl>
                 {frontmatter.info.map(({ key, value, link }, index) => (

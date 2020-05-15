@@ -1,11 +1,10 @@
 import React, { FunctionComponent } from 'react'
-import { Box, useThemeUI } from 'theme-ui'
-// import { alpha } from '@theme-ui/color'
+import { Box } from 'theme-ui'
+import { alpha } from '@theme-ui/color'
 import { Tabs, TabList, TabPanel, TabPanels, Tab } from '@reach/tabs'
 import { PinboardFeed } from '../PinboardFeed'
 
 export const Feeds: FunctionComponent = () => {
-  const { theme } = useThemeUI()
   return (
     <Box
       sx={{
@@ -18,12 +17,11 @@ export const Feeds: FunctionComponent = () => {
           bg: 'background',
           borderRadius: 0,
           border: 0,
-          // borderBottom: `1px solid ${theme.colors.text}`,
           p: [2, 4],
           textTransform: 'uppercase',
           '&:hover': {
             color: 'text',
-            bg: 'rgba(255,255,255,0.2)', //alpha('text', 0.5),
+            bg: alpha('text', 0.2),
           },
           '&[data-selected]': {
             color: 'background',

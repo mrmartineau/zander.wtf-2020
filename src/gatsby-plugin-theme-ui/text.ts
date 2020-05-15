@@ -1,4 +1,11 @@
+import { transparentize } from '@theme-ui/color'
+
 export const text = {
+  monoVariant: {
+    fontFamily: 'mono',
+    fontWeight: 'normal',
+  },
+
   articleTitle: {
     fontSize: 8,
     mb: 2,
@@ -46,16 +53,20 @@ export const text = {
     fontFamily: 'title',
     textTransform: 'uppercase',
     lineHeight: 'none',
-    '&:hover,&:focus, [open] &': {
-      color: 'hsla(0,0%,95%,.01)',
-      textShadow: 'none',
-      '-moz-text-stroke-color': '#fff',
-      '-webkit-text-stroke-color': '#fff',
-      textStrokeColor: '#fff',
-      '-moz-text-stroke-width': '1px',
-      '-webkit-text-stroke-width': '1px',
-      textStrokeWidth: '1px',
+    '[open] &, &:hover &, &:focus &': {
+      variant: 'text.projectListItemTitleActive',
     },
+  },
+
+  projectListItemTitleActive: {
+    color: transparentize('text', 0.99),
+    textShadow: 'none',
+    MozTextStrokeColor: theme => theme.colors.text,
+    WebkitTextStrokeColor: theme => theme.colors.text,
+    textStrokeColor: theme => theme.colors.text,
+    MozTextStrokeWidth: '1px',
+    WebkitTextStrokeWidth: '1px',
+    textStrokeWidth: '1px',
   },
 
   projectListItemTitleYear: {
@@ -82,14 +93,14 @@ export const text = {
     fontStyle: 'italic',
     fontSize: 3,
     fontWeight: 'body',
-    maxWidth: '70ch',
+    maxWidth: 'contentMaxWidth',
     mb: 1,
   },
 
   pinboardListItemDescription: {
     fontSize: [1, 2],
     opacity: '0.8',
-    maxWidth: '70ch',
+    maxWidth: 'contentMaxWidth',
   },
 
   pinboardListItemUrl: {

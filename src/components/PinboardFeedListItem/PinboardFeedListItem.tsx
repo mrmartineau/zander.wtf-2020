@@ -37,7 +37,7 @@ export const PinboardFeedListItem: FunctionComponent<PinboardFeedListItemProps> 
             <Fragment>
               <Box sx={{ mx: 2, opacity: 0.6 }}>•</Box>
               {filteredTags.map((item, index) => (
-                <Fragment>
+                <Fragment key={index}>
                   <Text
                     variant="pinboardListItemUrl"
                     key={`tag-${item}-${index}`}

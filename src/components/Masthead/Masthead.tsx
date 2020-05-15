@@ -1,8 +1,9 @@
 import React, { FunctionComponent } from 'react'
-import { Box } from 'theme-ui'
+import { Box, Flex } from 'theme-ui'
 import { Link } from 'gatsby'
 import { Logo } from '../Logo'
 import { Nav } from '../Nav'
+import { ThemeSwitcher } from '../ThemeSwitcher'
 
 export const Masthead: FunctionComponent = () => {
   return (
@@ -33,7 +34,10 @@ export const Masthead: FunctionComponent = () => {
             sx={{ width: ['1.5rem', '2rem'], height: ['1.5rem', '2rem'] }}
           />
         </Link>
-        <Nav />
+        <Flex>
+          <Nav />
+          <ThemeSwitcher />
+        </Flex>
       </Box>
     </Box>
   )

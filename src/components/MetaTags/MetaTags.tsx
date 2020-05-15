@@ -102,7 +102,14 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
           },
           ...extraMetatags,
         ]}
-      />
+      >
+        <link
+          rel="alternate"
+          href="/atom.xml"
+          type="application/atom+xml"
+          title="RSS Feed"
+        />
+      </Helmet>
       <SchemaOrg
         isArticle={isArticle}
         url={url}
@@ -110,6 +117,7 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
         image={ogImage}
         description={description}
         datePublished={seoData?.datePublished}
+        dateModified={seoData?.dateModified}
         siteUrl={site.siteMetadata.siteUrl}
         author={site.siteMetadata.author}
         defaultTitle={site.siteMetadata.title}

@@ -44,7 +44,7 @@ const Home: FunctionComponent<HomeProps> = ({ data }) => {
             <Text variant="introSuperTitle">Hello, my name is Zander</Text>I
             make websites
           </Heading>
-          <Box sx={{ maxWidth: '70ch' }}>
+          <Box sx={{ maxWidth: 'contentMaxWidth' }}>
             <Text variant="introDescription">
               I'm a contract front-end developer based in London. I’m a little
               bit obsessed with design systems and have far too many

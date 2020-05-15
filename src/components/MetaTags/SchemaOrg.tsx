@@ -6,6 +6,7 @@ interface SchemaOrgProps {
   author: string
   siteUrl: string
   datePublished?: string
+  dateModified?: string
   defaultTitle: string
   description: string
   image: string
@@ -18,6 +19,7 @@ export const SchemaOrg: FunctionComponent<SchemaOrgProps> = React.memo(
     author,
     siteUrl,
     datePublished,
+    dateModified,
     defaultTitle,
     description,
     image,
@@ -75,6 +77,7 @@ export const SchemaOrg: FunctionComponent<SchemaOrgProps> = React.memo(
               '@id': siteUrl,
             },
             datePublished,
+            dateModified,
           },
         ]
       : baseSchema

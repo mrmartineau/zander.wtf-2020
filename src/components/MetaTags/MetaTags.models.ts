@@ -5,6 +5,7 @@ export interface SeoInterface {
   opengraphDescription?: string
   opengraphImage?: string | null
   datePublished?: string
+  dateModified?: string
   slug?: string
 }
 
