@@ -1,4 +1,10 @@
-import { ContentfulMetaSeoInterface } from '../../types/custom-contentful'
+export interface SeoInterface {
+  title: string
+  description?: string
+  opengraphTitle?: string
+  opengraphDescription?: string
+  opengraphImage?: string | null
+}
 
 export interface MetaInterface {
   name?: string
@@ -8,7 +14,7 @@ export interface MetaInterface {
 }
 
 export interface MetaTagsProps {
-  seoData: ContentfulMetaSeoInterface
+  seoData?: SeoInterface
   extraMetatags?: MetaInterface[]
   lang?: string
 }

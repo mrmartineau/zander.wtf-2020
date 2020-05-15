@@ -27,7 +27,7 @@ export const Masthead: FunctionComponent = () => {
           justifyContent: 'space-between',
         }}
       >
-        <Link to="/">
+        <Link to="/" aria-label="Go to the home page">
           <Logo
             size="3rem"
             sx={{ width: ['1.5rem', '2rem'], height: ['1.5rem', '2rem'] }}

@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactElement } from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import { MetaTagsProps } from './MetaTags.models'
 
@@ -23,17 +23,16 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
     `
   )
 
-  const title: string = seoData?.metaTitle ?? site.siteMetadata.title
+  const title: string = seoData?.title ?? site.siteMetadata.title
   const description: string =
-    seoData?.metaDescription ?? site.siteMetadata.description
+    seoData?.description ?? site.siteMetadata.description
   const ogTitle: string = seoData?.opengraphTitle ?? title
   const ogDescription: string = seoData?.opengraphDescription ?? description
   const ogImage: string =
-    seoData?.opengraphImage?.file?.url ?? site.siteMetadata.opengraphImage
-  const twitterTitle: string = seoData?.twitterCardTitle ?? title
-  const twitterDescription: string =
-    seoData?.twitterCardDescription ?? description
-  const twitterImage: string = seoData?.twitterCardImage?.file?.url ?? ogImage
+    seoData?.opengraphImage ?? site.siteMetadata.opengraphImage
+  const twitterTitle: string = ogTitle
+  const twitterDescription: string = ogDescription
+  const twitterImage: string = ogImage
 
   return (
     <Helmet
@@ -41,6 +40,8 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
         lang,
       }}
       title={title}
+      defaultTitle="Hello, my name is Zander. I make websites"
+      titleTemplate="%s — zander.wtf"
       meta={[
         {
           name: `description`,
@@ -84,12 +85,10 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
         },
         {
           name: `twitter:widgets:theme`,
-          content: 'light',
+          content: 'dark',
         },
         ...extraMetatags,
       ]}
-    >
-      <link rel="stylesheet" href="https://use.typekit.net/eld0ezk.css" />
-    </Helmet>
+    />
   )
 }

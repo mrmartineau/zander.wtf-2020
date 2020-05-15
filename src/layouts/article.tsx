@@ -3,7 +3,6 @@ import React, { FunctionComponent, Fragment } from 'react'
 import { Heading, Box, Container, Text } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Layout } from '../components/Layout'
-import { ArticleList } from '../components/ArticleList'
 
 interface ArticleProps {
   data: {
@@ -51,7 +50,7 @@ const Article: FunctionComponent<ArticleProps> = ({ data }) => {
   } = data.mdx
 
   return (
-    <Layout>
+    <Layout seoData={{ title, description: subtitle }}>
       <article>
         <Container>
           <Box as="header" mb={4}>

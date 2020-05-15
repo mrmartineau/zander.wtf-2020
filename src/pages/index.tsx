@@ -32,7 +32,12 @@ const Home: FunctionComponent<HomeProps> = ({ data }) => {
   }
 
   return (
-    <Layout>
+    <Layout
+      seoData={{
+        title: 'Hello, my name is Zander. I make websites',
+        description: "I'm a contract front-end developer based in London.",
+      }}
+    >
       <section>
         <Box sx={{ p: 4, my: 9 }}>
           <Heading as="h1" variant="introTitle">
