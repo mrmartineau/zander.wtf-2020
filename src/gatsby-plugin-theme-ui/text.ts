@@ -7,14 +7,14 @@ export const text = {
   },
 
   articleTitle: {
-    fontSize: 8,
+    fontSize: [7, 8],
     mb: 2,
     lineHeight: 'none',
     fontFamily: 'title',
   },
 
   articleSubTitle: {
-    fontSize: 4,
+    fontSize: [3, 4],
     fontFamily: 'mono',
     fontStyle: 'italic',
     fontWeight: 'normal',
@@ -23,13 +23,13 @@ export const text = {
   },
 
   articleListItemTitle: {
-    fontFamily: 'heading',
-    fontSize: 4,
+    fontFamily: 'title',
+    fontSize: [3, 4],
   },
 
   articleListItemSubtitle: {
     fontFamily: 'mono',
-    fontSize: 3,
+    fontSize: [2, 3],
     fontStyle: 'italic',
   },
 

@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from 'react'
 import { Box, Flex } from 'theme-ui'
-import { Link } from 'gatsby'
 import { Logo } from '../Logo'
 import { Nav } from '../Nav'
 import { ThemeSwitcher } from '../ThemeSwitcher'
+import { StyledGatsbyLink } from '../StyledGatsbyLink'
 
 export const Masthead: FunctionComponent = () => {
   return (
@@ -26,15 +26,23 @@ export const Masthead: FunctionComponent = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          flexDirection: ['column', 'row'],
         }}
       >
-        <Link to="/" aria-label="Go to the home page">
+        <StyledGatsbyLink
+          to="/"
+          aria-label="Go to the home page"
+          sx={{ display: 'block', borderBottom: '0 !important', mb: [2, null] }}
+        >
           <Logo
-            size="3rem"
-            sx={{ width: ['1.5rem', '2rem'], height: ['1.5rem', '2rem'] }}
+            sx={{
+              width: ['2rem', '3rem'],
+              height: ['2rem', '3rem'],
+            }}
           />
-        </Link>
-        <Flex>
+        </StyledGatsbyLink>
+        <Flex sx={{ alignItems: 'center' }}>
           <Nav />
           <ThemeSwitcher />
         </Flex>

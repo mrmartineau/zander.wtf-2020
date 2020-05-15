@@ -9,23 +9,26 @@ export const ThemeSwitcher: FunctionComponent = () => {
       onClick={e => {
         setColorMode(colorMode === 'default' ? 'dark' : 'default')
       }}
-      aria-label="Toggle dark mode"
+      aria-label="Cycle colour modes"
       sx={{
         color: 'text',
         zIndex: 11,
         p: 0,
         display: 'block',
         mx: 'auto',
+        ml: 3 ,
         transition: 'all 200ms ease-in-out ',
         cursor: 'pointer',
         '&:hover': {
           color: 'primary',
         },
+        width: '1.2rem',
+        height: '1.2rem',
       }}
     >
       <svg
-        width="1.5rem"
-        height="1.5rem"
+        width="100%"
+        height="100%"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1024 1024"
         fill="currentColor"
