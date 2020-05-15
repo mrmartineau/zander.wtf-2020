@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactElement } from 'react'
+import React, { FunctionComponent, ReactElement, Fragment } from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import { MetaTagsProps } from './MetaTags.models'
@@ -47,61 +47,62 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
   }
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      defaultTitle={site.siteMetadata.title}
-      titleTemplate="%s — zander.wtf"
-      meta={[
-        {
-          name: `description`,
-          content: description,
-        },
-        {
-          property: `og:title`,
-          content: ogTitle,
-        },
-        {
-          property: `og:description`,
-          content: ogDescription,
-        },
-        {
-          property: `og:image`,
-          content: ogImage,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: twitterTitle,
-        },
-        {
-          name: `twitter:description`,
-          content: twitterDescription,
-        },
-        {
-          name: `twitter:image`,
-          content: twitterImage,
-        },
-        {
-          name: `twitter:widgets:theme`,
-          content: 'dark',
-        },
-        ...extraMetatags,
-      ]}
-    >
+    <Fragment>
+      <Helmet
+        htmlAttributes={{
+          lang,
+        }}
+        title={title}
+        defaultTitle={site.siteMetadata.title}
+        titleTemplate="%s — zander.wtf"
+        meta={[
+          {
+            name: `description`,
+            content: description,
+          },
+          {
+            property: `og:title`,
+            content: ogTitle,
+          },
+          {
+            property: `og:description`,
+            content: ogDescription,
+          },
+          {
+            property: `og:image`,
+            content: ogImage,
+          },
+          {
+            property: `og:type`,
+            content: `website`,
+          },
+          {
+            name: `twitter:card`,
+            content: `summary_large_image`,
+          },
+          {
+            name: `twitter:creator`,
+            content: site.siteMetadata.author,
+          },
+          {
+            name: `twitter:title`,
+            content: twitterTitle,
+          },
+          {
+            name: `twitter:description`,
+            content: twitterDescription,
+          },
+          {
+            name: `twitter:image`,
+            content: twitterImage,
+          },
+          {
+            name: `twitter:widgets:theme`,
+            content: 'dark',
+          },
+          ...extraMetatags,
+        ]}
+      />
       <SchemaOrg
         isArticle={isArticle}
         url={url}
@@ -113,6 +114,6 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
         author={site.siteMetadata.author}
         defaultTitle={site.siteMetadata.title}
       />
-    </Helmet>
+    </Fragment>
   )
 }
