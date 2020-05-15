@@ -1,59 +1,8 @@
-import React, { FunctionComponent, Fragment } from 'react'
-import { Heading, Link, Box, Text } from 'theme-ui'
+import React, { FunctionComponent } from 'react'
+import { Heading, Link, Box } from 'theme-ui'
 import useRequest from '../../utils/useRequest'
 import { Separator } from '../Separator'
-
-interface FeedListItemProps {
-  url: string
-  title: string
-  desc: string
-  tags: string[]
-}
-
-const FeedListItem: FunctionComponent<FeedListItemProps> = ({
-  url,
-  title,
-  desc,
-  tags,
-}) => {
-  let urlString = url
-  if ('URL' in window) {
-    urlString = new URL(url).hostname
-  }
-
-  const filteredTags = tags.filter(item => {
-    if (item === 'IFTTT' || item === 'TwitterLike' || item === 'Instapaper') {
-      return false
-    }
-    return true
-  })
-
-  return (
-    <Link href={url} variant="pinboardListItemLink">
-      <Text variant="pinboardListItemTitle">{title}</Text>
-      {desc && <Text variant="pinboardListItemDescription">{desc}</Text>}
-      <Box sx={{ mt: 1, display: 'flex' }}>
-        <Text variant="pinboardListItemUrl">{urlString}</Text>{' '}
-        {filteredTags.length && (
-          <Fragment>
-            <Box sx={{ mx: 2, opacity: 0.6 }}>•</Box>
-            {filteredTags.map((item, index) => (
-              <Fragment>
-                <Text
-                  variant="pinboardListItemUrl"
-                  key={`tag-${item}-${index}`}
-                  sx={{ mr: 2 }}
-                >
-                  #{item}
-                </Text>
-              </Fragment>
-            ))}
-          </Fragment>
-        )}
-      </Box>
-    </Link>
-  )
-}
+import { PinboardFeedListItem } from '../PinboardFeedListItem'
 
 const FEED_PATH = '/api/pinboard?tag='
 const PINBOARD_PATH = 'https://pinboard.in/'
@@ -106,7 +55,7 @@ export const PinboardFeed: FunctionComponent<PinboardFeedProps> = ({
       >
         {newFeedList.map((item, index) => {
           return (
-            <FeedListItem
+            <PinboardFeedListItem
               key={`feedItem-${index}`}
               tags={item.t}
               url={item.u}
