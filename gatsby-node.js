@@ -8,7 +8,10 @@ exports.createPages = async ({ graphql, actions }) => {
   const mdxDocs = await graphql(
     `
       {
-        allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+        allMdx(
+          sort: { fields: frontmatter___date, order: DESC }
+          filter: { fileAbsolutePath: { regex: "/(words)/" } }
+        ) {
           edges {
             node {
               frontmatter {
@@ -43,6 +46,7 @@ exports.createPages = async ({ graphql, actions }) => {
         id: post.node.id,
         previous,
         next,
+        slug,
       },
     })
   })

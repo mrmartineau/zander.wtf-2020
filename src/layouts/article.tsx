@@ -23,18 +23,18 @@ interface ArticleProps {
     id: string
     previous: boolean
     next: boolean
-    hasUntagged: boolean
-    basePath?: string
+    slug?: string
   }
   location: {
     pathname: string
   }
 }
 
-const Article: FunctionComponent<ArticleProps> = ({ data }) => {
+const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
   if (!data) {
     return null
   }
+  console.log('pageContext', pageContext)
 
   const {
     frontmatter: {
@@ -50,7 +50,15 @@ const Article: FunctionComponent<ArticleProps> = ({ data }) => {
   } = data.mdx
 
   return (
-    <Layout seoData={{ title, description: subtitle }}>
+    <Layout
+      seoData={{
+        title,
+        description: subtitle,
+        datePublished: date,
+        slug: pageContext.slug,
+      }}
+      isArticle={true}
+    >
       <article>
         <Container>
           <Box as="header" mb={4}>
@@ -70,10 +78,10 @@ const Article: FunctionComponent<ArticleProps> = ({ data }) => {
 
           <footer>
             {modified && (
-              <Fragment>
+              <Text variant="articleListItemMetadata">
                 Article updated{' '}
                 <time dateTime={modifiedTimestamp}>{modified}</time>
-              </Fragment>
+              </Text>
             )}
           </footer>
         </Container>

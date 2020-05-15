@@ -5,7 +5,7 @@ const remarkTruncateLinks = require('remark-truncate-links').remarkTruncateLinks
 
 module.exports = {
   siteMetadata: {
-    title: `Zander Martineau`,
+    title: 'Hello, my name is Zander. I make websites',
     description: `My personal site`,
     siteUrl: `http://zander.wtf/`,
     author: 'Zander Martineau',

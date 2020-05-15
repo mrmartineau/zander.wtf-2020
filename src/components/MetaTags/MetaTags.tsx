@@ -2,17 +2,20 @@ import React, { FunctionComponent, ReactElement } from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import { MetaTagsProps } from './MetaTags.models'
+import { SchemaOrg } from './SchemaOrg'
 
 export const MetaTags: FunctionComponent<MetaTagsProps> = ({
   seoData,
   lang = 'en',
   extraMetatags = [],
+  isArticle = false,
 }): ReactElement => {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
+            siteUrl
             title
             description
             author
@@ -34,13 +37,22 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
   const twitterDescription: string = ogDescription
   const twitterImage: string = ogImage
 
+  let url = site.siteMetadata.siteUrl
+  const slug = seoData?.slug ?? ''
+
+  if (isArticle) {
+    url = `${site.siteMetadata.siteUrl}/writing/${slug}`
+  } else if (slug) {
+    url = `${site.siteMetadata.siteUrl}/${slug}`
+  }
+
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={title}
-      defaultTitle="Hello, my name is Zander. I make websites"
+      defaultTitle={site.siteMetadata.title}
       titleTemplate="%s — zander.wtf"
       meta={[
         {
@@ -89,6 +101,18 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
         },
         ...extraMetatags,
       ]}
-    />
+    >
+      <SchemaOrg
+        isArticle={isArticle}
+        url={url}
+        title={title}
+        image={ogImage}
+        description={description}
+        datePublished={seoData?.datePublished}
+        siteUrl={site.siteMetadata.siteUrl}
+        author={site.siteMetadata.author}
+        defaultTitle={site.siteMetadata.title}
+      />
+    </Helmet>
   )
 }
