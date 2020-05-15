@@ -6,6 +6,7 @@ import { Layout } from '../components/Layout'
 import { ArticleList } from '../components/ArticleList'
 import { ProjectsList } from '../components/ProjectsList'
 import { Feeds } from '../components/Feeds'
+import { ArrowDown } from '../components/Icons/ArrowDown'
 
 interface HomeProps {
   data: {
@@ -54,15 +55,21 @@ const Home: FunctionComponent<HomeProps> = ({ data }) => {
         </Box>
       </section>
 
+      <ArrowDown sx={{ width: '20vw', pl: 4, ml: '5vw', my: '20vw' }} />
+
       <section>
         <TitleSeparator title="Words" />
         <ArticleList />
       </section>
 
+      <ArrowDown sx={{ width: '20vw', pl: 4, ml: '5vw', my: '20vw' }} />
+
       <section>
         <TitleSeparator title="Projects" />
         <ProjectsList />
       </section>
+
+      <ArrowDown sx={{ width: '20vw', pl: 4, ml: '5vw', my: '20vw' }} />
 
       <section>
         <TitleSeparator title="Feeds" />

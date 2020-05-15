@@ -28,7 +28,7 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
           py: [3, 4],
           px: [2, 4],
           overflowX: 'hidden',
-          whiteSpace: ['unset', 'pre'],
+          // whiteSpace: ['unset', 'pre'],
           '&::before': {
             content: '""',
           },
@@ -120,12 +120,14 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
                     <Box
                       as="dt"
                       sx={{
-                        fontStyle: 'italic',
+                        variant: 'text.monoVariantItalic',
                         display: [null, 'block'],
                         width: [null, '150px'],
                         marginRight: [null, '1rem'],
                         marginBottom: [null, '0.5rem'],
                         flexShrink: [null, 0],
+
+                        opacity: '0.8',
                       }}
                     >
                       {key}

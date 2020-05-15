@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { Flex, Link } from 'theme-ui'
 import { StyledGatsbyLink } from '../StyledGatsbyLink'
+import { External } from '../Icons/External'
 
 export const Nav: FunctionComponent = () => {
   return (
@@ -14,8 +15,14 @@ export const Nav: FunctionComponent = () => {
       <StyledGatsbyLink to={`/#feeds`} sx={{ variant: 'links.nav' }}>
         Feeds
       </StyledGatsbyLink>
-      <Link href="https://notes.zander.wtf" variant="nav">
-        Notes
+      <Link
+        href="https://notes.zander.wtf"
+        variant="nav"
+        sx={{ display: 'inline-flex', alignItems: 'center' }}
+        target="_black"
+        rel="noopener"
+      >
+        Notes <External size="0.7rem" sx={{ ml: 1 }} />
       </Link>
     </Flex>
   )

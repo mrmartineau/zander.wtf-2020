@@ -5,6 +5,11 @@ export const text = {
     fontFamily: 'mono',
     fontWeight: 'normal',
   },
+  monoVariantItalic: {
+    fontFamily: 'mono',
+    fontWeight: 'normal',
+    fontStyle: 'italic',
+  },
 
   articleTitle: {
     fontSize: [7, 8],
@@ -15,36 +20,38 @@ export const text = {
 
   articleSubTitle: {
     fontSize: [3, 4],
-    fontFamily: 'mono',
-    fontStyle: 'italic',
-    fontWeight: 'normal',
+    variant: 'text.monoVariantItalic',
     mb: 3,
     lineHeight: 'heading',
+    opacity: '0.8',
   },
 
   articleListItemTitle: {
-    fontFamily: 'title',
+    variant: 'text.monoVariantItalic',
     fontSize: [3, 4],
+    maxWidth: 'contentMaxWidth',
   },
 
   articleListItemSubtitle: {
-    fontFamily: 'mono',
-    fontSize: [2, 3],
-    fontStyle: 'italic',
+    variant: 'text.monoVariant',
+    fontSize: [1, 2],
+    opacity: 0.8,
+    maxWidth: 'contentMaxWidth',
+  },
+
+  metadata: {
+    variant: 'text.monoVariant',
+    fontSize: 1,
+    textTransform: 'uppercase',
+    opacity: 0.6,
   },
 
   articleListItemMetadata: {
-    fontFamily: 'mono',
-    fontSize: 1,
-    textTransform: 'uppercase',
-    opacity: 0.6,
+    variant: 'text.metadata',
   },
 
   articleMetadata: {
-    fontFamily: 'mono',
-    fontSize: 1,
-    textTransform: 'uppercase',
-    opacity: 0.6,
+    variant: 'text.metadata',
   },
 
   projectListItemTitle: {
@@ -70,10 +77,10 @@ export const text = {
   },
 
   projectListItemTitleYear: {
-    fontFamily: 'mono',
+    variant: 'text.monoVariant',
     fontSize: 0,
     textTransform: 'uppercase',
-    transform: 'rotate(-90deg)  translateX(-0.65rem)',
+    transform: 'rotate(-90deg)  translateX(-0.85rem)',
     width: '0',
     height: '0',
     textAlign: 'center',
@@ -89,10 +96,8 @@ export const text = {
   },
 
   pinboardListItemTitle: {
-    fontFamily: 'body',
-    fontStyle: 'italic',
+    variant: 'text.monoVariantItalic',
     fontSize: 3,
-    fontWeight: 'body',
     maxWidth: 'contentMaxWidth',
     mb: 1,
   },
@@ -118,7 +123,7 @@ export const text = {
 
   introSuperTitle: {
     fontFamily: 'body',
-    fontSize: 1,
+    fontSize: [2, 3],
     fontWeight: 'normal',
     textTransform: 'uppercase',
     mb: 2,
@@ -128,5 +133,6 @@ export const text = {
     fontFamily: 'body',
     fontStyle: 'italic',
     fontSize: [2, 3],
+    opacity: '0.8',
   },
 }

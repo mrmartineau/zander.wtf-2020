@@ -1,4 +1,4 @@
 export const sizes = {
-  container: 900,
+  container: '70ch',
   contentMaxWidth: '70ch',
 }

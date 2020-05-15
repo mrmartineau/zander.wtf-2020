@@ -3,9 +3,6 @@ title: Equals Go Card
 description: User account area for the brand new Equals Go multi-currency card
 link: https://personal.equals.co
 info:
-  - key: Client
-    value: Equalsmoney.com
-    link: https://equalsmoney.com
   - key: App
     value: personal.equalsmoney.com
     link: https://personal.equalsmoney.com
@@ -13,6 +10,11 @@ info:
     value: Colin Agbabiaka, Steven Archer, Tim Brooke, Ben Tomkinson, Charilaos Georgakakis, Jamie Halvorson, Tabasom Aryamanesh, Joshua Anderson, Lloyd Asamoah
   - key: Tech stack
     value: React, Next.js, Typescript, Redux (Saga), Express, AWS Lambdas, Styled Components, Design System Utils, Prismic CMS
+  - key: Duration
+    value: 1.5 years
+  - key: Client
+    value: Equals
+    link: https://equalsmoney.com
 date: 2019-08-13
 images:
   - name: Account overview
