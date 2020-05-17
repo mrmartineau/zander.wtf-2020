@@ -1,7 +1,8 @@
 const heading = {
   fontFamily: 'heading',
-  fontWeight: 'heading',
+  fontWeight: 'body',
   lineHeight: 'heading',
+  fontStyle: 'italic',
   mt: 4,
   mb: 3,
 }
@@ -139,10 +140,13 @@ export const styles = {
     mx: 0,
   },
   hr: {
-    bg: 'muted',
+    height: '0.4rem',
+    width: '20%',
+    bg: 'text',
+    display: 'block',
+    my: 6,
     border: 0,
-    height: '1px',
-    m: 3,
+    mx: 0,
   },
   table: {
     width: '100%',
@@ -163,5 +167,8 @@ export const styles = {
     borderBottomStyle: 'solid',
     borderBottomColor: 'background',
     p: 2,
+  },
+  ul: {
+    listStyle: 'inside disc',
   },
 }

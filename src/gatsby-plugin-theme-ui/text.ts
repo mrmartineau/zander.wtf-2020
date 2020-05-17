@@ -13,7 +13,7 @@ export const text = {
 
   articleTitle: {
     fontSize: [7, 8],
-    mb: 2,
+    mb: 4,
     lineHeight: 'none',
     fontFamily: 'title',
   },

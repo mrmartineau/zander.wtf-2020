@@ -13,3 +13,9 @@ This application used Next.js with an Express.js back-end and integrated with va
 I also created the first version of Curve's design system for the web. Initially with focus on product applications, the design system has since evolved into a more general system for all Curve's web properties. It is based on Theme UI.
 
 The final project at Curve was to redevelop [curve.com](https://curve.com), the company's public-facing website. This used the Contentful headless CMS and the Gatsby static site generator. This project further iterated on the design system and made it commonplace within the web application team.
+
+#### Notable Projects
+
+- Partner project (unreleased)
+- Curve's design-system (private)
+- New version of [curve.com](https://curve.com) (unreleased)
