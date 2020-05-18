@@ -41,7 +41,20 @@ module.exports = {
           squeezeParagraphs,
           [remarkTruncateLinks, { style: 'smart' }],
         ],
-        gatsbyRemarkPlugins: ['gatsby-remark-embed-gist'],
+        gatsbyRemarkPlugins: [
+          'gatsby-remark-embed-gist',
+          { resolve: 'gatsby-remark-copy-linked-files' },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              backgroundColor: '#fafafa',
+              maxWidth: 1035,
+            },
+          },
+          {
+            resolve: `gatsby-remark-embedder`,
+          },
+        ],
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -64,7 +77,7 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map((edge) => {
+              return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
