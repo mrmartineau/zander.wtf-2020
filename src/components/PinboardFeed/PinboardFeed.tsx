@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { Heading, Link, Box, Container } from 'theme-ui'
+import { Heading, Link, Box } from 'theme-ui'
 import useRequest from '../../utils/useRequest'
 import { Separator } from '../Separator'
 import { PinboardFeedListItem } from '../PinboardFeedListItem'
@@ -66,7 +66,7 @@ export const PinboardFeed: FunctionComponent<PinboardFeedProps> = ({
         })}
       </Box>
 
-      <Container sx={{ py: 4 }}>
+      <Box sx={{ p: 4 }}>
         <Separator sx={{ mt: 0 }} />
         <Link href={`${PINBOARD_PATH}u:MrMartineau/t:${tag}`}>
           See all{' '}
@@ -74,7 +74,7 @@ export const PinboardFeed: FunctionComponent<PinboardFeedProps> = ({
             👉
           </span>
         </Link>
-      </Container>
+      </Box>
     </Box>
   )
 }
