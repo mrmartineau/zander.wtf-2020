@@ -68,9 +68,9 @@ export const text = {
   projectListItemTitleActive: {
     color: transparentize('text', 0.99),
     textShadow: 'none',
-    MozTextStrokeColor: theme => theme.colors.text,
-    WebkitTextStrokeColor: theme => theme.colors.text,
-    textStrokeColor: theme => theme.colors.text,
+    MozTextStrokeColor: (theme) => theme.colors.text,
+    WebkitTextStrokeColor: (theme) => theme.colors.text,
+    textStrokeColor: (theme) => theme.colors.text,
     MozTextStrokeWidth: '1px',
     WebkitTextStrokeWidth: '1px',
     textStrokeWidth: '1px',

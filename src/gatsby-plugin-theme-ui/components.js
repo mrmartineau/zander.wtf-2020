@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 import Prism from '@theme-ui/prism'
 import { FaAnchor } from 'react-icons/fa'
 
-const heading = Tag => props => {
+const heading = (Tag) => (props) => {
   if (!props.id) return <Tag {...props} />
 
   return (
@@ -47,7 +47,7 @@ const components = {
   h4: heading('h4'),
   h5: heading('h5'),
   h6: heading('h6'),
-  pre: props => props.children,
+  pre: (props) => props.children,
   code: Prism,
 }
 

@@ -19,7 +19,7 @@ export const PinboardFeedListItem: FunctionComponent<PinboardFeedListItemProps> 
     urlString = new URL(url).hostname
   }
 
-  const filteredTags = tags.filter(item => {
+  const filteredTags = tags.filter((item) => {
     if (item === 'IFTTT' || item === 'TwitterLike' || item === 'Instapaper') {
       return false
     }

@@ -18,7 +18,7 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
     <Box
       as="details"
       sx={{
-        borderBottom: theme => `1px solid ${theme.colors.text}`,
+        borderBottom: (theme) => `1px solid ${theme.colors.text}`,
       }}
       // open
     >
@@ -81,14 +81,14 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
             },
             '::-webkit-scrollbar-thumb': {
               backgroundColor: 'background',
-              backgroundImage: theme =>
+              backgroundImage: (theme) =>
                 `linear-gradient(${theme.colors.background} 0, ${theme.colors.background} 0.25rem, ${theme.colors.text} 0.25rem, ${theme.colors.text} 0.75rem, ${theme.colors.background} 0.75rem)`,
             },
           }}
         >
           {frontmatter.images && (
             <Flex>
-              {frontmatter.images.map(item => (
+              {frontmatter.images.map((item) => (
                 <Image
                   src={item.path.childImageSharp.resize.src}
                   alt={item.name}

@@ -13,7 +13,7 @@
     "test": "jest",
     "lint": "eslint './src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "yarn lint --fix",
-    "format": "prettier --write 'src/**/*.*' '*.json' '*.{js,jsx,ts,tsx}' '*.md'",
+    "format": "prettier --write 'src/**/*.*' 'content/**/*.*' '*.json' '*.{js,jsx,ts,tsx}' '*.md'",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
