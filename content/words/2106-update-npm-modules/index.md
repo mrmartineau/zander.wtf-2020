@@ -258,8 +258,6 @@ By the way, it only works with Github so if you use any other service, you're ou
 
 ---
 
-## Fin
-
 If you work on an open-source Github repo, [Greenkeeper.io](https://greenkeeper.io/) is a brilliant choice. It is free for public repos and 1 private repo, and very affordable if you have more private repos. We use it on [Kickoff](http://github.com/TryKickoff/kickoff) and it is brilliant.
 
 For all other use cases, I recommend [npm-check](https://libraries.io/npm/npm-check). The interactive tool is so useful, it not only shows you which packages need updating but provides more information about the package too.

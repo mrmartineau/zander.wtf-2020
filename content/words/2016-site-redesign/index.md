@@ -94,8 +94,6 @@ a:not([class]) {
 
 This is a little detail that I love and will start using on other sites that I develop. I changed standard link underlines so that any descenders break the underline itself.
 
-## Fin
-
 This new version is as simple as I dared make it, without it looking too basic, as I still wanted it to be 'designed' in some way. My [WebPageTest score](http://www.webpagetest.org/result/160420_GW_BC8/) was the best I’ve ever seen & my [page speed score](https://developers.google.com/speed/pagespeed/insights/?url=zander.wtf&tab=desktop) is pretty impressive too, with 90/100 on mobile and 96/100 on desktop 🎉
 
 [^1]: Tests at Amazon revealed similar results: every 100 ms increase in load time of Amazon.com decreased sales by 1% (Kohavi and Longbotham 2007)

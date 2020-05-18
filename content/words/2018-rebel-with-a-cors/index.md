@@ -69,7 +69,7 @@ const microCors = require('micro-cors')
 const cors = microCors({ allowMethods: ['GET'] })
 const DOMAIN = 'https://xkcd.com/'
 
-const handler = async function(req, res) {
+const handler = async function (req, res) {
   const params = req.url
   const path = `${DOMAIN}${params}`
   const response = await axios(path)

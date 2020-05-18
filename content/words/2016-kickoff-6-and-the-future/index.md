@@ -55,8 +55,8 @@ We also made a small number of improvements for those using continuous delivery 
 
 ```js
 "scripts": {
-    "predeploy": "npm i -g grunt-cli && npm prune && npm install --no-optional",
-    "deploy": "grunt compile --release"
+  "predeploy": "npm i -g grunt-cli && npm prune && npm install --no-optional",
+  "deploy": "grunt compile --release"
 }
 ```
 
