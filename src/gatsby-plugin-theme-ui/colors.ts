@@ -8,7 +8,7 @@ export const colors = {
   ...baseColors,
   text: baseColors.light,
   background: baseColors.dark,
-  primary: 'hsl(334, 86%, 48%)',
+  primary: 'hsl(336, 66%, 58%)',
   secondary: '#718096',
   accent: '#e2e8f0',
   highlight: '#e2e8f0',

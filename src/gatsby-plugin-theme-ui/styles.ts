@@ -17,14 +17,12 @@ export const styles = {
   a: {
     transition: 'all 200ms ease-in-out',
     '&:link, &:visited': {
-      color: 'primary',
-      textDecoration: 'none',
-      borderBottom: '2px solid',
-      borderBottomColor: 'transparent',
-    },
-    '&:hover': {
       color: 'text',
-      borderBottomColor: 'primary',
+      textDecoration: 'none',
+      borderBottom: theme => `2px solid ${theme.colors.primary}`,
+    },
+    '&:hover,&:focus': {
+      borderBottomColor: 'text',
     },
   },
   p: {
