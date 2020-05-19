@@ -28,5 +28,9 @@ have any results & I will update this post.
 
 ### An example
 
-<pre class="codepen" data-height="500" data-type="result" data-href="uKobH" data-user="mrmartineau" data-safe="true"><code></code><a href="http://codepen.io/mrmartineau/pen/uKobH">Check out this Pen!</a></pre>
-<script async src="http://codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="mrmartineau" data-slug-hash="uKobH" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS3 Multi-column spanning test">
+  <span>See the Pen <a href="https://codepen.io/mrmartineau/pen/uKobH">
+  CSS3 Multi-column spanning test</a> by Zander Martineau (<a href="https://codepen.io/mrmartineau">@mrmartineau</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
