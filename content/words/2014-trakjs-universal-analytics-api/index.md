@@ -69,13 +69,13 @@ trak.event({
 
 #### Arguments object: (these are all optional)
 
-**category**: A string value of the category value to set<br>
-**action**: A string value of the action value to set<br>
-**label**: A string value of the label value to set<br>
-**value**: An integer<br>
-**trigger**: A string value of a valid event name: `click`, `focus`, `mouseover` etc<br>
-**nonInteraction**: An integer<br>
-**eventName**: A string value used only with Google Tag Manager. Define your GTM event name here
+- **category**: A string value of the category value to set
+- **action**: A string value of the action value to set
+- **label**: A string value of the label value to set
+- **value**: An integer
+- **trigger**: A string value of a valid event name: `click`, `focus`, `mouseover` etc
+- **nonInteraction**: An integer
+- **eventName**: A string value used only with Google Tag Manager. Define your GTM event name here
 
 If any property is left `undefined`, the browser's default value will be used instead.
 
