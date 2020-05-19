@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
-import React, { FunctionComponent, Fragment } from 'react'
-import { Heading, Box, Container, Text } from 'theme-ui'
+import React, { FunctionComponent } from 'react'
+import { Heading, Box, Text } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Layout } from '../components/Layout'
 
@@ -59,33 +59,31 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
       }}
       isArticle={true}
     >
-      <article>
-        <Container>
-          <Box as="header" mb={4}>
-            <Heading as="h1" variant="articleTitle">
-              {title}
-            </Heading>
-            <Heading as="h2" variant="articleSubTitle">
-              {subtitle}
-            </Heading>
-            <Text variant="articleMetadata">
-              <time dateTime={dateTimestamp}>{date}</time> · Time to read:{' '}
-              {timeToRead} minutes
+      <Box as="article" sx={{ p: 4, maxWidth: 'contentMaxWidth' }}>
+        <Box as="header" mb={4}>
+          <Heading as="h1" variant="articleTitle">
+            {title}
+          </Heading>
+          <Heading as="h2" variant="articleSubTitle">
+            {subtitle}
+          </Heading>
+          <Text variant="articleMetadata">
+            <time dateTime={dateTimestamp}>{date}</time> · Time to read:{' '}
+            {timeToRead} minutes
+          </Text>
+        </Box>
+
+        <MDXRenderer>{body}</MDXRenderer>
+
+        <footer>
+          {modified && (
+            <Text variant="articleListItemMetadata">
+              Article updated{' '}
+              <time dateTime={modifiedTimestamp}>{modified}</time>
             </Text>
-          </Box>
-
-          <MDXRenderer>{body}</MDXRenderer>
-
-          <footer>
-            {modified && (
-              <Text variant="articleListItemMetadata">
-                Article updated{' '}
-                <time dateTime={modifiedTimestamp}>{modified}</time>
-              </Text>
-            )}
-          </footer>
-        </Container>
-      </article>
+          )}
+        </footer>
+      </Box>
     </Layout>
   )
 }

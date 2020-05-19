@@ -17,7 +17,7 @@ export const ArticleListItem: FunctionComponent<ArticleListItemProps> = ({
 }) => {
   return (
     <StyledGatsbyLink
-      to={`/writing/${slug}`}
+      to={`/blog/${slug}`}
       sx={{ variant: 'links.articleListItem' }}
     >
       <Text variant="articleListItemMetadata">{date}</Text>

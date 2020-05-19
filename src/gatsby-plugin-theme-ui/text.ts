@@ -115,7 +115,7 @@ export const text = {
   },
 
   introTitle: {
-    fontSize: [7, '14vw'],
+    fontSize: '14vw',
     lineHeight: 0.9,
     mb: 4,
     fontFamily: 'title',
@@ -123,7 +123,7 @@ export const text = {
 
   introSuperTitle: {
     fontFamily: 'body',
-    fontSize: [2, 3],
+    fontSize: '2vw',
     fontWeight: 'normal',
     textTransform: 'uppercase',
     mb: 2,
@@ -132,7 +132,7 @@ export const text = {
   introDescription: {
     fontFamily: 'body',
     fontStyle: 'italic',
-    fontSize: [2, 3],
+    fontSize: '2.2vw',
     opacity: '0.8',
   },
 }

@@ -6,13 +6,13 @@ import { External } from '../Icons/External'
 export const Nav: FunctionComponent = () => {
   return (
     <Flex>
-      <StyledGatsbyLink to={`/#words`} sx={{ variant: 'links.nav' }}>
-        Words
+      <StyledGatsbyLink to={`/blog`} sx={{ variant: 'links.nav' }}>
+        Blog
       </StyledGatsbyLink>
-      <StyledGatsbyLink to={`/#projects`} sx={{ variant: 'links.nav' }}>
+      <StyledGatsbyLink to={`/projects`} sx={{ variant: 'links.nav' }}>
         Projects
       </StyledGatsbyLink>
-      <StyledGatsbyLink to={`/#feeds`} sx={{ variant: 'links.nav' }}>
+      <StyledGatsbyLink to={`/feeds`} sx={{ variant: 'links.nav' }}>
         Feeds
       </StyledGatsbyLink>
       <Link
@@ -22,7 +22,7 @@ export const Nav: FunctionComponent = () => {
         target="_black"
         rel="noopener"
       >
-        Notes <External size="0.7rem" sx={{ ml: 1 }} />
+        Code Notes <External size="0.7rem" sx={{ ml: 1 }} />
       </Link>
     </Flex>
   )

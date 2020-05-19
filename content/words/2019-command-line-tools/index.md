@@ -2,7 +2,8 @@
 slug: terminal-commands
 title: Command line tools
 subtitle: A mixture of my favourite CLI tools and things that I usually forget
-date: 2019-11-03
+date: 2019-09-07
+modified: 2020-03-17
 ---
 
 Update: the latest version of this content can be found at https://notes.zander.wtf/command-line-tools

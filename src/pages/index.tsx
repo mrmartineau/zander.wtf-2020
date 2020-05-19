@@ -3,8 +3,6 @@ import React, { FunctionComponent } from 'react'
 import { Box, Text, Heading } from 'theme-ui'
 import { TitleSeparator } from '../components/TitleSeparator'
 import { Layout } from '../components/Layout'
-import { ArticleList } from '../components/ArticleList'
-import { ProjectsList } from '../components/ProjectsList'
 import { Feeds } from '../components/Feeds'
 import { ArrowDown } from '../components/Icons/ArrowDown'
 
@@ -36,44 +34,21 @@ const Home: FunctionComponent<HomeProps> = ({ data }) => {
     <Layout
       seoData={{
         title: 'Hello, my name is Zander. I make websites',
-        description: "I'm a contract front-end developer based in London.",
+        description: 'I am a contract front-end developer based in London.',
       }}
     >
       <section>
-        <Box sx={{ p: 4, my: 9 }}>
+        <Box sx={{ p: 4, mt: 6 }}>
           <Heading as="h1" variant="introTitle">
             <Text variant="introSuperTitle">Hello, my name is Zander</Text>I
             make websites
           </Heading>
-          <Box sx={{ maxWidth: 'contentMaxWidth' }}>
-            <Text variant="introDescription">
-              I'm a contract front-end developer based in London. I’m a little
-              bit obsessed with design systems and have far too many
-              side-projects on the go at one time.
-            </Text>
-          </Box>
+          <Text variant="introDescription" sx={{ maxWidth: 'contentMaxWidth' }}>
+            I am a contract front-end developer based in London. I’m a little
+            bit obsessed with design systems and have far too many side-projects
+            on the go at one time.
+          </Text>
         </Box>
-      </section>
-
-      <ArrowDown sx={{ width: '20vw', pl: 4, ml: '5vw', my: '20vw' }} />
-
-      <section>
-        <TitleSeparator title="Words" />
-        <ArticleList />
-      </section>
-
-      <ArrowDown sx={{ width: '20vw', pl: 4, ml: '5vw', my: '20vw' }} />
-
-      <section>
-        <TitleSeparator title="Projects" />
-        <ProjectsList />
-      </section>
-
-      <ArrowDown sx={{ width: '20vw', pl: 4, ml: '5vw', my: '20vw' }} />
-
-      <section>
-        <TitleSeparator title="Feeds" />
-        <Feeds />
       </section>
     </Layout>
   )
