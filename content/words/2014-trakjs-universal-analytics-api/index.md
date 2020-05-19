@@ -28,8 +28,8 @@ There are two main ways to use trak.js, as `data-trak` attributes in your markup
   data-trak='{"category":"Test category","action":"Test action"}'
   title="1 title"
 >
-  link</a
->
+  link
+</a>
 ```
 
 #### Custom trigger type (new as of v0.4.0)
@@ -42,8 +42,8 @@ There are two main ways to use trak.js, as `data-trak` attributes in your markup
   href="#pagehref"
   data-trak='{"trigger":"focus","category":"Test category","action":"Test action"}'
 >
-  Custom trigger type</a
->
+  Custom trigger type
+</a>
 ```
 
 ### Javascript implementation
@@ -100,29 +100,29 @@ If any property is left `undefined`, the browser's default value will be used in
   href="#"
   data-trak='{"category":"Rating","action":"page.title","label":"Up"}'
 >
-  link</a
->
+  link
+</a>
 
 <!-- link.href wildcard -->
 <a href="#" data-trak='{"category":"Rating","action":"link.href","label":"Up"}'>
-  link</a
->
+  link
+</a>
 
 <!-- link.title wildcard -->
 <a
   href="#"
   data-trak='{"category":"Rating","action":"link.title","label":"Up"}'
 >
-  link</a
->
+  link
+</a>
 
 <!-- referrer wildcard -->
 <a
   href="#"
   data-trak='{"category":"Rating","action":"document.referrer","label":"Up"}'
 >
-  link</a
->
+  link
+</a>
 ```
 
 ## Getting the Library
