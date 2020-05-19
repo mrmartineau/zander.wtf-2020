@@ -1,4 +1,5 @@
 ---
+slug: site-redesign-2016
 title: 'Redesigning my site (2016)'
 subtitle: 'The focus for, and some techniques I used in, my recent redesign'
 date: 2016-04-15

@@ -1,6 +1,7 @@
 ---
+slug: creative-technology-monthly-chatbots
 title: 'Creative Technology Monthly: Chatbots'
-excerpt: 'Issue 01: Bots — November 2016'
+subtitle: 'Issue 01: Bots — November 2016'
 date: 2016-11-24
 original:
   url: 'https://medium.com/tmw-interactive/creative-technology-monthly-26e1c8bc6faa#.anorapxjc'

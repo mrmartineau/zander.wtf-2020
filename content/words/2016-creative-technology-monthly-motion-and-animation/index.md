@@ -1,4 +1,5 @@
 ---
+slug: creative-technology-monthly-motion-and-animation
 title: 'Creative Technology Monthly: Motion and Animation'
 subtitle: 'Issue 02: Motion and Animation - December 2016'
 date: 2016-12-23

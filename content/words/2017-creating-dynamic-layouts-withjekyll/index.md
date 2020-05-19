@@ -1,9 +1,9 @@
 ---
-title: Creating dynamic layouts with Jekyll
 slug: creating-dynamic-layouts-withjekyll
+title: Creating dynamic layouts with Jekyll
 subtitle: How we used YAML front-matter to massively change the layout for different posts on our agency’s new website
-date: 2018-01-23
-modified: 2018-02-17
+date: 2017-02-02
+canonical: https://medium.com/tmw-interactive/creating-dynamic-layouts-with-jekyll-3bbb7fc57d1f
 ---
 
 [Jekyll](http://jekyllrb.com)\-created websites are typically simple and their layouts, predictable. I want to show you how I created a pseudo-dynamic layout for case-studies, on [TMW's new website](http://www.tmwunlimited.com), using some YAML front-matter and a little magic..\*

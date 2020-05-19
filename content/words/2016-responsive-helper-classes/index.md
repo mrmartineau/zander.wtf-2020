@@ -1,7 +1,7 @@
 ---
 slug: responsive-helper-classes
 title: 'Add responsive helper classes to your project'
-excerpt: '#tipsForKickoff'
+subtitle: '#tipsForKickoff'
 date: 2016-01-18
 original:
   url: 'http://trykickoff.com/2016/01/18/responsive-helper-classes.html'
