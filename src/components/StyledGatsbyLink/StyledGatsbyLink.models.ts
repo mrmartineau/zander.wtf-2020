@@ -5,6 +5,7 @@ export interface StyledGatsbyLinkProps {
   href?: string
   to?: string
   sx?: SxStyleProp
+  variant?: string
 
   // INFO: This has to be ignored because Theme UI's TS types are not ready to
   // allow for the `as` prop yet. We should be able to remove this when the

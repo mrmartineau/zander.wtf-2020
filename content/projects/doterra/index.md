@@ -14,4 +14,4 @@ info:
     link: https://wearewqa.com
 ---
 
-I implemented various key features on top of the [Saleor storefront](https://github.com/mirumee/saleor-storefront). The storefront is a GraphQL-powered, PWA, single-page application storefront for [Saleor](https://saleor.io/).
+I implemented various key features and customisations on top of the [Saleor storefront](https://github.com/mirumee/saleor-storefront) open-source project for doTERRA's new marketplace site. The storefront is a GraphQL-powered, PWA, single-page application.

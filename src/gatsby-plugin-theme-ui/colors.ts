@@ -2,17 +2,23 @@ export const baseColors = {
   white: '#f1f1f3',
   light: '#f1f1f3',
   dark: '#15181C',
+  pink: 'hsl(336, 66%, 58%)',
 }
 
 export const colors = {
   ...baseColors,
   text: baseColors.light,
   background: baseColors.dark,
-  primary: 'hsl(336, 66%, 58%)',
+  primary: baseColors.pink,
+  muted: 'hsl(210, 5%, 40%)',
+
+  codeBackground: '#2d2a2e',
+  scrollbar: 'hsl(210, 5%, 40%)',
+  scrollbarBg: 'hsl(285, 5%, 12%)',
+
   secondary: '#718096',
   accent: '#e2e8f0',
   highlight: '#e2e8f0',
-  muted: '#e2e8f0',
 
   code1: 'hsl(345, 100%, 69%)',
   code2: '#fc9867',
@@ -22,24 +28,27 @@ export const colors = {
   code6: '#ab9df2',
   code7: '#999988',
 
-  scrollbar: 'hsl(285, 5%, 12%)',
   success: '#9ae6b4',
   info: '#63b3ed',
   warning: '#faf089',
   danger: '#feb2b2',
   textMuted: '#718096',
   navHover: '#cbd5e0',
-  codeBackground: '#fbf2e9',
 
   modes: {
-    dark: {
+    light: {
       text: baseColors.dark,
       background: baseColors.light,
-      primary: 'hsl(345, 100%, 69%)',
+      primary: baseColors.pink,
+      muted: '#e2e8f0',
+
+      codeBackground: 'hsl(240, 8%, 91%)',
+      scrollbar: '#e2e8f0',
+      scrollbarBg: 'hsl(210, 20%, 85%)',
+
       secondary: '#718096',
       accent: '#e2e8f0',
       highlight: '#e2e8f0',
-      muted: 'hsl(210, 5%, 40%)',
 
       code1: 'hsl(211, 61%, 23%)',
       code2: '#fc9867',
@@ -49,14 +58,12 @@ export const colors = {
       code6: '#6f42c1',
       code7: '#999988',
 
-      scrollbar: 'hsl(210, 20%, 85%)',
       success: '#9ae6b4',
       info: '#63b3ed',
       warning: '#faf089',
       danger: '#feb2b2',
       textMuted: '#718096',
       navHover: 'hsl(285, 5%, 13%)',
-      codeBackground: '#2d2a2e',
     },
   },
 }

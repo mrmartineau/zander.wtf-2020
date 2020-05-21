@@ -3,7 +3,7 @@ slug: rebel-with-a-cors
 title: Rebel with a CORS
 subtitle: How to make your own simple CORS-enabled API from one that has CORS disabled
 date: 2018-02-14
-modified: 2020-05-04
+modified: 2020-05-21
 ---
 
 As a front-end developer, I often consume various 3rd party APIs while developing. These APIs could be for weather, crypto currency prices or the latest XKCD comic.
@@ -69,7 +69,7 @@ const microCors = require('micro-cors')
 const cors = microCors({ allowMethods: ['GET'] })
 const DOMAIN = 'https://xkcd.com/'
 
-const handler = async function (req, res) {
+const handler = async function(req, res) {
   const params = req.url
   const path = `${DOMAIN}${params}`
   const response = await axios(path)
@@ -160,7 +160,7 @@ For an example of an even more simple pass-through API, you can see my CORS enab
 
 ---
 
-My thanks go to [Andrew Williams](https://medium.com/u/bc0058830195), [Ashley Nolan](https://medium.com/u/f2a3cc045295) & [Ciaran Park](https://medium.com/u/a6cf81c6fa33) for their help with the title of this post. Other suggestions from them include:
+My thanks go to [Roo Williams](https://roowilliams.com/), [Ashley Nolan](https://ashleynolan.co.uk/) & [Ciaran Park](http://www.ciaranpark.com/) for their help with the title of this post. Other suggestions from them include:
 
 - No CORS for concern: getting that API
 - Be-CORS you're worth it

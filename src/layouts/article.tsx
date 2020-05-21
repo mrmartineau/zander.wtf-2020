@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
-import { Heading, Box, Text } from 'theme-ui'
+import { Heading, Box, Text, Container } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Layout } from '../components/Layout'
 
@@ -59,20 +59,29 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
       }}
       isArticle={true}
     >
-      <Box as="article" sx={{ p: 4, maxWidth: 'contentMaxWidth' }}>
-        <Box as="header" mb={4}>
-          <Heading as="h1" variant="articleTitle">
-            {title}
-          </Heading>
-          <Heading as="h2" variant="articleSubTitle">
-            {subtitle}
-          </Heading>
-          <Text variant="articleMetadata">
-            <time dateTime={dateTimestamp}>{date}</time> · Time to read:{' '}
-            {timeToRead} minutes
-          </Text>
-        </Box>
-
+      <Box
+        as="header"
+        mb={4}
+        sx={{
+          bg: 'text',
+          color: 'background',
+          p: 6,
+          mb: 4,
+          textAlign: 'center',
+        }}
+      >
+        <Heading variant="articleTitle" as="h1">
+          {title}
+        </Heading>
+        <Heading as="h2" variant="articleSubTitle">
+          {subtitle}
+        </Heading>
+        <Text variant="articleMetadata">
+          <time dateTime={dateTimestamp}>{date}</time> · Reading time:{' '}
+          {timeToRead} minutes
+        </Text>
+      </Box>
+      <Container as="article" sx={{ p: 4, maxWidth: 'contentMaxWidth' }}>
         <MDXRenderer>{body}</MDXRenderer>
 
         <footer>
@@ -83,7 +92,7 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
             </Text>
           )}
         </footer>
-      </Box>
+      </Container>
     </Layout>
   )
 }

@@ -28,7 +28,7 @@ export const links = {
     '&:link,&:visited': {
       borderBottom: 0,
       textDecoration: 'none',
-      color: 'text',
+      color: 'background',
     },
     '&:hover,&:focus': {
       color: 'primary',
@@ -44,6 +44,14 @@ export const links = {
     '&:hover': {
       color: 'background',
       bg: 'text',
+    },
+  },
+
+  inverted: {
+    transition: 'all 200ms ease-in-out ',
+    color: 'background',
+    '&:hover': {
+      color: 'primary',
     },
   },
 }

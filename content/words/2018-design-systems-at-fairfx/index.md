@@ -3,10 +3,11 @@ slug: design-systems-at-fairfx
 title: Design systems at FairFX
 subtitle: How we are improving customer experience through shared code at FairFX
 date: 2018-10-25
-modified: 2020-05-04
+modified: 2020-05-21
+canonical: https://medium.com/fairfx-engineering/design-systems-at-fairfx-cb7fdb193c14
 ---
 
-~~FairFX~~ now renamed to [Equals](https://equals.co) needed to rapidly develop a new system to replace their Perl monolith codebase to a more nimble React/Node/serverless ecosystem. How could we do it in time…? Would we be able to build it in time?
+FairFX (now renamed to [Equals](https://equals.co)) needed to rapidly develop a new system to replace their Perl monolith codebase to a more nimble React/Node/serverless ecosystem. How could we do it in time…? Would we be able to build it in time?
 
 In collaboration with our Design and UX team, we created a component library built with React and a few other technologies. We started small, but even at this early stage we were able to identify how it would inevitably grow into a full design system for the business. Why do we need a design system? There are many new websites and apps being created and they all need to look, feel and behave the same. **They need to be consistent.**
 

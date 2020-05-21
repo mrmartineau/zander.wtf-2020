@@ -28,17 +28,25 @@ export const Masthead: FunctionComponent = () => {
           justifyContent: 'space-between',
           flexWrap: 'wrap',
           flexDirection: ['column', 'row'],
+          bg: 'text',
+          color: 'background',
         }}
       >
         <StyledGatsbyLink
           to="/"
           aria-label="Go to the home page"
-          sx={{ display: 'block', borderBottom: '0 !important', mb: [2, null] }}
+          sx={{
+            display: 'block',
+            borderBottom: '0 !important',
+            my: [2, null],
+          }}
+          variant="inverted"
         >
           <Logo
             sx={{
-              width: ['2rem', '3rem'],
-              height: ['2rem', '3rem'],
+              width: '3rem',
+              height: '3rem',
+              color: 'inherit',
             }}
           />
         </StyledGatsbyLink>

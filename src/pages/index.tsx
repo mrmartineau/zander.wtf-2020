@@ -1,10 +1,7 @@
 import { graphql } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import { Box, Text, Heading } from 'theme-ui'
-import { TitleSeparator } from '../components/TitleSeparator'
 import { Layout } from '../components/Layout'
-import { Feeds } from '../components/Feeds'
-import { ArrowDown } from '../components/Icons/ArrowDown'
 
 interface HomeProps {
   data: {
@@ -44,9 +41,9 @@ const Home: FunctionComponent<HomeProps> = ({ data }) => {
             make websites
           </Heading>
           <Text variant="introDescription" sx={{ maxWidth: 'contentMaxWidth' }}>
-            I am a contract front-end developer based in London. I’m a little
-            bit obsessed with design systems and have far too many side-projects
-            on the go at one time.
+            ..and things for the web developers. I am a contract front-end
+            developer based in London. I’m a little bit obsessed with design
+            systems and have far too many side-projects on the go at one time.
           </Text>
         </Box>
       </section>

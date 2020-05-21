@@ -21,8 +21,8 @@ export const TitleSeparator: FunctionComponent<TitleSeparatorProps> = ({
         sx={{
           position: 'absolute',
           top: '100%',
-          left: [2, 4],
-          marginTop: ['-1rem', '-2rem'],
+          left: 4,
+          marginTop: '-2rem',
           display: 'inline-flex',
           alignItems: 'center',
           textTransform: 'uppercase',

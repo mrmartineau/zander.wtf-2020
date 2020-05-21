@@ -1,6 +1,9 @@
 import { transparentize } from '@theme-ui/color'
 
 export const text = {
+  /**
+   * Reusable variants
+   */
   monoVariant: {
     fontFamily: 'mono',
     fontWeight: 'normal',
@@ -10,14 +13,60 @@ export const text = {
     fontWeight: 'normal',
     fontStyle: 'italic',
   },
-
-  articleTitle: {
-    fontSize: [7, 8],
-    mb: 4,
-    lineHeight: 'none',
+  metadataVariant: {
+    variant: 'text.monoVariant',
+    fontSize: 0,
+    textTransform: 'uppercase',
+    opacity: 0.6,
+  },
+  headingVariant: {
     fontFamily: 'title',
   },
 
+  /**
+   * Specific variants
+   */
+  pageHeading: {
+    fontFamily: 'title',
+    textTransform: 'uppercase',
+    p: 4,
+    m: 0,
+    fontSize: [7, '10vw'],
+    lineHeight: 1,
+    bg: 'text',
+    color: 'background',
+  },
+
+  // Home
+  introTitle: {
+    fontSize: '14vw',
+    lineHeight: 0.9,
+    mb: 4,
+    fontFamily: 'title',
+  },
+  introSuperTitle: {
+    fontFamily: 'body',
+    fontSize: [2, '2vw'],
+    fontWeight: 'normal',
+    textTransform: 'uppercase',
+    mb: 2,
+  },
+  introDescription: {
+    fontFamily: 'body',
+    fontStyle: 'italic',
+    fontSize: [2, '2.2vw'],
+    opacity: '0.8',
+  },
+
+  // Articles
+  articleTitle: {
+    fontSize: [7, '5vw'],
+    fontFamily: 'title',
+    lineHeight: 'none',
+    mb: 4,
+    maxWidth: '16ch',
+    mx: 'auto',
+  },
   articleSubTitle: {
     fontSize: [3, 4],
     variant: 'text.monoVariantItalic',
@@ -25,35 +74,25 @@ export const text = {
     lineHeight: 'heading',
     opacity: '0.8',
   },
-
   articleListItemTitle: {
     variant: 'text.monoVariantItalic',
-    fontSize: [3, 4],
+    fontSize: 4,
     maxWidth: 'contentMaxWidth',
   },
-
   articleListItemSubtitle: {
     variant: 'text.monoVariant',
-    fontSize: [1, 2],
+    fontSize: 2,
     opacity: 0.8,
     maxWidth: 'contentMaxWidth',
   },
-
-  metadata: {
-    variant: 'text.monoVariant',
-    fontSize: 1,
-    textTransform: 'uppercase',
-    opacity: 0.6,
-  },
-
   articleListItemMetadata: {
-    variant: 'text.metadata',
+    variant: 'text.metadataVariant',
   },
-
   articleMetadata: {
-    variant: 'text.metadata',
+    variant: 'text.metadataVariant',
   },
 
+  // Projects
   projectListItemTitle: {
     pl: '2rem',
     fontSize: [5, 8],
@@ -64,7 +103,6 @@ export const text = {
       variant: 'text.projectListItemTitleActive',
     },
   },
-
   projectListItemTitleActive: {
     color: transparentize('text', 0.99),
     textShadow: 'none',
@@ -75,7 +113,6 @@ export const text = {
     WebkitTextStrokeWidth: '1px',
     textStrokeWidth: '1px',
   },
-
   projectListItemTitleYear: {
     variant: 'text.monoVariant',
     fontSize: 0,
@@ -86,7 +123,6 @@ export const text = {
     textAlign: 'center',
     lineHeight: '20px',
   },
-
   projectListItemDescription: {
     fontFamily: 'body',
     fontStyle: 'italic',
@@ -95,44 +131,21 @@ export const text = {
     mb: 4,
   },
 
+  // Feeds
   pinboardListItemTitle: {
     variant: 'text.monoVariantItalic',
     fontSize: 3,
     maxWidth: 'contentMaxWidth',
     mb: 1,
   },
-
   pinboardListItemDescription: {
     fontSize: [1, 2],
     opacity: '0.8',
     maxWidth: 'contentMaxWidth',
   },
-
   pinboardListItemUrl: {
     fontFamily: 'mono',
     fontSize: 1,
     opacity: '0.6',
-  },
-
-  introTitle: {
-    fontSize: '14vw',
-    lineHeight: 0.9,
-    mb: 4,
-    fontFamily: 'title',
-  },
-
-  introSuperTitle: {
-    fontFamily: 'body',
-    fontSize: '2vw',
-    fontWeight: 'normal',
-    textTransform: 'uppercase',
-    mb: 2,
-  },
-
-  introDescription: {
-    fontFamily: 'body',
-    fontStyle: 'italic',
-    fontSize: '2.2vw',
-    opacity: '0.8',
   },
 }

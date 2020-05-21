@@ -59,7 +59,7 @@ export const styles = {
     mb: 2,
   },
   inlineCode: {
-    backgroundColor: 'background',
+    backgroundColor: 'codeBackground',
     p: '0.1em 0.2em',
     fontSize: '1em',
     borderRadius: 'default',
@@ -69,9 +69,8 @@ export const styles = {
     p: 3,
     fontSize: 1,
     color: 'text',
-    bg: 'background',
+    bg: 'codeBackground',
     overflowX: 'auto',
-    borderRadius: 'default',
     '.comment,.prolog,.doctype,.cdata': {
       color: 'code7',
       fontStyle: 'italic',
@@ -115,19 +114,19 @@ export const styles = {
       },
     },
     '&::-webkit-scrollbar-track': {
-      backgroundColor: 'scrollbar',
+      backgroundColor: 'scrollbarBg',
     },
     '&::-webkit-scrollbar-thumb': {
-      backgroundColor: 'muted',
+      backgroundColor: 'scrollbar',
     },
   },
-  pre: {
-    p: 3,
-    color: 'text',
-    bg: 'background',
-    borderRadius: 'default',
-    overflowX: 'auto',
-  },
+  // pre: {
+  //   p: 3,
+  //   color: 'text',
+  //   bg: 'codeBackground',
+  //   borderRadius: 'default',
+  //   overflowX: 'auto',
+  // },
   blockquote: {
     borderLeft: '4px solid',
     borderColor: 'muted',
@@ -167,6 +166,9 @@ export const styles = {
     p: 2,
   },
   ul: {
-    listStyle: 'inside disc',
+    listStylePosition: 'inside',
+  },
+  ol: {
+    listStylePosition: 'inside',
   },
 }

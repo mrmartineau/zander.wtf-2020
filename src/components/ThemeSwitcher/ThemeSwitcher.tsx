@@ -6,12 +6,12 @@ export const ThemeSwitcher: FunctionComponent = () => {
 
   return (
     <IconButton
-      onClick={(e) => {
-        setColorMode(colorMode === 'default' ? 'dark' : 'default')
+      onClick={e => {
+        setColorMode(colorMode === 'default' ? 'light' : 'default')
       }}
       aria-label="Cycle colour modes"
       sx={{
-        color: 'text',
+        color: 'background',
         zIndex: 11,
         p: 0,
         display: 'block',

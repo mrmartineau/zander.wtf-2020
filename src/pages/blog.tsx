@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
-import { TitleSeparator } from '../components/TitleSeparator'
 import { Layout } from '../components/Layout'
 import { ArticleList } from '../components/ArticleList'
+import { Heading } from 'theme-ui'
 
 const Writing: FunctionComponent = () => {
   return (
@@ -12,7 +12,7 @@ const Writing: FunctionComponent = () => {
       }}
     >
       <section>
-        <TitleSeparator title="Blog" />
+        <Heading variant="pageHeading">Blog</Heading>
         <ArticleList />
       </section>
     </Layout>
