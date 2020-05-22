@@ -18,15 +18,20 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
     <Box
       as="details"
       sx={{
-        borderBottom: (theme) => `1px solid ${theme.colors.text}`,
+        borderBottom: theme => `1px solid ${theme.colors.text}`,
+        '&:hover': {
+          bg: 'accent',
+        },
+        '&[open]:hover': {
+          bg: 'background',
+        },
       }}
       // open
     >
       <Box
         as="summary"
         sx={{
-          py: [3, 4],
-          px: [2, 4],
+          p: 'padding',
           overflowX: 'hidden',
           // whiteSpace: ['unset', 'pre'],
           '&::before': {
@@ -47,7 +52,7 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
           '&:hover': {
             cursor: 'pointer',
           },
-          '&:hover h3, &:focus h3': {
+          ':not([open]) &:hover h3': {
             variant: 'text.projectListItemTitleActive',
           },
         }}
@@ -58,13 +63,9 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
         />
       </Box>
 
-      <Separator sx={{ m: 0, ml: 4 }} />
+      <Separator sx={{ m: 0, ml: 'padding' }} />
 
-      <Box
-        sx={{
-          p: 4,
-        }}
-      >
+      <Box sx={{ p: 'padding' }}>
         <Box sx={{ maxWidth: 'contentMaxWidth' }}>
           <Heading variant="projectListItemDescription" as="h4">
             {frontmatter.description}
@@ -75,20 +76,21 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
         <Box
           sx={{
             overflowX: 'auto',
-            '::-webkit-scrollbar': { height: '0.5rem' },
+            '::-webkit-scrollbar': {
+              width: '0.8rem',
+              height: '0.8rem',
+            },
             '::-webkit-scrollbar-track': {
-              backgroundColor: 'background',
+              backgroundColor: 'scrollbarBg',
             },
             '::-webkit-scrollbar-thumb': {
-              backgroundColor: 'background',
-              backgroundImage: (theme) =>
-                `linear-gradient(${theme.colors.background} 0, ${theme.colors.background} 0.25rem, ${theme.colors.text} 0.25rem, ${theme.colors.text} 0.75rem, ${theme.colors.background} 0.75rem)`,
+              backgroundColor: 'scrollbar',
             },
           }}
         >
           {frontmatter.images && (
             <Flex>
-              {frontmatter.images.map((item) => (
+              {frontmatter.images.map(item => (
                 <Image
                   src={item.path.childImageSharp.resize.src}
                   alt={item.name}

@@ -1,8 +1,7 @@
 export const links = {
   articleListItem: {
-    p: 4,
+    p: 'padding',
     display: 'block',
-    transition: 'all 200ms ease-in-out ',
     color: 'text',
     '&:link, &:visited': {
       borderBottom: 0,
@@ -11,7 +10,7 @@ export const links = {
     },
     '&:hover': {
       color: 'background',
-      bg: 'text',
+      bg: 'accent',
     },
   },
 
@@ -22,8 +21,7 @@ export const links = {
     display: 'block',
     fontWeight: 'normal',
     fontFamily: 'mono',
-    fontSize: 1,
-    transition: 'all 200ms ease-in-out ',
+    fontSize: 2,
     cursor: 'pointer',
     '&:link,&:visited': {
       borderBottom: 0,
@@ -37,7 +35,7 @@ export const links = {
 
   pinboardListItemLink: {
     color: 'text',
-    p: 4,
+    p: 'padding',
     display: 'block',
     textDecoration: 'none',
 
@@ -48,7 +46,6 @@ export const links = {
   },
 
   inverted: {
-    transition: 'all 200ms ease-in-out ',
     color: 'background',
     '&:hover': {
       color: 'primary',

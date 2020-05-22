@@ -66,7 +66,7 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
           bg: 'text',
           color: 'background',
           p: 6,
-          mb: 4,
+          mb: 'padding',
           textAlign: 'center',
         }}
       >
@@ -81,7 +81,10 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
           {timeToRead} minutes
         </Text>
       </Box>
-      <Container as="article" sx={{ p: 4, maxWidth: 'contentMaxWidth' }}>
+      <Container
+        as="article"
+        sx={{ p: 'padding', maxWidth: 'contentMaxWidth' }}
+      >
         <MDXRenderer>{body}</MDXRenderer>
 
         <footer>

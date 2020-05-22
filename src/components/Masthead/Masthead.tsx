@@ -1,8 +1,7 @@
 import React, { FunctionComponent } from 'react'
-import { Box, Flex } from 'theme-ui'
+import { Box } from 'theme-ui'
 import { Logo } from '../Logo'
 import { Nav } from '../Nav'
-import { ThemeSwitcher } from '../ThemeSwitcher'
 import { StyledGatsbyLink } from '../StyledGatsbyLink'
 
 export const Masthead: FunctionComponent = () => {
@@ -16,7 +15,7 @@ export const Masthead: FunctionComponent = () => {
     >
       <Box
         sx={{
-          p: 4,
+          p: 'padding',
           // position: 'fixed',
           // top: 0,
           // right: 0,
@@ -27,7 +26,7 @@ export const Masthead: FunctionComponent = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           flexWrap: 'wrap',
-          flexDirection: ['column', 'row'],
+          flexDirection: 'row', ///['column', 'row'],
           bg: 'text',
           color: 'background',
         }}
@@ -50,10 +49,8 @@ export const Masthead: FunctionComponent = () => {
             }}
           />
         </StyledGatsbyLink>
-        <Flex sx={{ alignItems: 'center' }}>
-          <Nav />
-          <ThemeSwitcher />
-        </Flex>
+
+        <Nav />
       </Box>
     </Box>
   )

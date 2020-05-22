@@ -29,7 +29,7 @@ export const text = {
   pageHeading: {
     fontFamily: 'title',
     textTransform: 'uppercase',
-    p: 4,
+    p: 'padding',
     m: 0,
     fontSize: [7, '10vw'],
     lineHeight: 1,
@@ -41,8 +41,17 @@ export const text = {
   introTitle: {
     fontSize: '14vw',
     lineHeight: 0.9,
-    mb: 4,
+    mb: 'padding',
     fontFamily: 'title',
+    // span: {
+    //   transition: 'all 200ms ease-in-out ',
+    // },
+    'span:hover': {
+      color: 'accent',
+      // backgroundImage: `linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%)`,
+      // WebkitBackgroundClip: 'text',
+      // WebkitTextFillColor: 'rgba(255, 255, 255, 0.46)',
+    },
   },
   introSuperTitle: {
     fontFamily: 'body',
@@ -50,6 +59,10 @@ export const text = {
     fontWeight: 'normal',
     textTransform: 'uppercase',
     mb: 2,
+    fontStyle: 'normal',
+    // color: theme => `${theme.colors.text} !important`,
+    // background: 'text',
+    WebkitBackgroundClip: 'border-box',
   },
   introDescription: {
     fontFamily: 'body',
@@ -71,6 +84,8 @@ export const text = {
     fontSize: [3, 4],
     variant: 'text.monoVariantItalic',
     mb: 3,
+    maxWidth: '50ch',
+    mx: 'auto',
     lineHeight: 'heading',
     opacity: '0.8',
   },
@@ -99,9 +114,9 @@ export const text = {
     fontFamily: 'title',
     textTransform: 'uppercase',
     lineHeight: 'none',
-    '[open] &, &:hover &, &:focus &': {
-      variant: 'text.projectListItemTitleActive',
-    },
+    // '[open] &': {
+    //   variant: 'text.projectListItemTitleActive',
+    // },
   },
   projectListItemTitleActive: {
     color: transparentize('text', 0.99),

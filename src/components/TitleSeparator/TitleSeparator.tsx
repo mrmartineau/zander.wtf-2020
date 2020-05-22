@@ -12,7 +12,7 @@ export const TitleSeparator: FunctionComponent<TitleSeparatorProps> = ({
     <Box
       bg="text"
       color="background"
-      p={4}
+      p={'padding'}
       pt="12rem"
       sx={{ position: 'relative', textTransform: 'uppercase' }}
       id={encodeURI(title.toLowerCase())}
@@ -21,7 +21,7 @@ export const TitleSeparator: FunctionComponent<TitleSeparatorProps> = ({
         sx={{
           position: 'absolute',
           top: '100%',
-          left: 4,
+          left: 'padding',
           marginTop: '-2rem',
           display: 'inline-flex',
           alignItems: 'center',

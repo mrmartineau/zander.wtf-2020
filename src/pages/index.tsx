@@ -35,10 +35,20 @@ const Home: FunctionComponent<HomeProps> = ({ data }) => {
       }}
     >
       <section>
-        <Box sx={{ p: 4, mt: 6 }}>
+        <Box sx={{ p: 'padding', mt: 6 }}>
           <Heading as="h1" variant="introTitle">
-            <Text variant="introSuperTitle">Hello, my name is Zander</Text>I
-            make websites
+            <Text variant="introSuperTitle">Hello, my name is Zander</Text>
+            <span>I</span> <span>m</span>
+            <span>a</span>
+            <span>k</span>
+            <span>e</span> <span>w</span>
+            <span>e</span>
+            <span>b</span>
+            <span>s</span>
+            <span>i</span>
+            <span>t</span>
+            <span>e</span>
+            <span>s</span>
           </Heading>
           <Text variant="introDescription" sx={{ maxWidth: 'contentMaxWidth' }}>
             ..and things for the web developers. I am a contract front-end

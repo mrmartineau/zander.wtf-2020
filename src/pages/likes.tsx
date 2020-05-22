@@ -13,7 +13,7 @@ const Writing: FunctionComponent = () => {
     >
       <section>
         <Heading variant="pageHeading" as="h1">
-          Feeds
+          Likes
         </Heading>
         <Feeds />
       </section>

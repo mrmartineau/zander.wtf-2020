@@ -11,13 +11,13 @@ export const colors = {
   background: baseColors.dark,
   primary: baseColors.pink,
   muted: 'hsl(210, 5%, 40%)',
+  accent: baseColors.pink,
 
   codeBackground: '#2d2a2e',
   scrollbar: 'hsl(210, 5%, 40%)',
   scrollbarBg: 'hsl(285, 5%, 12%)',
 
   secondary: '#718096',
-  accent: '#e2e8f0',
   highlight: '#e2e8f0',
 
   code1: 'hsl(345, 100%, 69%)',
@@ -40,6 +40,7 @@ export const colors = {
       text: baseColors.dark,
       background: baseColors.light,
       primary: baseColors.pink,
+      accent: baseColors.pink,
       muted: '#e2e8f0',
 
       codeBackground: 'hsl(240, 8%, 91%)',
@@ -47,7 +48,6 @@ export const colors = {
       scrollbarBg: 'hsl(210, 20%, 85%)',
 
       secondary: '#718096',
-      accent: '#e2e8f0',
       highlight: '#e2e8f0',
 
       code1: 'hsl(211, 61%, 23%)',

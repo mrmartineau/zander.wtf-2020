@@ -15,7 +15,6 @@ export const styles = {
     fontSize: 2,
   },
   a: {
-    transition: 'all 200ms ease-in-out',
     '&:link, &:visited': {
       color: 'text',
       textDecoration: 'none',
@@ -106,12 +105,8 @@ export const styles = {
       color: 'code4',
     },
     '&::-webkit-scrollbar': {
-      width: '0.5rem',
-      height: '0.5rem',
-      '&:hover': {
-        width: '1rem',
-        height: '1rem',
-      },
+      width: '0.8rem',
+      height: '0.8rem',
     },
     '&::-webkit-scrollbar-track': {
       backgroundColor: 'scrollbarBg',

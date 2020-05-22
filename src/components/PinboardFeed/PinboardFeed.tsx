@@ -66,7 +66,7 @@ export const PinboardFeed: FunctionComponent<PinboardFeedProps> = ({
         })}
       </Box>
 
-      <Box sx={{ p: 4 }}>
+      <Box sx={{ p: 'padding' }}>
         <Separator sx={{ mt: 0 }} />
         <Link href={`${PINBOARD_PATH}u:MrMartineau/t:${tag}`}>
           See all{' '}

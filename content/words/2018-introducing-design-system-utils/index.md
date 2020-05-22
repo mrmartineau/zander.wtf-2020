@@ -8,13 +8,15 @@ modified: 2018-10-04
 
 **NOTE:** The content in this post references **version 1.x.x** of [design-system-utils](https://github.com/mrmartineau/design-system-utils). For up-to-date documentation, always use the docs in [the repo](https://github.com/mrmartineau/design-system-utils).
 
+---
+
 Maintaining styling consistency in a modern web app (or React Native) is tough. There isn’t a common way to manage shared values and settings, commonly called "design tokens".
 
 ### TLDR;
 
 **Design System Utils** is a micro framework that standardises your design-system tokens & provides helpful utility functions to access it’s information.
 
-## Let me run through the basics
+## The basics
 
 You first need to create your design system file, this contains all your global variables that your app will use, think font-sizes, color palette, spacing etc. I usually create a top-level directory named theme or design system, and add an index.js inside, like so:
 
@@ -183,24 +185,24 @@ export default new DesignSystem(myDesignSystem, {
 })
 ```
 
-## API methods
+## API getter methods
 
-### `tokens.get()` - Get any value from the design tokens
+### Get any value from the design tokens
 
-The`tokens.get()` function can be used to get any value from the design-system. Use object dot notation to find the value you need from your design system object.
+The `tokens.get()` function can be used as a general purpose method to get any value from the design-system. It uses object dot notation to find the value you need from your design system object.
 
 ```js
 // with the system setup, as above
 tokens.get('lineHeight.headings') // 1.1
 ```
 
-There are a few more helper methods to make finding certain values more simple.
+You could get by just using this method, but I created a few other shortcut/helper methods to make getting values a lot more easy. Read on..
 
-### `tokens.fontSize()` or `tokens.fs()` - Get font-size values
+### Get font-size values
 
 The `tokens.fontSize()` method is a short-hand for the `tokens.get()` method. It can be used to get a value from the `type.sizes` object.
 
-Thetype.sizesobject’s values can be formatted in a few ways:
+The `type.sizes` object’s values can be formatted in a few ways:
 
 - as a string with any unit of measurement, e.g.: '13px' `px`, `rem` or `em`
 - as a template string using another function to calculate font-sizes, for example a modular-scale, e.g. `${ms(0, modularscale)}px`. **Note: this uses an external package, [modularscale-js](https://github.com/modularscale/modularscale-js)**
@@ -261,7 +263,7 @@ colors: {
 }
 ```
 
-#### tokens.color()- Get color palette values
+#### Get color palette values
 
 The `tokens.color()` function gets values from the `colorPalette` object. It assumes every color has a `base` property and other properties for different shades of the same color. This is a short-hand for the `tokens.get()` function.
 
@@ -271,7 +273,7 @@ tokens.color('bright') // #F9FAFB - the `base` key is the default, so it is not 
 tokens.color('bright', 'dark')
 ```
 
-#### tokens.brand()- Get brand palette values
+#### Get brand palette values
 
 The `tokens.brand()` function gets values from the `colors.brand` object. This is a short-hand for the `tokens.get()` function.
 
@@ -282,23 +284,23 @@ tokens.brand('pink')
 tokens.brand('primary.blue') // it is possible to nest this object as much as you like
 ```
 
-### tokens.bp()- Get responsive breakpoint values
+### Get responsive breakpoint values
 
-The`tokens.bp()` method is a short-hand for the`tokens.get()` method. It can be used to get a breakpoint from the `breakpoints` object.
+The `tokens.bp()` method is a short-hand for the `tokens.get()` method. It can be used to get a breakpoint from the `breakpoints` object.
 
 ```js
 tokens.bp('m')
 ```
 
-### tokens.z()- Getz-indexvalues
+### Get z-index values
 
-The`tokens.z()` method is a short-hand for the`tokens.get()` method. It can be used to get a breakpoint from the `zIndex` object.
+The `tokens.z()` method is a short-hand for the `tokens.get()` method. It can be used to get a breakpoint from the `zIndex` object.
 
 ```js
 tokens.z('low')
 ```
 
-### `tokens.spacing()` or `tokens.space()` - Get spacing values
+### Get spacing values
 
 The `tokens.spacing()` method returns a value from your `spacing.scale` definition. **The spacing data could either be an array, or an object.**
 
@@ -329,58 +331,13 @@ tokens.spacing('m') // '100rem'
 
 ### Calculations
 
-The framework currently provides a few calculation functions,multiply,toPxandpxTo:
+The framework currently provides a few calculation utility functions, `multiply`,`toPx` and `pxTo`. These are there when you need to calculate or convert one value to another.
 
-#### tokens.multiply()
-
-```js
-tokens.multiply(10, 2) // 20
-
-// you can pass in another value from the system
-tokens.multiply(tokens.get('spacing.baseline'), 2)
-
-// or just use the key from the system
-// the initial value will always be run through `parseFloat()`
-tokens.multiply('spacing.baseline', 2)
-```
-
-#### pxTo()
-
-Converts `px` to `rem` or `em`
-
-```js
-import { pxTo } from 'design-system-utils'
-// pxTo(fontSize, baseFontSize, unit - 'rem'/'em')
-pxTo(12, 20, 'rem') // 0.6rem
-pxTo(12, 20, 'em') // 0.6em
-```
-
-#### toPx()
-
-Converts `rem` or `em` value to `px`
-
-```js
-import { toPx } from 'design-system-utils'
-// toPx(fontSize, baseFontSize)
-toPx('1.875rem', 16) // 30px
-toPx('1.875em', 16) // 30px
-```
-
-#### parseUnit()
-
-Parses a number and unit string, and returns the unit used
-
-```js
-import { parseUnit } from 'design-system-utils'
-parseUnit('1.875rem') // 'rem'
-parseUnit('18px') // 'px'
-```
-
-## Demo &examples
+## Demo & examples
 
 I created a demo on [codesandbox.io](https://codesandbox.io/s/6wrp94x7kk), it includes examples of using the design-system utils with [emotion](https://emotion.sh/), [styled-components](https://www.styled-components.com/) and [glamorous](https://glamorous.rocks/). There is also a basic example [here](https://github.com/mrmartineau/design-system-utils/blob/master/example).
 
-## How do you getit?
+## How do you get it?
 
 You can install it via npm using:
 

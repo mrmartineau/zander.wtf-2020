@@ -1,5 +1,7 @@
-export const space = [
-  0,
+export const space: string[] & {
+  padding?: string
+} = [
+  '0',
   '0.25rem',
   '0.5rem',
   '1rem',
@@ -13,3 +15,5 @@ export const space = [
   '16rem',
   '32rem',
 ]
+
+space.padding = space[4]

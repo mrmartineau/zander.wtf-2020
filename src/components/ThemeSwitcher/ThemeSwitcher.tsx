@@ -6,7 +6,7 @@ export const ThemeSwitcher: FunctionComponent = () => {
 
   return (
     <IconButton
-      onClick={e => {
+      onClick={() => {
         setColorMode(colorMode === 'default' ? 'light' : 'default')
       }}
       aria-label="Cycle colour modes"
@@ -15,8 +15,8 @@ export const ThemeSwitcher: FunctionComponent = () => {
         zIndex: 11,
         p: 0,
         display: 'block',
-        mx: 'auto',
         ml: 3,
+        mr: [2, 3],
         transition: 'all 200ms ease-in-out ',
         cursor: 'pointer',
         '&:hover': {
