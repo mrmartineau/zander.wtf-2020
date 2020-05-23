@@ -81,7 +81,7 @@ module.exports = cors(handler)
 
 That's 14 lines of code!
 
-The example above passes any slug information into the API (e.g. 1000/0.json), so calling https://xkcd.now.sh/1000/0.json (my version of the API), would map to https://xkcd.com/1000/0.json. This could be the end of our journey, but I’d like to improve the API UX a bit by changing the endpoints:
+The example above passes any slug information into the API (e.g. `1000/0.json`), so calling https://xkcd.now.sh/1000/0.json (my version of the API), would map to https://xkcd.com/1000/0.json. This could be the end of our journey, but I’d like to improve the API UX a bit by changing the endpoints:
 
 - **xkcd.now.sh** should return the latest comic
 - **xkcd.now.sh/1000** should return comic ID 1000

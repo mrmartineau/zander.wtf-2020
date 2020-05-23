@@ -19,7 +19,7 @@ Consistency is key for customer experience; without it, customers will not be ab
 
 [By manucosen at Unsplash.com](https://unsplash.com/photos/n--CMLApjfI)
 
-At the beginning, 🗻*Fuji* started small, we created all the usual suspects: buttons, input fields and textual elements; but is has grown to include so much more. [Design tokens](https://uxdesign.cc/design-tokens-for-dummies-8acebf010d71)were also included from the get-go and we make use of [design system utils](https://github.com/mrmartineau/design-system-utils/), an open source library I created to help reference values from our tokens from anywhere in our apps, specifically in our components.
+At the beginning, 🗻*Fuji* started small, we created all the usual suspects: buttons, input fields and textual elements; but is has grown to include so much more. [Design tokens](https://uxdesign.cc/design-tokens-for-dummies-8acebf010d71) were also included from the get-go and we make use of [design system utils](https://github.com/mrmartineau/design-system-utils/), an open source library I created to help reference values from our tokens from anywhere in our apps, specifically in our components.
 
 Why is it called 🗻 Fuji? It’s a tenuous link to our core business: providing foreign currency for people on their holidays. We asked our employees what their favourite holiday destination was, and Mount Fuji was the response with the most votes.
 
