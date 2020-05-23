@@ -38,22 +38,14 @@ const Home: FunctionComponent<HomeProps> = ({ data }) => {
         <Box sx={{ p: 'padding', mt: 6 }}>
           <Heading as="h1" variant="introTitle">
             <Text variant="introSuperTitle">Hello, my name is Zander</Text>
-            <span>I</span> <span>m</span>
-            <span>a</span>
-            <span>k</span>
-            <span>e</span> <span>w</span>
-            <span>e</span>
-            <span>b</span>
-            <span>s</span>
-            <span>i</span>
-            <span>t</span>
-            <span>e</span>
-            <span>s</span>
+            {'I make websites'.split('').map(item => (
+              <span>{item}</span>
+            ))}
           </Heading>
           <Text variant="introDescription" sx={{ maxWidth: 'contentMaxWidth' }}>
-            ..and things for the web developers. I am a contract front-end
-            developer based in London. I’m a little bit obsessed with design
-            systems and have far too many side-projects on the go at one time.
+            ..and other tools for the web developers. I’m a little bit obsessed
+            with design systems and have far too many side-projects on the go at
+            one time.
           </Text>
         </Box>
       </section>

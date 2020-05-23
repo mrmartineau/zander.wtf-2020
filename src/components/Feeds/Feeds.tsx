@@ -17,6 +17,7 @@ export const Feeds: FunctionComponent = () => {
           bg: 'background',
           borderRadius: 0,
           border: 0,
+          m: 0,
           p: [2, 4],
           textTransform: 'uppercase',
           '&:hover': {

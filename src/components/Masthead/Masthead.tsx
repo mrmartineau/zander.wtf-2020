@@ -7,51 +7,40 @@ import { StyledGatsbyLink } from '../StyledGatsbyLink'
 export const Masthead: FunctionComponent = () => {
   return (
     <Box
-      sx={
-        {
-          /* height: '6rem' */
-        }
-      }
+      sx={{
+        p: 'padding',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexWrap: 'wrap',
+        flexDirection: 'row', ///['column', 'row'],
+        bg: 'text',
+        color: 'background',
+      }}
+      as="header"
+      role="banner"
     >
-      <Box
+      <StyledGatsbyLink
+        to="/"
+        aria-label="Go to the home page"
         sx={{
-          p: 'padding',
-          // position: 'fixed',
-          // top: 0,
-          // right: 0,
-          // left: 0,
-          // zIndex: 'high',
-          // mixBlendMode: 'exclusion',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          flexDirection: 'row', ///['column', 'row'],
-          bg: 'text',
-          color: 'background',
+          display: 'block',
+          borderBottom: '0 !important',
+          my: [2, null],
         }}
+        variant="inverted"
       >
-        <StyledGatsbyLink
-          to="/"
-          aria-label="Go to the home page"
+        <Logo
           sx={{
-            display: 'block',
-            borderBottom: '0 !important',
-            my: [2, null],
+            width: '3rem',
+            height: '3rem',
+            color: 'inherit',
           }}
-          variant="inverted"
-        >
-          <Logo
-            sx={{
-              width: '3rem',
-              height: '3rem',
-              color: 'inherit',
-            }}
-          />
-        </StyledGatsbyLink>
+          alt="Zander's logo - a letter Z"
+        />
+      </StyledGatsbyLink>
 
-        <Nav />
-      </Box>
+      <Nav />
     </Box>
   )
 }

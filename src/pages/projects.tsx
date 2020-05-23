@@ -12,7 +12,9 @@ const Writing: FunctionComponent = () => {
       }}
     >
       <section>
-        <Heading variant="pageHeading">Projects</Heading>
+        <Heading variant="pageHeading" as="h1">
+          Projects
+        </Heading>
         <ProjectsList />
       </section>
     </Layout>

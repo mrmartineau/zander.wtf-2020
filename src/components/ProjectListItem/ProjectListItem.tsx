@@ -20,7 +20,7 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
       sx={{
         borderBottom: theme => `1px solid ${theme.colors.text}`,
         '&:hover': {
-          bg: 'accent',
+          bg: 'primary',
         },
         '&[open]:hover': {
           bg: 'background',
@@ -34,21 +34,18 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
           p: 'padding',
           overflowX: 'hidden',
           // whiteSpace: ['unset', 'pre'],
-          '&::before': {
-            content: '""',
-          },
           '&::-webkit-details-marker': {
             display: 'none',
           },
-          // '&::-moz-details-marker': {
-          //   display: 'none',
-          // },
-          // '&::details-marker': {
-          //   display: 'none',
-          // },
-          // '&::marker': {
-          //   display: 'none',
-          // },
+          '&::-moz-details-marker': {
+            display: 'none',
+          },
+          '&::details-marker': {
+            display: 'none',
+          },
+          '&::marker': {
+            display: 'none',
+          },
           '&:hover': {
             cursor: 'pointer',
           },
@@ -67,9 +64,11 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
 
       <Box sx={{ p: 'padding' }}>
         <Box sx={{ maxWidth: 'contentMaxWidth' }}>
-          <Heading variant="projectListItemDescription" as="h4">
-            {frontmatter.description}
-          </Heading>
+          {frontmatter.description && (
+            <Heading variant="projectListItemDescription" as="h4">
+              {frontmatter.description}
+            </Heading>
+          )}
           <MDXRenderer>{body}</MDXRenderer>
         </Box>
 
@@ -89,7 +88,7 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
           }}
         >
           {frontmatter.images && (
-            <Flex>
+            <Flex tabIndex={0}>
               {frontmatter.images.map(item => (
                 <Image
                   src={item.path.childImageSharp.resize.src}

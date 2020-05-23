@@ -47,7 +47,7 @@ export const text = {
     //   transition: 'all 200ms ease-in-out ',
     // },
     'span:hover': {
-      color: 'accent',
+      color: 'primary',
       // backgroundImage: `linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%)`,
       // WebkitBackgroundClip: 'text',
       // WebkitTextFillColor: 'rgba(255, 255, 255, 0.46)',

@@ -6,7 +6,7 @@ const remarkTruncateLinks = require('remark-truncate-links').remarkTruncateLinks
 module.exports = {
   siteMetadata: {
     title: 'Hello, my name is Zander. I make websites',
-    description: `My personal site`,
+    description: `Zander Martineau's personal site`,
     siteUrl: `http://zander.wtf/`,
     author: 'Zander Martineau',
   },
@@ -119,6 +119,20 @@ module.exports = {
             // link: "https://feeds.feedburner.com/gatsby/blog",
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Zander Martineau`,
+        short_name: `zander.wtf`,
+        description: `Zander Martineau's personal site`,
+        start_url: `/`,
+        background_color: `#15181C`,
+        theme_color: `#15181C`,
+        display: `standalone`,
+        icon: `static/logo.png`,
+        lang: 'en',
       },
     },
   ],

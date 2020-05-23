@@ -12,6 +12,7 @@ export const Nav: FunctionComponent = () => {
         flexDirection: ['column', 'row'],
         justifyContent: 'flex-end',
       }}
+      role="navigation"
     >
       <Flex>
         <StyledGatsbyLink to={`/blog`} sx={{ variant: 'links.nav' }}>
@@ -36,7 +37,8 @@ export const Nav: FunctionComponent = () => {
           target="_black"
           rel="noopener"
         >
-          Code Notes <External size="0.7rem" sx={{ ml: 1 }} />
+          Code Notes{' '}
+          <External size="0.7rem" sx={{ ml: 1 }} alt="External link icon" />
         </Link>
 
         <ThemeSwitcher />

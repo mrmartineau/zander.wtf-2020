@@ -10,7 +10,7 @@ export const links = {
     },
     '&:hover': {
       color: 'background',
-      bg: 'accent',
+      bg: 'primary',
     },
   },
 

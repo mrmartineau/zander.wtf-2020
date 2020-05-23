@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import { MetaTagsProps } from './MetaTags.models'
 import { SchemaOrg } from './SchemaOrg'
+import { useThemeUI } from 'theme-ui'
 
 export const MetaTags: FunctionComponent<MetaTagsProps> = ({
   seoData,
@@ -10,6 +11,7 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
   extraMetatags = [],
   isArticle = false,
 }): ReactElement => {
+  const { theme } = useThemeUI()
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -109,6 +111,7 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
           type="application/atom+xml"
           title="RSS Feed"
         />
+        <meta name="theme-color" content={theme?.colors?.primary} />
       </Helmet>
       <SchemaOrg
         isArticle={isArticle}
