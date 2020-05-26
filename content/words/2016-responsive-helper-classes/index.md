@@ -3,10 +3,6 @@ slug: responsive-helper-classes
 title: 'Add responsive helper classes to your project'
 subtitle: '#tipsForKickoff'
 date: 2016-01-18
-original:
-  url: 'http://trykickoff.com/2016/01/18/responsive-helper-classes.html'
-  text: 'trykickoff.com'
-image: 'outoffocus_bus_at__piccadillycircus___london._Taken_with_my__SonyA6000__london.jpg'
 ---
 
 Kickoff doesn't include responsive helper classes by default, but I created some for a recent project. Assuming your Sass breakpoint variables (in [\_variables.scss](https://github.com/TryKickoff/kickoff/blob/master/assets/src/scss/_variables.scss#L56-L64)) look something like this:

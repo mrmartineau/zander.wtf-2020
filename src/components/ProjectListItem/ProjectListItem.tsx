@@ -18,7 +18,7 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
     <Box
       as="details"
       sx={{
-        borderBottom: theme => `1px solid ${theme.colors.text}`,
+        borderBottom: theme => `0.4rem solid ${theme.colors.text}`,
         '&:hover': {
           bg: 'primary',
         },

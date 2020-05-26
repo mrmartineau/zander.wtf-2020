@@ -3,14 +3,6 @@ slug: the-road-to-kickoff-v4
 title: 'The road to Kickoff version 4'
 subtitle: What's in store for the next release of Kickoff
 date: 2014-08-27
-original:
-  url: 'http://tech.tmw.co.uk/2014/08/the-road-to-kickoff-version-4/'
-  text: 'tech.tmw.co.uk'
-image: 3341937639_f3d8379ce0_n.jpg
-
-github:
-  user: tmwagency
-  repo: kickoff
 ---
 
 **UPDATE:** The content in this post is out-of-date, Kickoff v4 has now been released. Please go to the [Kickoff site](http://trykickoff.com) to see all the new updates.

@@ -1,5 +1,5 @@
 ---
-slug: creating-dynamic-layouts-withjekyll
+slug: creating-dynamic-layouts-with-jekyll
 title: Creating dynamic layouts with Jekyll
 subtitle: How we used YAML front-matter to massively change the layout for different posts on our agency’s new website
 date: 2017-02-02

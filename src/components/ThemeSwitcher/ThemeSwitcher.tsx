@@ -4,7 +4,7 @@ import { Palette } from '../Icons/Palette'
 
 const modes = [
   'default',
-  'light',
+  'inverted',
   'dark',
   // 'sunshine',
   'sunset',

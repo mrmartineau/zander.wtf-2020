@@ -55,7 +55,7 @@ export const colors = {
       mastheadText: baseColors.light,
     },
 
-    light: {
+    inverted: {
       text: baseColors.dark,
       articleListItemHoverText: baseColors.light,
       background: baseColors.light,

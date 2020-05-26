@@ -2,6 +2,7 @@ import React, { Fragment, FunctionComponent } from 'react'
 import { Global } from '@emotion/core'
 import { reset, fontFace, responsiveFontSizing, global } from '../../styles'
 import { Masthead } from '../Masthead'
+import { Footer } from '../Footer'
 import { MetaTags } from '../MetaTags'
 import { SeoInterface } from '../MetaTags/MetaTags.models'
 
@@ -21,6 +22,7 @@ export const Layout: FunctionComponent<LayoutProps> = ({
       <MetaTags seoData={seoData} isArticle={isArticle} />
       <Masthead />
       <main>{children}</main>
+      <Footer />
     </Fragment>
   )
 }

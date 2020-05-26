@@ -1,9 +1,6 @@
 ---
 slug: the-choreographic-grid-a-css-grid-for-content-interdigitation
 title: 'The Choreographic Grid'
-link:
-  url: 'http://mrmartineau.github.io/Choreographic-Grid/test.html'
-  text: 'mrmartineau.github.io/Choreographic-Grid/test.html'
 subtitle: 'A CSS grid framework for content interdigitation'
 image: 10676261784_fc2159cbfc.jpg
 github:

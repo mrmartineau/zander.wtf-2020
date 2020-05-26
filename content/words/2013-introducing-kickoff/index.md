@@ -1,14 +1,7 @@
 ---
 slug: introducing-kickoff
 title: 'Introducing Kickoff'
-original:
-  url: 'http://tech.tmw.co.uk/2013/12/introducing-kickoff'
-  text: 'tech.tmw.co.uk/2013/12/introducing-kickoff'
 subtitle: 'An overview of Kickoff for the TMW Labs blog'
-image: 14424983722_085ce6256c.jpg
-github:
-  user: tmwagency
-  repo: kickoff
 date: 2013-12-10
 ---
 

@@ -28,24 +28,24 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
     `
   )
 
-  const title: string = seoData?.title ?? site.siteMetadata.title
-  const description: string =
-    seoData?.description ?? site.siteMetadata.description
+  const md = site.siteMetadata
+
+  const title: string = seoData?.title ?? md.title
+  const description: string = seoData?.description ?? md.description
   const ogTitle: string = seoData?.opengraphTitle ?? title
   const ogDescription: string = seoData?.opengraphDescription ?? description
-  const ogImage: string =
-    seoData?.opengraphImage ?? site.siteMetadata.opengraphImage
+  const ogImage: string = seoData?.opengraphImage ?? md.opengraphImage
   const twitterTitle: string = ogTitle
   const twitterDescription: string = ogDescription
   const twitterImage: string = ogImage
 
-  let url = site.siteMetadata.siteUrl
+  let url = md.siteUrl
   const slug = seoData?.slug ?? ''
 
   if (isArticle) {
-    url = `${site.siteMetadata.siteUrl}/writing/${slug}`
+    url = `${md.siteUrl}/writing/${slug}`
   } else if (slug) {
-    url = `${site.siteMetadata.siteUrl}/${slug}`
+    url = `${md.siteUrl}/${slug}`
   }
 
   return (
@@ -55,7 +55,7 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
           lang,
         }}
         title={title}
-        defaultTitle={site.siteMetadata.title}
+        defaultTitle={md.title}
         titleTemplate="%s — zander.wtf"
         meta={[
           {
@@ -84,7 +84,7 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
           },
           {
             name: `twitter:creator`,
-            content: site.siteMetadata.author,
+            content: md.author,
           },
           {
             name: `twitter:title`,
@@ -112,6 +112,9 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
           title="RSS Feed"
         />
         <meta name="theme-color" content={theme?.colors?.primary} />
+        {seoData?.canonical && (
+          <link rel="canonical" href={seoData.canonical}></link>
+        )}
       </Helmet>
       <SchemaOrg
         isArticle={isArticle}
@@ -121,9 +124,9 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
         description={description}
         datePublished={seoData?.datePublished}
         dateModified={seoData?.dateModified}
-        siteUrl={site.siteMetadata.siteUrl}
-        author={site.siteMetadata.author}
-        defaultTitle={site.siteMetadata.title}
+        siteUrl={md.siteUrl}
+        author={md.author}
+        defaultTitle={md.title}
       />
     </Fragment>
   )

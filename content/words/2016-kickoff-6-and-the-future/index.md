@@ -3,10 +3,6 @@ slug: kickoff-6-and-the-future
 title: 'Kickoff 6 and the future'
 subtitle: '#tipsForKickoff'
 date: 2016-02-10
-original:
-  url: 'http://trykickoff.com/2016/02/10/kickoff-6-and-the-future.html'
-  text: 'trykickoff.com'
-image: runningonthebeach.jpg
 ---
 
 The latest major version of Kickoff was released last November and included many improvements. This post summarises all the important changes that you need to know about.

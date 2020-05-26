@@ -15,7 +15,7 @@ export const text = {
   },
   metadataVariant: {
     variant: 'text.monoVariant',
-    fontSize: 0,
+    fontSize: 1,
     textTransform: 'uppercase',
     opacity: 0.6,
   },

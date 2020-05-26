@@ -1,11 +1,9 @@
 ---
 slug: creative-technology-monthly-motion-and-animation
 title: 'Creative Technology Monthly: Motion and Animation'
-subtitle: 'Issue 02: Motion and Animation - December 2016'
+subtitle: 'Issue 02: Motion and Animation — December 2016'
 date: 2016-12-23
-original:
-  url: 'https://medium.com/tmw-interactive/creative-technology-monthly-motion-and-animation-7216199c3dd2#.d4g9pc3fx'
-  text: Medium.com
+canonical: 'https://medium.com/tmw-interactive/creative-technology-monthly-motion-and-animation-7216199c3dd2#.d4g9pc3fx'
 ---
 
 ## Motion and Animation 🚀

@@ -1,8 +1,7 @@
 ---
 slug: live-reloading-preprocessed-css-with-grunt
 title: 'Live reloading preprocessed CSS using Grunt'
-subtitle: 'This is all you need to get Livereload working with Grunt.'
-image: 13019864575_aedafb589a.jpg
+subtitle: 'This is all you need to get Livereload working with Grunt'
 date: 2013-06-08
 ---
 

@@ -43,6 +43,7 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
       modified,
       dateTimestamp,
       modifiedTimestamp,
+      canonical,
     },
     body,
     timeToRead,
@@ -56,6 +57,7 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
         datePublished: dateTimestamp,
         dateModified: modifiedTimestamp,
         slug: pageContext.slug,
+        canonical,
       }}
       isArticle={true}
     >
@@ -109,6 +111,7 @@ export const pageQuery = graphql`
         dateTimestamp: date
         modified(formatString: "Do MMMM YYYY")
         modifiedTimestamp: modified
+        canonical
       }
       timeToRead
     }

@@ -40,7 +40,7 @@
     },
     {
       "source": "/writing/creating-dynamic-layouts-withjekyll",
-      "destination": "/blog/creating-dynamic-layouts-withjekyll",
+      "destination": "/blog/creating-dynamic-layouts-with-jekyll",
       "permanent": true
     },
     {
@@ -71,6 +71,26 @@
     {
       "source": "/writing/redesigning-my-site",
       "destination": "/blog/site-redesign-2016",
+      "permanent": true
+    },
+    {
+      "source": "/writing/add-responsive-helper-classes-to-your-project",
+      "destination": "/blog/responsive-helper-classes",
+      "permanent": true
+    },
+    {
+      "source": "/writing/improving-the-ux-of-a-front-end-framework",
+      "destination": "/blog/ux-of-a-front-end-framework",
+      "permanent": true
+    },
+    {
+      "source": "/writing/introducing-kickoff",
+      "destination": "/blog/introducing-kickoff",
+      "permanent": true
+    },
+    {
+      "source": "/writing/on-staying-current",
+      "destination": "/blog/on-staying-current",
       "permanent": true
     }
   ]

@@ -7,6 +7,7 @@ export interface SeoInterface {
   datePublished?: string
   dateModified?: string
   slug?: string
+  canonical?: string
 }
 
 export interface MetaInterface {

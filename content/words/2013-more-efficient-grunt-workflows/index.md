@@ -2,7 +2,6 @@
 slug: more-efficient-grunt-workflows
 title: 'More efficient Grunt workflows'
 subtitle: 'Useful tips for development with Grunt'
-image: 14239530388_82ce1a047c.jpg
 date: 2013-12-01
 ---
 

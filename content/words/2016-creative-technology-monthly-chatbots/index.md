@@ -1,11 +1,9 @@
 ---
 slug: creative-technology-monthly-chatbots
 title: 'Creative Technology Monthly: Chatbots'
-subtitle: 'Issue 01: Bots — November 2016'
+subtitle: 'Issue 01: Bots —  November 2016'
 date: 2016-11-24
-original:
-  url: 'https://medium.com/tmw-interactive/creative-technology-monthly-26e1c8bc6faa#.anorapxjc'
-  text: Medium.com
+canonical: 'https://medium.com/tmw-interactive/creative-technology-monthly-26e1c8bc6faa#.anorapxjc'
 ---
 
 > Welcome to Creative Technology monthly, this is the first issue of what we hope will be a long-running series here at TMW. It will cover topics ranging from design to development; artificial intelligence to hardware hacking; and much more.

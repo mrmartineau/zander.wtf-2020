@@ -3,9 +3,7 @@ slug: creative-technology-monthly-disappearing-interface
 title: 'Creative Technology Monthly: Disappearing interface'
 subtitle: 'Issue 03: Disappearing interface with Marc Curtis - January 2017'
 date: 2017-01-27
-original:
-  url: 'https://medium.com/tmw-interactive/creative-technology-monthly-disappearing-interface-4161d262ba23#.jvd3gsdlv'
-  text: Medium.com
+canonical: 'https://medium.com/tmw-interactive/creative-technology-monthly-disappearing-interface-4161d262ba23#.jvd3gsdlv'
 ---
 
 ## Disappearing interface

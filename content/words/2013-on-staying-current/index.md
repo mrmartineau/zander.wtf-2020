@@ -2,10 +2,6 @@
 slug: on-staying-current
 title: On staying current
 subtitle: 'My recipe for staying up-to-date with web development news and trends'
-image: 10676527333_71aab96d33.jpg
-link:
-  url: 'http://pinboard.in/u:MrMartineau/t:on-staying-current/'
-  text: 'pinboard.in/u:MrMartineau/t:on-staying-current/'
 date: 2013-03-07
 ---
 

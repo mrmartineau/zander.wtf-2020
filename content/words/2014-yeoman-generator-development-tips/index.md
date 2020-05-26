@@ -3,13 +3,6 @@ slug: yeoman-generator-development-tips
 title: 'Yeoman Generator Development Tips'
 subtitle: 'Tips for those creating Yeoman generators'
 date: 2014-05-01
-original:
-  url: 'http://tech.tmw.co.uk/2014/03/yeoman-generator-development-tips/'
-  text: 'tech.tmw.co.uk'
-image: 14482673202_51afdd2f01.jpg
-github:
-  user: tmwagency
-  repo: generator-kickoff
 ---
 
 Yeoman generators are a powerful tool for developers, they enable us to get up and running with projects extremely quickly. I created a generator for our Kickoff framework and came across a few things that I thought others would benefit from; hopefully this post will shed some light for others creating their own generators.

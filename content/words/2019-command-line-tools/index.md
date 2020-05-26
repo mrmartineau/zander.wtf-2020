@@ -12,29 +12,12 @@ Disclaimer: If you don't use [fish-shell](https://fish-shell.com), some of the p
 
 ## Keyboard shortcuts
 
-### ctrl-r
-
-Search previously used commands
-
-### ctrl-t
-
-Invoke _FZF_ fuzzy file finder (see below)
-
-### ctrl-l
-
-Clear the terminal screen
-
-### ctrl-k
-
-Clears the terminal screen but no-scroll back. Basically wipes the
-
-### ctrl-w
-
-Cut one word backwards using white space as delimiter
-
-### esc-t
-
-Swap the last two words before the cursor
+- `ctrl-r` - Search previously used commands
+- `ctrl-t` - Invoke _FZF_ fuzzy file finder (see below)
+- `ctrl-l` - Clear the terminal screen
+- `ctrl-k` - Clears the terminal screen but no-scroll back. Basically wipes the
+- `ctrl-w` - Cut one word backwards using white space as delimiter
+- `esc-t` - Swap the last two words before the cursor
 
 ## Commands
 
@@ -82,26 +65,6 @@ Show directory contents as a tree
 ```sh
 # with yarn
 ❯ yarn global list
-yarn global v1.19.1
-info "canvas-sketch-cli@1.4.2" has binaries:
-   - canvas-sketch
-   - canvas-sketch-cli
-   - canvas-sketch-gif
-   - canvas-sketch-mp4
-info "create-razzle-app@2.4.0" has binaries:
-   - create-razzle-app
-info "create-react-app@2.1.2" has binaries:
-   - create-react-app
-info "docusaurus-init@1.0.1" has binaries:
-   - docusaurus-init
-info "emma-cli@2.0.1" has binaries:
-   - emma
-   - ema
-info "emoj@2.0.0" has binaries:
-   - emoj
-info "yalc@1.0.0-pre.27" has binaries:
-   - yalc
-✨  Done in 4.78s.
 
 # with npm
 ❯ npm -g ls --depth=0
@@ -123,7 +86,7 @@ autojump is a faster way to navigate your filesystem. It works by maintaining a
 database of the directories you use the most from the command line.
 
 ```
-❯ j code
+❯ j {your search term}
 ```
 
 ### exa
@@ -190,12 +153,13 @@ Work with yarn/npm packages locally like a boss.
 ❯ hub browse mojombo/jekyll wiki
 ```
 
-### List the current repo's PRs
+#### List the current repo's PRs
 
 ```sh
 # this is an alias
 alias prs 'hub pr list -L 20 -b develop --format="%t%n - Branch: [%H]%n - %U%n - %l%n%n"'
-# e.g. ❯ prs
+# e.g.
+❯ prs
 ```
 
 ### Create a branch and switch to it
@@ -205,7 +169,8 @@ alias prs 'hub pr list -L 20 -b develop --format="%t%n - Branch: [%H]%n - %U%n -
 function branch
   git branch {$argv} && git checkout {$argv}
 end
-# e.g. ❯ branch feature/WL-88-hello
+# e.g.
+❯ branch feature/WL-88-hello
 ```
 
 ### standup
@@ -214,7 +179,7 @@ end
 
 Shows a list of commits for the past 24 hours
 
-```
+```sh
 ❯ standup
 /Users/zander/code/fairfx/fx-holiday-money-app
 5315f033 - build(multi): HM-925 Improve perf for a couple of pages (16 hours ago) <Zander Martineau>
@@ -272,8 +237,13 @@ map and transform structured data with the same ease that `sed`, `awk`,
 Safely\* install packages with npm or yarn by auditing them as part of your install process
 
 ```sh
-# with npm ❯ npq install express # with yarn, set an alias like so:alias npq="NPQ_PKG_MGR=yarn npq-hero"
+# with yarn, set an alias like so:
+alias npq="NPQ_PKG_MGR=yarn npq-hero"
+# then
 ❯ npq add express
+
+# with npm 
+❯ npq install express 
 ```
 
 ### youtube-dl
@@ -281,9 +251,6 @@ Safely\* install packages with npm or yarn by auditing them as part of your inst
 [https://youtube-dl.org](https://youtube-dl.org/)
 
 ```sh
-# install
-❯ brew install youtube-dl
-# use
 ❯ youtube-dl d2qfa3tlgH8
 ```
 

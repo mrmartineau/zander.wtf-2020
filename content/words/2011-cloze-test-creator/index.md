@@ -2,9 +2,6 @@
 slug: cloze-test-creator
 title: 'Cloze test creator'
 subtitle: 'I created a simple Cloze test generator'
-link:
-  url: 'http://zander.io/cloze-test/'
-  text: 'zander.io/cloze-test/'
 image: 4851216242_b49a0b6cd8.jpg
 date: 2011-01-22
 ---

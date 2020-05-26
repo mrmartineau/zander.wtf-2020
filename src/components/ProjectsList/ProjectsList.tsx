@@ -53,7 +53,7 @@ export const ProjectsList: FunctionComponent = () => {
                     childImageSharp {
                       fixed(
                         height: 800
-                        traceSVG: { color: "#573ede" }
+                        traceSVG: { color: "#db4d86" }
                         quality: 75
                       ) {
                         ...GatsbyImageSharpFixed_withWebp_tracedSVG

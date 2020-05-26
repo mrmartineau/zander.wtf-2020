@@ -32,6 +32,25 @@ export const links = {
     },
   },
 
+  footerNav: {
+    px: [2, 3],
+    py: 1,
+    textTransform: 'uppercase',
+    display: 'block',
+    fontWeight: 'normal',
+    fontFamily: 'mono',
+    fontSize: 2,
+    cursor: 'pointer',
+    '&:link,&:visited': {
+      borderBottom: 0,
+      textDecoration: 'none',
+      color: 'text',
+    },
+    '&:hover,&:focus': {
+      color: 'primary',
+    },
+  },
+
   pinboardListItemLink: {
     color: 'text',
     p: 'padding',

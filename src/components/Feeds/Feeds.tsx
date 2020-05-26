@@ -13,8 +13,8 @@ export const Feeds: FunctionComponent = () => {
         },
         '[data-reach-tab]': {
           flexGrow: '1',
-          color: 'text',
-          bg: 'background',
+          color: 'mastheadText',
+          bg: 'mastheadBackground',
           borderRadius: 0,
           border: 0,
           m: 0,
@@ -25,8 +25,8 @@ export const Feeds: FunctionComponent = () => {
             bg: alpha('text', 0.2),
           },
           '&[data-selected]': {
-            color: 'background',
-            bg: 'text',
+            color: 'text',
+            bg: 'background',
           },
         },
       }}

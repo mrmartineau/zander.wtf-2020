@@ -23,10 +23,7 @@ interface Articlesinterface {
   }
 }
 
-export const ArticleList: FunctionComponent<ArticleListProps> = ({
-  exclude,
-}) => {
-  console.log('exclude', exclude)
+export const ArticleList: FunctionComponent<ArticleListProps> = () => {
   const { articles } = useStaticQuery<Articlesinterface>(
     graphql`
       query {

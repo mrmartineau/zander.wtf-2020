@@ -2,13 +2,6 @@
 slug: trakjs-universal-analytics-api
 title: 'Improve website event tracking with trak.js'
 subtitle: Add tracking events more easily with our new library
-original:
-  url: 'http://tech.tmw.co.uk/2014/11/trakjs-universal-analytics-api/'
-  text: 'tech.tmw.co.uk'
-image: 15676360182_1f2011cb84_m.jpg
-github:
-  user: mrmartineau
-  repo: trak.js
 date: 2014-11-17
 ---
 

@@ -1,12 +1,10 @@
 ---
 slug: speedtesting-gulp-and-grunt
 title: 'Speedtesting gulp.js and Grunt'
-original:
-  url: 'http://tech.tmw.co.uk/2014/01/speedtesting-gulp-and-grunt'
-  text: 'tech.tmw.co.uk'
 image: 14403140136_3354d5b41b.jpg
 subtitle: 'Using the Kickoff framework, I compare two of the most popular client-side task runners'
 date: 2014-01-15
+modified: 2014-01-17
 ---
 
 [gulp.js](http://gulpjs.com/) is the new hot young thing on the front-end circuit; it is a task runner similar to [Grunt](http://gruntjs.com). There are many anecdotal reports saying that gulp.js is far quicker than Grunt at performing similar tasks so naturally I wanted to see this for myself using [Kickoff](http://tmwagency.github.io/kickoff/) – the front-end framework we use at TMW – as a Guinea Pig.
@@ -19,13 +17,13 @@ The gulp.js fork of Kickoff can be found at [github.com/tmwagency/kickoff/tree/g
 
 ### Sass compilation
 
-![Grunt and gulp.js Sass compilation comparison](http://tech.tmw.co.uk/img/blog/kickoff-gulp-test/compare-sass.gif)
+![Grunt and gulp.js Sass compilation comparison](./compare-sass.gif)
 
 Gulp here is about twice as fast as Grunt at running the same task and immediately you can see what all the fuss is about. Grunt uses [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) and gulp.js uses [gulp-ruby-sass](https://github.com/sindresorhus/gulp-ruby-sass/) (both of which use Ruby) to compile. gulp-ruby-sass is slower than [gulp-sass](https://github.com/dlmanning/gulp-sass), but more stable and feature-rich so I will make the switch when it improves, so I reckon that the difference will be even greater when this happens. See the gulpfile settings for this [here](https://github.com/tmwagency/kickoff/blob/gulp/gulpfile.js#L51-L65).
 
 ### Javascript minification and concatination using Uglify.js
 
-![Grunt and gulp.js Javascript minification and concatination using Uglify.js](http://tech.tmw.co.uk/img/blog/kickoff-gulp-test/compare-js.gif)
+![Grunt and gulp.js Javascript minification and concatination using Uglify.js](./compare-js.gif)
 
 The difference here is not that large but it is still impressive. See the gulpfile settings for this [here](https://github.com/tmwagency/kickoff/blob/gulp/gulpfile.js#L67-L83).
 
