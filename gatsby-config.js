@@ -9,6 +9,7 @@ module.exports = {
     description: `Zander Martineau's personal site`,
     siteUrl: `http://zander.wtf/`,
     author: 'Zander Martineau',
+    opengraphImage: '/logo.png',
   },
   plugins: [
     `gatsby-plugin-typescript`,
