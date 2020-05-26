@@ -19,7 +19,6 @@ export interface MetaInterface {
 
 export interface MetaTagsProps {
   seoData?: SeoInterface
-  extraMetatags?: MetaInterface[]
   lang?: string
   isArticle?: boolean
 }

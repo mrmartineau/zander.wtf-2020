@@ -8,7 +8,6 @@ import { useThemeUI } from 'theme-ui'
 export const MetaTags: FunctionComponent<MetaTagsProps> = ({
   seoData,
   lang = 'en',
-  extraMetatags = [],
   isArticle = false,
 }): ReactElement => {
   const { theme } = useThemeUI()
@@ -21,7 +20,7 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
             title
             description
             author
-            # opengraphImage
+            opengraphImage
           }
         }
       }
@@ -43,7 +42,7 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
   const slug = seoData?.slug ?? ''
 
   if (isArticle) {
-    url = `${md.siteUrl}/writing/${slug}`
+    url = `${md.siteUrl}/blog/${slug}`
   } else if (slug) {
     url = `${md.siteUrl}/${slug}`
   }
@@ -54,64 +53,40 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
         htmlAttributes={{
           lang,
         }}
-        title={title}
         defaultTitle={md.title}
         titleTemplate="%s — zander.wtf"
-        meta={[
-          {
-            name: `description`,
-            content: description,
-          },
-          {
-            property: `og:title`,
-            content: ogTitle,
-          },
-          {
-            property: `og:description`,
-            content: ogDescription,
-          },
-          {
-            property: `og:image`,
-            content: ogImage,
-          },
-          {
-            property: `og:type`,
-            content: `website`,
-          },
-          {
-            name: `twitter:card`,
-            content: `summary_large_image`,
-          },
-          {
-            name: `twitter:creator`,
-            content: md.author,
-          },
-          {
-            name: `twitter:title`,
-            content: twitterTitle,
-          },
-          {
-            name: `twitter:description`,
-            content: twitterDescription,
-          },
-          {
-            name: `twitter:image`,
-            content: twitterImage,
-          },
-          {
-            name: `twitter:widgets:theme`,
-            content: 'dark',
-          },
-          ...extraMetatags,
-        ]}
       >
+        {/* General tags */}
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="image" content={ogImage} />
+        <link rel="canonical" href={url} />
+
+        {/* OpenGraph tags */}
+        <meta property="og:url" content={url} />
+        {isArticle && <meta property="og:type" content="article" />}
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDescription} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@MrMartineau" />
+        <meta name="twitter:title" content={twitterTitle} />
+        <meta name="twitter:description" content={twitterDescription} />
+        <meta name="twitter:image" content={twitterImage} />
+        <meta name="twitter:widgets:theme" content="dark" />
+
         <link
           rel="alternate"
           href="/atom.xml"
           type="application/atom+xml"
           title="RSS Feed"
         />
+
         <meta name="theme-color" content={theme?.colors?.primary} />
+
         {seoData?.canonical && (
           <link rel="canonical" href={seoData.canonical}></link>
         )}
