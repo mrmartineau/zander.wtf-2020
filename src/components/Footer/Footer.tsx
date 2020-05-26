@@ -28,6 +28,7 @@ export const Footer: FunctionComponent = () => {
         sx={{
           p: 'padding',
           display: 'flex',
+          flexWrap: 'wrap',
           alignItems: 'center',
           justifyContent: 'center',
           mt: 8,

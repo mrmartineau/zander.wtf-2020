@@ -7,7 +7,7 @@ const Writing: FunctionComponent = () => {
   return (
     <Layout
       seoData={{
-        title: 'Hello, my name is Zander. I make websites',
+        title: 'Projects',
         description: "I'm a contract front-end developer based in London.",
       }}
     >
