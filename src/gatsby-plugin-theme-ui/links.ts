@@ -2,14 +2,13 @@ export const links = {
   articleListItem: {
     p: 'padding',
     display: 'block',
-    color: 'text',
     '&:link, &:visited': {
       borderBottom: 0,
       color: 'text',
       textDecoration: 'none',
     },
-    '&:hover': {
-      color: 'background',
+    '&:hover,&:focus': {
+      color: 'articleListItemHoverText',
       bg: 'primary',
     },
   },
@@ -26,7 +25,7 @@ export const links = {
     '&:link,&:visited': {
       borderBottom: 0,
       textDecoration: 'none',
-      color: 'background',
+      color: 'mastheadText',
     },
     '&:hover,&:focus': {
       color: 'primary',
@@ -38,16 +37,15 @@ export const links = {
     p: 'padding',
     display: 'block',
     textDecoration: 'none',
-
-    '&:hover': {
+    '&:hover,&:focus': {
       color: 'background',
       bg: 'text',
     },
   },
 
   inverted: {
-    color: 'background',
-    '&:hover': {
+    color: 'mastheadText',
+    '&:hover,&:focus': {
       color: 'primary',
     },
   },

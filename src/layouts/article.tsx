@@ -62,8 +62,8 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
       <Box
         as="header"
         sx={{
-          bg: 'text',
-          color: 'background',
+          bg: 'mastheadBackground',
+          color: 'mastheadText',
           p: 6,
           mb: 8,
           textAlign: 'center',

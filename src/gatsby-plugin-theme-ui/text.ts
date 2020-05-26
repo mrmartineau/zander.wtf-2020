@@ -33,8 +33,8 @@ export const text = {
     m: 0,
     fontSize: [7, '10vw'],
     lineHeight: 1,
-    bg: 'text',
-    color: 'background',
+    bg: 'mastheadBackground',
+    color: 'mastheadText',
   },
 
   // Home

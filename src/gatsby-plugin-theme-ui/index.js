@@ -38,4 +38,6 @@ export default {
   layout,
   zIndices,
   images,
+
+  useColorSchemeMediaQuery: true,
 }

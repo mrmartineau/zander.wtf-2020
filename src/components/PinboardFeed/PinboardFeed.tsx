@@ -32,8 +32,8 @@ export const PinboardFeed: FunctionComponent<PinboardFeedProps> = ({
     url: `${FEED_PATH}${tag}`,
   })
 
-  if (error) return <div>failed to load</div>
-  if (!data) return <div>loading...</div>
+  if (error) return <Box sx={{ textAlign: 'center', p: 4 }}>failed to load</Box>
+  if (!data) return <Box sx={{ textAlign: 'center', p: 4 }}>loading...</Box>
 
   const maxDisplayCount = count
   const newFeedList =

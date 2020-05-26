@@ -14,8 +14,8 @@ export const Masthead: FunctionComponent = () => {
         justifyContent: 'space-between',
         flexWrap: 'wrap',
         flexDirection: 'row', ///['column', 'row'],
-        bg: 'text',
-        color: 'background',
+        bg: 'mastheadBackground',
+        color: 'mastheadText',
       }}
       as="header"
       role="banner"

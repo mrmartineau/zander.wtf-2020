@@ -5,11 +5,13 @@ import { Palette } from '../Icons/Palette'
 const modes = [
   'default',
   'light',
-  'one',
+  'dark',
+  // 'sunshine',
   'sunset',
-  'green',
-  'midnight',
-  'sunshine',
+  // 'midnight',
+  'cultured',
+  // 'green',
+  // 'one',
 ]
 
 export const ThemeSwitcher: FunctionComponent = () => {
@@ -25,21 +27,25 @@ export const ThemeSwitcher: FunctionComponent = () => {
       }}
       aria-label="Cycle colour modes"
       sx={{
-        color: 'background',
+        color: 'mastheadText',
         zIndex: 11,
-        display: 'block',
+        display: 'flex',
+        alignItems: 'center',
+        flexShrink: 0,
+        textTransform: 'uppercase',
         p: 0,
         ml: 3,
         mr: [2, 3],
         cursor: 'pointer',
+        width: 'auto',
+        height: 'auto',
         '&:hover, &:focus': {
           color: 'primary',
         },
-        width: '1.2rem',
-        height: '1.2rem',
       }}
     >
-      <Palette />
+      {colorMode}{' '}
+      <Palette width="1.2rem" height="1rem" sx={{ flexShrink: 0, ml: 2 }} />
     </IconButton>
   )
 }
