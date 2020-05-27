@@ -8,7 +8,7 @@ const Writing: FunctionComponent = () => {
     <Layout
       seoData={{
         title: 'Likes',
-        description: "I'm a contract front-end developer based in London.",
+        description: "Articles I've recently read and my recent bookmarks",
       }}
     >
       <section>
