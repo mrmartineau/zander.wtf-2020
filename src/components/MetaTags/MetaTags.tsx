@@ -57,6 +57,7 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
         titleTemplate="%s — zander.wtf"
       >
         {/* General tags */}
+        <meta charset="utf-8" />
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="image" content={ogImage} />
@@ -68,7 +69,6 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
         <link rel="me" href="https://github.com/mrmartineau" type="text/html" />
         <meta name="geo.region" content="GB" />
         <meta name="geo.placename" content="London" />
-        <link rel="canonical" href={url} />
 
         {/* OpenGraph tags */}
         <meta property="og:url" content={url} />
