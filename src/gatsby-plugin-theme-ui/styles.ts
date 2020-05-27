@@ -1,8 +1,7 @@
 const heading = {
   fontFamily: 'heading',
-  fontWeight: 'body',
+  fontWeight: '300',
   lineHeight: 'heading',
-  fontStyle: 'italic',
   mt: 4,
   mb: 3,
 }
@@ -33,10 +32,12 @@ export const styles = {
   },
   h1: {
     ...heading,
+    fontFamily: 'title',
     fontSize: 7,
   },
   h2: {
     ...heading,
+    fontFamily: 'title',
     fontSize: 6,
   },
   h3: {

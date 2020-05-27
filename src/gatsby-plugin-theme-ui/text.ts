@@ -90,8 +90,8 @@ export const text = {
     opacity: '0.8',
   },
   articleListItemTitle: {
-    variant: 'text.monoVariantItalic',
-    fontSize: 4,
+    fontFamily: 'title',
+    fontSize: 5,
     maxWidth: 'contentMaxWidth',
   },
   articleListItemSubtitle: {

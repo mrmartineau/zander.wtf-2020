@@ -18,11 +18,11 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
     <Box
       as="details"
       sx={{
-        borderBottom: theme => `0.4rem solid ${theme.colors.text}`,
-        '&:hover': {
+        borderBottom: theme => `2px solid ${theme.colors.text}`,
+        '&:hover,&:focus': {
           bg: 'primary',
         },
-        '&[open]:hover': {
+        '&[open]:hover,&[open]:focus': {
           bg: 'background',
         },
       }}
@@ -49,9 +49,9 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
           '&:hover': {
             cursor: 'pointer',
           },
-          ':not([open]) &:hover h3': {
-            variant: 'text.projectListItemTitleActive',
-          },
+          // ':not([open]) &:hover h3,:not([open]) &:focus h3': {
+          //   variant: 'text.projectListItemTitleActive',
+          // },
         }}
       >
         <ProjectListItemTitle
@@ -109,9 +109,8 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
 
         {frontmatter.info && (
           <Fragment>
-            <Separator />
             <Box sx={{ maxWidth: 'contentMaxWidth' }}>
-              <Styled.h4>Project info</Styled.h4>
+              <Styled.h2>Project info</Styled.h2>
               <dl>
                 {frontmatter.info.map(({ key, value, link }, index) => (
                   <Box

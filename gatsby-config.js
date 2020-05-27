@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-performance-metrics`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
