@@ -60,6 +60,14 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="image" content={ogImage} />
+        <meta
+          name="viewport"
+          content="initial-scale=1.0, width=device-width, viewport-fit=cover"
+        />
+        <link rel="author" href="Zander Martineau" />
+        <link rel="me" href="https://github.com/mrmartineau" type="text/html" />
+        <meta name="geo.region" content="GB" />
+        <meta name="geo.placename" content="London" />
         <link rel="canonical" href={url} />
 
         {/* OpenGraph tags */}
