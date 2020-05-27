@@ -18,8 +18,8 @@ const Home: FunctionComponent = () => (
           ))}
         </Heading>
         <Text variant="introDescription" sx={{ maxWidth: 'contentMaxWidth' }}>
-          ..and other tools for the web developers. I’m a little bit obsessed
-          with design systems and have a few too many side-projects on the go.
+          ..and other tools for web developers. I’m a little bit obsessed with
+          design systems and have a few too many side-projects on the go.
         </Text>
       </Box>
     </section>
