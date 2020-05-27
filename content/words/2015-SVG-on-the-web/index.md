@@ -3,7 +3,6 @@ slug: svg-on-the-web
 title: 'My process for using SVG on the web'
 subtitle: 'hiDPI workflow for modern websites'
 date: 2015-09-09
-image: 16924093090_60a1fc401c_m.jpg
 ---
 
 SVGs (Scalable Vector Graphics) have been around for a long time but it is only in the last few years that developers have started using them in anger, this is most likely because of the wider browser support and the prevalence of retina or hiDPI screens uses in modern smartphones. They are brilliant for creating resolution independent graphics for use on your websites.

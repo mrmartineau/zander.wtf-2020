@@ -2,7 +2,6 @@
 slug: customise-sublime-text-2
 title: 'Customise Sublime Text 2'
 subtitle: "Tips for customising the only text editor you'll ever need."
-image: 10676467333_57099271fb.jpg
 date: 2011-08-23
 ---
 

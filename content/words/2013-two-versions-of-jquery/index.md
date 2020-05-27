@@ -2,7 +2,6 @@
 slug: two-versions-of-jquery
 title: 'Two versions of jQuery?'
 subtitle: "Why can't we serve separate versions for different browsers?"
-image: 14482390592_b93daaf414.jpg
 date: 2013-06-10
 ---
 

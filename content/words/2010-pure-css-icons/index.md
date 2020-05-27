@@ -3,7 +3,6 @@ slug: pure-css-icons
 title: 'Pure CSS Icons'
 subtitle: 'An experiment at creating shapes with CSS'
 date: 2010-04-18
-image: 4851230316_2fb479d3d9.jpg
 ---
 
 Having marvelled at [David Desandro's Opera Logo](http://desandro.com/articles/opera-logo-css/) made entirely in HTML and CSS, I wanted to try a similar experiment for myself. So with a large scoop of border-radius I set about trying to create various 'common' icons that could be used in your web apps.

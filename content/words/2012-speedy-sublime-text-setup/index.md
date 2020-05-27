@@ -1,14 +1,7 @@
 ---
 slug: speedy-sublime-text-setup
 title: Speedy Sublime Text setup
-link:
-  url: 'https://github.com/mrmartineau/SublimeTextSetupWiki'
-  text: 'github.com/mrmartineau/SublimeTextSetupWiki'
 subtitle: 'I created a wiki to speed up Sublime Text setup, click above to find out more.'
-image: 14295135299_773720db99.jpg
-github:
-  user: mrmartineau
-  repo: SublimeTextSetupWiki
 date: 2012-05-16
 ---
 

@@ -2,10 +2,6 @@
 slug: html5-coda-clip-library
 title: 'Coda Clip Library for HTML5'
 date: 2010-09-20
-image: 13020288133_2f493fc0bd.jpg
-link:
-  url: 'http://github.com/mrmartineau/HTML5-Coda-Clips'
-  text: 'Download the clips'
 ---
 
 Like most web developers I maintain a personal collection of code snippets & recently have been amassing a folder full of snippets related specifically to HTML5 (you won't see any CSS3 in here..) & its new tags & some sample usages.

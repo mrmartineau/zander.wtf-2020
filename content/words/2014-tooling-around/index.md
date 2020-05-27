@@ -3,7 +3,6 @@ slug: tooling-around
 title: 'Tooling around'
 subtitle: 'Are we focusing too much on the tools and not the output?'
 date: 2014-04-16
-image: 14422957531_14b7a07761_c.jpg
 ---
 
 I first heard of _tooling_, as we know it now, when Paul Irish spoke at [jQuery UK 2012](http://www.paulirish.com/2012/talk-tooling-the-webapp-development-stack/). He described the end-to-end workflow for web-based projects using only the best tools to increase efficiency. Examples include setting up projects using boilerplate code, frameworks and common tools and having them all function in perfect harmony.

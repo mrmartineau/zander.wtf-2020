@@ -1,7 +1,6 @@
 ---
 slug: quick-dirty-cloze-content-test
 title: 'Quick & dirty Cloze content test with the Lettering.js jQuery plugin'
-image: 14305389038_92c82a6246.jpg
 date: 2011-01-21
 ---
 

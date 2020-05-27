@@ -1,7 +1,6 @@
 ---
 slug: speedtesting-gulp-and-grunt
 title: 'Speedtesting gulp.js and Grunt'
-image: 14403140136_3354d5b41b.jpg
 subtitle: 'Using the Kickoff framework, I compare two of the most popular client-side task runners'
 date: 2014-01-15
 modified: 2014-01-17

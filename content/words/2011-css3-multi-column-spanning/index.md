@@ -5,7 +5,6 @@ categories:
   - CSS
 subtitle: 'A simple test of this handy CSS feature.'
 date: 2011-01-15
-image: 4850604091_63fca411ab.jpg
 ---
 
 The [CSS Multi-column Layout Module](http://www.w3.org/TR/css3-multicol/) has a rather interesting

@@ -3,7 +3,6 @@ slug: ux-of-a-front-end-framework
 title: 'Improving the UX of a front-end framework'
 subtitle: 'How we focused on our users for the latest version of Kickoff'
 date: 2015-09-07
-image: 16488545384_d25c2ab1c2_z.jpg
 ---
 
 Back in May we [released v5.0.0 of Kickoff](https://github.com/TryKickoff/kickoff/releases/tag/5.0.0), the focus of this release was to improve the framework's UX. What does that mean? Can you have UX on a framework or a set of files? I believe you can, and here’s how we did it.

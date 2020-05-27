@@ -3,10 +3,6 @@ slug: pinboard-chrome-extension
 title: 'Pinboard.in Chrome Extension'
 subtitle: 'An improved, more responsive design'
 date: 2014-08-01
-image: 14695521096_a6755fd425.jpg
-link:
-  url: 'https://chrome.google.com/webstore/detail/pinboard-style/mmcabafimbenknlnlndkdfjgfkkljhmg'
-  text: 'Try the extension for yourself'
 ---
 
 I love [Pinboard](http://pinboard.in), in fact I think I may be a little obsessed with this simple bookmarking service, however, I think its design could do with an update. I created a Chrome extension that cleans up the UI, improves the visual hierarchy & generally makes the site a little more pleasant to use than it already was.

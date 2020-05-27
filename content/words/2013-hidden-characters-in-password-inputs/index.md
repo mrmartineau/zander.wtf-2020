@@ -2,7 +2,6 @@
 slug: hidden-characters-in-password-inputs
 title: 'How to fix hidden characters in password inputs in old IE'
 subtitle: 'A fix for an obscure problem I found recently'
-image: 14305350410_f88214a539.jpg
 date: 2013-05-04
 ---
 

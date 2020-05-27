@@ -2,10 +2,6 @@
 slug: the-choreographic-grid-a-css-grid-for-content-interdigitation
 title: 'The Choreographic Grid'
 subtitle: 'A CSS grid framework for content interdigitation'
-image: 10676261784_fc2159cbfc.jpg
-github:
-  user: mrmartineau
-  repo: Choreographic-Grid
 date: 2012-05-08
 ---
 
