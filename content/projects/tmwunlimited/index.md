@@ -5,6 +5,12 @@ link: http://www.tmwunlimited.com/
 info:
   - key: Team
     value: Lorena Teruel
+  - key: Site at launch
+    value: tmwsite.now.sh
+    link: https://tmwsite.now.sh/
+  - key: Blog post
+    value: Creating dynamic layouts with Jekyll
+    link: /blog/creating-dynamic-layouts-with-jekyll
 date: 2016-02-27
 images:
   - name: Quote page
