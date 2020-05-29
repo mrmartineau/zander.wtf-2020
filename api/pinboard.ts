@@ -1,7 +1,7 @@
 import { NowRequest, NowResponse } from '@now/node'
 
 import axios from 'axios'
-const DOMAIN = 'http://feeds.pinboard.in'
+const DOMAIN = 'https://feeds.pinboard.in'
 
 export default async (req: NowRequest, res: NowResponse) => {
   const apiSlug = `/json/u:MrMartineau/t:${req.query.tag}/?count=10`
