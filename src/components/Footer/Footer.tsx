@@ -50,11 +50,11 @@ export const Footer: FunctionComponent = () => {
 
       <Logo
         sx={{
-          mt: '50vw',
+          mt: '10vw',
           mb: '10vw',
           mx: 'auto',
-          width: '50vw',
-          height: '50vw',
+          width: '50vmin',
+          height: '50vmin',
         }}
       />
     </Box>
