@@ -29,10 +29,7 @@ export const ArticleList: FunctionComponent<ArticleListProps> = () => {
       query {
         articles: allMdx(
           sort: { fields: frontmatter___date, order: DESC }
-          filter: {
-            fileAbsolutePath: { regex: "/(words)/" }
-            frontmatter: { published: { ne: false } }
-          }
+          filter: { fileAbsolutePath: { regex: "/(words)/" } }
         ) {
           edges {
             node {

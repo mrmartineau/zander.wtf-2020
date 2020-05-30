@@ -15,9 +15,13 @@ interface ArticleProps {
         dateTimestamp: string
         modified: string
         modifiedTimestamp: string
+        canonical: string
       }
       body: any
       timeToRead: string
+      wordCount: {
+        words: number
+      }
     }
   }
   pageContext: {
@@ -48,6 +52,7 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
     },
     body,
     timeToRead,
+    wordCount,
   } = data.mdx
 
   return (
@@ -80,7 +85,8 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
         </Heading>
         <Text variant="articleMetadata">
           <time dateTime={dateTimestamp}>{date}</time> · Reading time:{' '}
-          {timeToRead} minute{Number(timeToRead) > 1 && 's'}
+          {timeToRead} minute{Number(timeToRead) > 1 && 's'} · {wordCount.words}{' '}
+          words
         </Text>
       </Box>
       <Container as="article" sx={{ maxWidth: 'contentMaxWidth' }}>
@@ -116,6 +122,9 @@ export const pageQuery = graphql`
         canonical
       }
       timeToRead
+      wordCount {
+        words
+      }
     }
   }
 `
