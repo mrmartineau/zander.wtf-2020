@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: 'Hello, my name is Zander. I make websites',
     description: `Zander Martineau's personal site`,
-    siteUrl: `http://zander.wtf/`,
+    siteUrl: `https://zander.wtf/`,
     author: 'Zander Martineau',
     opengraphImage: '/opengraph.jpg',
   },
@@ -83,8 +83,8 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: `${site.siteMetadata.siteUrl}/writing/${edge.node.frontmatter.slug}`,
-                  guid: `${site.siteMetadata.siteUrl}/writing/${edge.node.frontmatter.slug}`,
+                  url: `${site.siteMetadata.siteUrl}/blog/${edge.node.frontmatter.slug}`,
+                  guid: `${site.siteMetadata.siteUrl}/blog/${edge.node.frontmatter.slug}`,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
@@ -92,9 +92,9 @@ module.exports = {
             query: `
               {
                 allMdx(
-                  limit: 25,
+                  limit: 10,
                   sort: { fields: frontmatter___date, order: DESC }
-                  filter: { fileAbsolutePath: { regex: "/(words)/" } }
+                  filter: { fileAbsolutePath: { regex: "/(words)/" }frontmatter: { published: { ne: false } } }
                 ) {
                   edges {
                     node {
@@ -111,12 +111,12 @@ module.exports = {
               }
             `,
             output: '/atom.xml',
-            title: "Zander Martineau's Writing",
+            title: "Zander Martineau's Blog",
             // optional configuration to insert feed reference in pages:
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;
             // if not provided or `undefined`, all pages will have feed reference inserted
-            match: '^/writing/',
+            match: '^/blog/',
             // optional configuration to specify external rss feed, such as feedburner
             // link: "https://feeds.feedburner.com/gatsby/blog",
           },
