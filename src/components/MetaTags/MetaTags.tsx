@@ -33,7 +33,8 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
   const description: string = seoData?.description ?? md.description
   const ogTitle: string = seoData?.opengraphTitle ?? title
   const ogDescription: string = seoData?.opengraphDescription ?? description
-  const ogImage: string = seoData?.opengraphImage ?? md.opengraphImage
+  const ogImage: string = `${md.siteUrl}${seoData?.opengraphImage ??
+    md.opengraphImage}`
   const twitterTitle: string = ogTitle
   const twitterDescription: string = ogDescription
   const twitterImage: string = ogImage
