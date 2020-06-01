@@ -17,7 +17,6 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@bundle-analyzer/gatsby-plugin": "^0.5.1",
     "@reach/tabs": "^0.10.3",
     "@theme-ui/color": "^0.4.0-alpha.1",
     "@theme-ui/presets": "^0.3.0",
