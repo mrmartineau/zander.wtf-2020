@@ -47,6 +47,11 @@ export const SchemaOrg: FunctionComponent<SchemaOrgProps> = React.memo(
               {
                 '@type': 'ListItem',
                 position: 1,
+                item: 'https://zander.wtf/blog',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
                 item: {
                   '@id': url,
                   name: title,
