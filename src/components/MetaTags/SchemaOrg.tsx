@@ -71,13 +71,20 @@ export const SchemaOrg: FunctionComponent<SchemaOrgProps> = React.memo(
               '@type': 'Person',
               name: author,
             },
-
+            publisher: {
+              '@type': 'Organization',
+              name: 'Zander',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://zander.wtf/opengraph.jpg',
+              },
+            },
             mainEntityOfPage: {
               '@type': 'WebSite',
               '@id': siteUrl,
             },
             datePublished,
-            dateModified,
+            dateModified: dateModified ?? datePublished,
           },
         ]
       : baseSchema
