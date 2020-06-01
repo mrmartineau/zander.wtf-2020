@@ -13,9 +13,7 @@ const Home: FunctionComponent = () => (
       <Box sx={{ p: 'padding', mt: 6 }}>
         <Heading as="h1" variant="introTitle">
           <Text variant="introSuperTitle">Hello, my name is Zander</Text>
-          {'I make websites'.split('').map((item, index) => (
-            <span key={index}>{item}</span>
-          ))}
+          <span>I</span> <span>make</span> <span>websites</span>
         </Heading>
         <Text variant="introDescription" sx={{ maxWidth: 'contentMaxWidth' }}>
           ..and other tools for web developers. I’m a little bit obsessed with
