@@ -137,5 +137,11 @@ module.exports = {
         lang: 'en',
       },
     },
+    {
+      resolve: '@bundle-analyzer/gatsby-plugin',
+      options: { token: '2d209a59baf37ae884f704c5f8c0d2757c1667b5' },
+    },
+    `gatsby-plugin-webpack-size`,
+    `gatsby-plugin-webpack-bundle-analyser-v2`,
   ],
 }
