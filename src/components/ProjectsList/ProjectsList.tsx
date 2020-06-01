@@ -35,7 +35,10 @@ export const ProjectsList: FunctionComponent = () => {
       query {
         work: allMdx(
           sort: { fields: frontmatter___date, order: DESC }
-          filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+          filter: {
+            fileAbsolutePath: { regex: "/(projects)/" }
+            frontmatter: { published: { ne: false } }
+          }
         ) {
           edges {
             node {
