@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { Box, Link } from 'theme-ui'
 import { Logo } from '../Logo'
+import { FiRss } from 'react-icons/fi'
 
 const links = [
   {
@@ -18,6 +19,7 @@ const links = [
   {
     text: 'RSS',
     url: '/atom.xml',
+    icon: <FiRss size="1.3rem" style={{ display: 'block' }} title="RSS" />,
   },
 ]
 
@@ -43,7 +45,7 @@ export const Footer: FunctionComponent = () => {
             sx={{ variant: 'links.footerNav' }}
             key={item.text}
           >
-            {item.text}
+            {item.icon ? item.icon : item.text}
           </Link>
         ))}
       </Box>
