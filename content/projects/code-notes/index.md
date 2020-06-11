@@ -16,10 +16,14 @@ info:
 images:
   - name: Listing page
     path: ./list.png
-  - name: Listing page (dark mode)
-    path: ./list-dark.png
   - name: Note page
     path: ./note.png
+  - name: Skinny note
+    path: ./skinny-note.png
+  - name: Listing page (dark mode)
+    path: ./list-dark.png
+  - name: Skinny nav
+    path: ./skinny-nav.png
   - name: Note page (dark)
     path: ./note-dark.png
 ---

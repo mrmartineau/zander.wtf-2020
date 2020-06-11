@@ -78,8 +78,8 @@ Anime is a flexible, yet lightweight JavaScript animation library developed by J
 
 - [cssreference.io](http://cssreference.io/) is a beautifully made free visual guide to CSS with illustrated and animated examples of the most popular CSS properties. Made by Jeremy Thomas.
 - [The Responsive Breakpoints Generator](http://www.responsivebreakpoints.com/) helps you easily generate the optimal responsive image dimensions 🖼
-- [ntl](https://github.com/ruyadorno/ntl) — a super useful package if you are running lots of npm run scripts
-- [Shave](https://github.com/dollarshaveclub/shave) — Shave is a zero dependency javascript plugin that truncates text to fit within a html element based on a set max-height ✁
+- [ntl](https://github.com/ruyadorno/ntl)  is  a super useful package if you are running lots of npm run scripts
+- [Shave](https://github.com/dollarshaveclub/shave) is a zero dependency javascript plugin that truncates text to fit within a html element based on a set max-height
 
 ---
 

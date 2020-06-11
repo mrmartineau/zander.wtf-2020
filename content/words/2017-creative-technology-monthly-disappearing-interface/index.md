@@ -70,7 +70,6 @@ HP’s Sound in Colour is a beautiful microsite for one of their laptops. It rec
 
 - [Designing for Brand Interaction](https://uxdesign.cc/designing-for-brand-interaction-95556c013782#.a6smxzwag) by Rebecca Ussai Henderson relates to last month’s CTM by showing how a branded experiences can be created👌
 - [Welcome to the internet of superfluous things](http://www.tmwunlimited.com/latest/2017/01/19/welcome-the-internet-superfluous-things/) by, our very own, Marc Curtis talks about some of the useless things that are being created these days. _"For the love of all that is holy do we need Edwin the Smart Rubber Duck? I’m calling it: we’ve reached peak internet of things."_
-
 - On a similar note, [The CES of Shit](https://twitter.com/i/moments/817537697535250432) is a brilliant, curated Twitter Moment from the [@theinternetofshit](https://twitter.com/theinternetofshit) showcasing all the awful things at CES this year. Do we really need smart underwear? Why do some people even bother?!!
 - [Awesome-casestudy](https://github.com/luruke/awesome-casestudy) is a curated list of technical case studies about front-end development.
 
