@@ -1,7 +1,6 @@
 const remarkSlug = require('remark-slug')
 const remarkEmoji = require('remark-emoji')
 const squeezeParagraphs = require('remark-squeeze-paragraphs')
-// const remarkTruncateLinks = require('remark-truncate-links').remarkTruncateLinks
 const unwrapImages = require('remark-unwrap-images')
 
 module.exports = {
@@ -42,7 +41,6 @@ module.exports = {
           remarkSlug,
           remarkEmoji,
           squeezeParagraphs,
-          // [remarkTruncateLinks, { style: 'smart' }],
           unwrapImages,
         ],
         gatsbyRemarkPlugins: [
@@ -58,16 +56,6 @@ module.exports = {
               disableBgImage: true,
             },
           },
-          // {
-          //   resolve: 'gatsby-remark-images-anywhere',
-          //   options: {
-          //     backgroundColor: '#fafafa',
-          //     maxWidth: 1035,
-          //     linkImagesToOriginal: false,
-          //     // showCaptions: true,
-          //     // disableBgImage: true,
-          //   },
-          // },
           `gatsby-remark-embedder`,
         ],
       },
@@ -152,5 +140,11 @@ module.exports = {
     },
     `gatsby-plugin-webpack-size`,
     `gatsby-plugin-webpack-bundle-analyser-v2`,
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `zander.wtf`,
+      },
+    },
   ],
 }
