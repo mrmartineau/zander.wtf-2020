@@ -13,6 +13,9 @@ const sharedDarkColors = {
   code5: '#78dce8',
   code6: '#ab9df2',
   code7: '#999988',
+  codeCopyButtonBg: 'rgba(0,0,0,0.6)',
+  codeCopyButtonBgHover: 'rgba(0,0,0,0.8)',
+  codeCopyButtonBorder: 'rgba(0,0,0,1)',
   // scrollbar: darken('background', 0.25),
   // scrollbarBg: lighten('background', 0.25),
 }
@@ -25,6 +28,9 @@ const sharedLightColors = {
   code5: 'hsl(211, 61%, 43%)',
   code6: '#6f42c1',
   code7: '#999988',
+  codeCopyButtonBg: 'rgba(255,255,255,0.6)',
+  codeCopyButtonBgHover: 'rgba(255,255,255,0.8)',
+  codeCopyButtonBorder: 'rgba(255,255,255,1)',
   // scrollbar: darken('background', 0.25),
   // scrollbarBg: lighten('background', 0.25),
 }
@@ -156,7 +162,7 @@ export const colors = {
       muted: '#A8DADC',
       scrollbar: '#e2e8f0',
       scrollbarBg: 'hsl(210, 20%, 85%)',
-      codeBackground: '#FEF3EB',
+      codeBackground: '#E4F1EF',
       ...sharedLightColors,
     },
   },

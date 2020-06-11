@@ -58,18 +58,37 @@ export const styles = {
     fontSize: 2,
     mb: 2,
   },
+  img: {
+    my: 4,
+    p: 3,
+    border: theme => `1px solid ${theme.colors.codeBackground}`,
+    mx: 'auto',
+    // bg: 'codeBackground',
+    // boxShadow: 'inset 0 0 30px rgba(0,0,0,0.2)',
+    display: 'block',
+    borderRadius: 'default',
+  },
+  figure: {
+    bg: 'primary',
+  },
+  figcaption: {
+    bg: 'primary',
+  },
   inlineCode: {
-    backgroundColor: 'codeBackground',
+    bg: 'codeBackground',
     p: '0.1em 0.2em',
     fontSize: '1em',
     borderRadius: 'default',
     fontWeight: 'inherit',
   },
   code: {
+    m: 0,
     p: 3,
+    pt: 2,
     fontSize: 1,
     color: 'text',
     bg: 'codeBackground',
+    borderRadius: '0 0 0.25rem 0.25rem',
     overflowX: 'auto',
     '.comment,.prolog,.doctype,.cdata': {
       color: 'code7',

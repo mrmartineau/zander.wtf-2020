@@ -1,7 +1,8 @@
 const remarkSlug = require('remark-slug')
 const remarkEmoji = require('remark-emoji')
 const squeezeParagraphs = require('remark-squeeze-paragraphs')
-const remarkTruncateLinks = require('remark-truncate-links').remarkTruncateLinks
+// const remarkTruncateLinks = require('remark-truncate-links').remarkTruncateLinks
+const unwrapImages = require('remark-unwrap-images')
 
 module.exports = {
   siteMetadata: {
@@ -41,21 +42,33 @@ module.exports = {
           remarkSlug,
           remarkEmoji,
           squeezeParagraphs,
-          [remarkTruncateLinks, { style: 'smart' }],
+          // [remarkTruncateLinks, { style: 'smart' }],
+          unwrapImages,
         ],
         gatsbyRemarkPlugins: [
           'gatsby-remark-embed-gist',
-          { resolve: 'gatsby-remark-copy-linked-files' },
+          'gatsby-remark-copy-linked-files',
           {
             resolve: 'gatsby-remark-images',
             options: {
               backgroundColor: '#fafafa',
-              maxWidth: 1035,
+              maxWidth: 1000,
+              linkImagesToOriginal: false,
+              // showCaptions: true,
+              disableBgImage: true,
             },
           },
-          {
-            resolve: `gatsby-remark-embedder`,
-          },
+          // {
+          //   resolve: 'gatsby-remark-images-anywhere',
+          //   options: {
+          //     backgroundColor: '#fafafa',
+          //     maxWidth: 1035,
+          //     linkImagesToOriginal: false,
+          //     // showCaptions: true,
+          //     // disableBgImage: true,
+          //   },
+          // },
+          `gatsby-remark-embedder`,
         ],
       },
     },
