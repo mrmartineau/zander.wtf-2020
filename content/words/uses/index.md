@@ -3,7 +3,7 @@ slug: uses
 title: My setup
 subtitle: An overview of my hardware and software setup
 date: 2019-02-11
-modified: 2020-04-22
+modified: 2020-06-12
 ---
 
 I'm a bit of a pedant when it comes to the gear that I use everyday. I like to use good quality things that make my life easier.
@@ -18,7 +18,7 @@ I have the 2019 16" model. It's a fucking beast!
 
 ### [Code mechanical keyboard](https://codekeyboards.com/)
 
-This is my day-to-day workhorce. It was my first foray into mechanical keyboards. It is a fairly straightforward tenkeyless keyboard and a real workhorse. I added the [Royal Navy keycap](http://www.ukkeycaps.co.uk/product/dsa-royal-navy-double-shot-keyset) set to personalise it a bit more.
+This is my day-to-day workhorse. It was my first foray into mechanical keyboards. It is a fairly straightforward tenkeyless keyboard and a real workhorse. I added the [Royal Navy keycap](http://www.ukkeycaps.co.uk/product/dsa-royal-navy-double-shot-keyset) set to personalise it a bit more.
 
 ### [WhiteFox mechanical keyboard](https://input.club/whitefox/)
 
