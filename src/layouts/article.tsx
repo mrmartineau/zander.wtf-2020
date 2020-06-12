@@ -92,15 +92,14 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
       <Container as="article" sx={{ maxWidth: 'contentMaxWidth' }}>
         <MDXRenderer>{body}</MDXRenderer>
 
-        <Box as="footer" mt={8}>
-          <Separator />
-          {modified && (
+        {modified && (
+          <Box as="footer" mt={8}>
             <Text variant="articleListItemMetadata">
               Article updated{' '}
               <time dateTime={modifiedTimestamp}>{modified}</time>
             </Text>
-          )}
-        </Box>
+          </Box>
+        )}
       </Container>
     </Layout>
   )
