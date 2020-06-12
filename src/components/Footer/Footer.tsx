@@ -5,6 +5,11 @@ import { FiRss } from 'react-icons/fi'
 
 const links = [
   {
+    text: 'Hire me',
+    url:
+      'mailto:hi+jobs@zander.wtf?subject=I%20would%20like%20to%20hire%20you&body=Hi%20Zander%2C%0D%0A%0D%0A%F0%9F%91%8B',
+  },
+  {
     text: 'GitHub',
     url: 'https://github.com/mrmartineau',
   },
