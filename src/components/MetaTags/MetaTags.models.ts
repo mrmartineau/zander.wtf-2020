@@ -3,7 +3,7 @@ export interface SeoInterface {
   description?: string
   opengraphTitle?: string
   opengraphDescription?: string
-  opengraphImage?: string | null
+  opengraphImage?: string
   datePublished?: string
   dateModified?: string
   slug?: string

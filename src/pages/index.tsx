@@ -7,6 +7,7 @@ const Home: FunctionComponent = () => (
     seoData={{
       title: 'Hello, my name is Zander. I make websites',
       description: 'I am a contract front-end developer based in London.',
+      opengraphImage: 'home.jpg',
     }}
   >
     <section>

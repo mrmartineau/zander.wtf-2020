@@ -9,6 +9,7 @@ const Writing: FunctionComponent = () => {
       seoData={{
         title: 'Blog',
         description: 'Articles and nerdery',
+        opengraphImage: 'blog.jpg',
       }}
     >
       <section>

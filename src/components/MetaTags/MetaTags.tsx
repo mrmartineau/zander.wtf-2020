@@ -29,12 +29,15 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
 
   const md = site.siteMetadata
 
+  let ogImage: string = `${md.siteUrl}${md.opengraphImage}`
+  if (seoData?.opengraphImage && seoData?.slug) {
+    ogImage = `${md.siteUrl}/opengraph/${seoData.opengraphImage}`
+  }
+
   const title: string = seoData?.title ?? md.title
   const description: string = seoData?.description ?? md.description
   const ogTitle: string = seoData?.opengraphTitle ?? title
   const ogDescription: string = seoData?.opengraphDescription ?? description
-  const ogImage: string = `${md.siteUrl}${seoData?.opengraphImage ??
-    md.opengraphImage}`
   const twitterTitle: string = ogTitle
   const twitterDescription: string = ogDescription
   const twitterImage: string = ogImage
@@ -58,7 +61,7 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
         titleTemplate="%s — zander.wtf"
       >
         {/* General tags */}
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="image" content={ogImage} />

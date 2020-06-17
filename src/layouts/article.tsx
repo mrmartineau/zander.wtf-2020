@@ -13,9 +13,10 @@ interface ArticleProps {
         subtitle: string
         date: string
         dateTimestamp: string
-        modified: string
-        modifiedTimestamp: string
-        canonical: string
+        modified?: string
+        modifiedTimestamp?: string
+        canonical?: string
+        opengraphImage?: string
       }
       body: any
       timeToRead: string
@@ -49,6 +50,7 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
       dateTimestamp,
       modifiedTimestamp,
       canonical,
+      opengraphImage,
     },
     body,
     timeToRead,
@@ -64,6 +66,7 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
         dateModified: modifiedTimestamp,
         slug: pageContext.slug,
         canonical,
+        opengraphImage,
       }}
       isArticle={true}
     >
@@ -119,6 +122,7 @@ export const pageQuery = graphql`
         modified(formatString: "Do MMMM YYYY")
         modifiedTimestamp: modified
         canonical
+        opengraphImage
       }
       timeToRead
       wordCount {

@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { jsx, Button, Box } from 'theme-ui'
 import Prism from '@theme-ui/prism'
-import { FaAnchor } from 'react-icons/fa'
-import { useState } from 'react'
 import { toClipboard } from 'copee'
+import { useState } from 'react'
+import { FaAnchor } from 'react-icons/fa'
+import { Box, Button, jsx } from 'theme-ui'
 import { getColourFromString } from '../utils/getColourFromString'
 
 const heading = Tag => props => {
