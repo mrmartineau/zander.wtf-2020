@@ -6,5 +6,5 @@ export default async (req: NowRequest, res: NowResponse) => {
   const { data } = await axios(requestPath)
   res.setHeader('Content-Type', 'application/json')
   res.statusCode = 200
-  res.end(JSON.stringify(data))
+  res.end(data)
 }
