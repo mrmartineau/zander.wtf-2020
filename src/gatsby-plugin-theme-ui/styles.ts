@@ -76,7 +76,7 @@ export const styles = {
   },
   inlineCode: {
     bg: 'codeBackground',
-    p: '0.1em 0.2em',
+    p: '0.05em 0.5em 0.1em',
     fontSize: '1em',
     borderRadius: 'default',
     fontWeight: 'inherit',
