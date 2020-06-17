@@ -30,7 +30,7 @@ export const MetaTags: FunctionComponent<MetaTagsProps> = ({
   const md = site.siteMetadata
 
   let ogImage: string = `${md.siteUrl}${md.opengraphImage}`
-  if (seoData?.opengraphImage && seoData?.slug) {
+  if (seoData?.opengraphImage) {
     ogImage = `${md.siteUrl}/opengraph/${seoData.opengraphImage}`
   }
 
