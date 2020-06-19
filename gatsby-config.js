@@ -144,6 +144,7 @@ module.exports = {
       resolve: `gatsby-plugin-plausible`,
       options: {
         domain: `zander.wtf`,
+        customDomain: `stats.zander.wtf`,
       },
     },
   ],
