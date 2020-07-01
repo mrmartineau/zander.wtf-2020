@@ -3,6 +3,9 @@ title: TMW Unlimited
 description: Complete redesign and development of TMW's existing website
 link: http://www.tmwunlimited.com/
 info:
+  - key: Agency
+    value: TMWUnlimited...
+    link: https://www.tmwunlimited.com
   - key: Team
     value: Lorena Teruel
   - key: Site at launch
@@ -19,6 +22,7 @@ images:
     path: ./blog.png
   - name: 404 page
     path: ./404.png
+logo: ./tmw-logo.png
 ---
 
 Lorena Teruel and I were given free reign to update TMW's old website. We spent a number of weeks coming up with the strategy, UX and thinking behind the new version of the site.

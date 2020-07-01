@@ -27,6 +27,7 @@ images:
     path: ./modal.png
   - name: Navigation
     path: ./nav.png
+logo: ./cornmarket-logo.png
 ---
 
 I was tech lead and lead front-end developer for the re-platforming of Cornmarket's new website. With a design-system led approach, I started the front-end development, then handed over to the cross-functional remote dev team (from India, which I managed) whilst continuing as lead front-end dev.

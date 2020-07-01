@@ -3,6 +3,9 @@ title: The Bar
 description: Created a multi-platform consumer Pan-European website aimed at inspiring and educating consumers in the art of making spirits-based mixed drinks and cocktails for any social occasion.
 link: http://uk.thebar.com/
 info:
+  - key: theBar
+    value: uk.thebar.com
+    link: http://uk.thebar.com/
   - key: Team
     value: Nic Bell, Simon Kinslow
   - key: TMW Case Study
@@ -14,6 +17,7 @@ images:
     path: ./home.png
   - name: Recipe page
     path: ./recipe.png
+logo: ./the-bar-logo.png
 ---
 
 Created a multi-platform consumer Pan-European website aimed at inspiring and educating consumers in the art of making spirits-based mixed drinks and cocktails for any social occasion.

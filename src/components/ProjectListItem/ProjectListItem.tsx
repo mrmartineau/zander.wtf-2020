@@ -72,26 +72,26 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
           <MDXRenderer>{body}</MDXRenderer>
         </Box>
 
-        <Box
-          sx={{
-            overflowX: 'auto',
-            '::-webkit-scrollbar': {
-              width: '0.8rem',
-              height: '0.8rem',
-            },
-            '::-webkit-scrollbar-track': {
-              backgroundColor: 'scrollbarBg',
-            },
-            '::-webkit-scrollbar-thumb': {
-              backgroundColor: 'scrollbar',
-            },
-          }}
-        >
-          {frontmatter.images && (
+        {frontmatter.images && (
+          <Box
+            sx={{
+              overflowX: 'auto',
+              '::-webkit-scrollbar': {
+                width: '0.8rem',
+                height: '0.8rem',
+              },
+              '::-webkit-scrollbar-track': {
+                backgroundColor: 'scrollbarBg',
+              },
+              '::-webkit-scrollbar-thumb': {
+                backgroundColor: 'scrollbar',
+              },
+            }}
+          >
             <Flex tabIndex={0}>
               {frontmatter.images.map(item => (
                 <Image
-                  src={item.path.childImageSharp.resize.src}
+                  src={item?.path?.childImageSharp?.resize?.src}
                   alt={item.name}
                   sx={{
                     height: ['300px', '550px'],
@@ -104,13 +104,27 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
                 />
               ))}
             </Flex>
-          )}
-        </Box>
+          </Box>
+        )}
 
-        {frontmatter.info && (
-          <Fragment>
-            <Box sx={{ maxWidth: 'contentMaxWidth' }}>
-              <Styled.h2>Project info</Styled.h2>
+        {(frontmatter.info || frontmatter.logo) && (
+          <Box sx={{ maxWidth: 'contentMaxWidth' }}>
+            <Styled.h2>Project info</Styled.h2>
+
+            {frontmatter.logo && (
+              <Image
+                src={frontmatter.logo.childImageSharp.original.src}
+                alt={`${frontmatter.title} logo`}
+                sx={{
+                  my: 4,
+                  borderRadius: 'sm',
+                  maxWidth: '375px',
+                }}
+                loading="lazy"
+              />
+            )}
+
+            {frontmatter.info && (
               <dl>
                 {frontmatter.info.map(({ key, value, link }, index) => (
                   <Box
@@ -138,8 +152,8 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
                   </Box>
                 ))}
               </dl>
-            </Box>
-          </Fragment>
+            )}
+          </Box>
         )}
       </Box>
     </Box>

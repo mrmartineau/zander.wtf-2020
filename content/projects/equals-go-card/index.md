@@ -23,6 +23,7 @@ images:
     path: ./exchange-currency.png
   - name: Marketing site
     path: ./marketing-site.png
+logo: ./equals-logo.png
 ---
 
 In 2019 Equals released a brand new product, the [Equals Go card](https://equalsmoney.com/personal/travel-card). It is a multi-currency card with up to 15 currencies that makes it easier and cheaper for people to manage their money while abroad. I worked on the web app for this product, which encompassed the user account area for customers.

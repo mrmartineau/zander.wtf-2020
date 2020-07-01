@@ -16,6 +16,13 @@ export interface ProjectFrontmatter {
     value: string
     link?: string
   }[]
+  logo?: {
+    childImageSharp: {
+      original: {
+        src: string
+      }
+    }
+  }
 }
 
 interface ProjectInterface {
@@ -50,6 +57,13 @@ export const ProjectsList: FunctionComponent = () => {
                 year: date(formatString: "YYYY")
                 dateTimestamp: date
                 description
+                logo {
+                  childImageSharp {
+                    original {
+                      src
+                    }
+                  }
+                }
                 images {
                   name
                   path {

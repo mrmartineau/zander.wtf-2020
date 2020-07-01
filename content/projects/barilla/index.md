@@ -14,6 +14,7 @@ images:
     path: ./recipe.png
   - name: Search page
     path: ./search.png
+logo: ./barilla-logo.png
 ---
 
 Before this project, each of Barilla’s local markets used a different website, with different content, presenting a very inconsistent view of the brand. Our challenge was to create and design a modern new site that could host the wide-range of content needed to deliver an effective web experience across markets.

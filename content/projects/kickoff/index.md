@@ -11,9 +11,7 @@ info:
   - key: Project duration
     value: 4+ years
 date: 2014-07-17
-images:
-  - name: Logo
-    path: ./logo.jpg
+logo: ./kickoff-logo.png
 ---
 
 Developed in partnership with Ash Nolan, Kickoff is a lightweight, flexible and robust front-end framework that is a great starting point for any web site. We developed it while at TMW, but it grew way beyond internal projects into something that many other companies and developers use on projects of all sizes.

@@ -4,6 +4,7 @@ date: 2020-03-03
 info:
   - key: Team
     value: Bharat Jay, Matt Boyle, Connor Gettel, Diego Rivas, Andrea Medda, Filcho Dragunchev, Dimitry Theulings
+logo: ./curve-logo.png
 ---
 
 I joined Curve to work on a greenfield project in partnership with a large global tech company. I developed a small, but important web application that was part of the wider user journey for the integration. With close collaboration between Curve's mobile app and back-end Golang API teams.
