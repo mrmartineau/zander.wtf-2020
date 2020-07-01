@@ -57,8 +57,8 @@ export const links = {
     display: 'block',
     textDecoration: 'none',
     '&:hover,&:focus': {
-      color: 'background',
-      bg: 'text',
+      color: 'articleListItemHoverText',
+      bg: 'primary',
     },
   },
 
