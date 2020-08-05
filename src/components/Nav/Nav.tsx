@@ -21,9 +21,9 @@ export const Nav: FunctionComponent = () => {
         <StyledGatsbyLink to={`/projects`} sx={{ variant: 'links.nav' }}>
           Projects
         </StyledGatsbyLink>
-        <StyledGatsbyLink to={`/likes`} sx={{ variant: 'links.nav' }}>
+        {/* <StyledGatsbyLink to={`/likes`} sx={{ variant: 'links.nav' }}>
           Likes
-        </StyledGatsbyLink>
+        </StyledGatsbyLink> */}
       </Flex>
       <Flex
         sx={{
