@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { Box, Text, Heading } from 'theme-ui'
+import { Box, Text, Heading, Link } from 'theme-ui'
 import { Layout } from '../components/Layout'
 
 const Home: FunctionComponent = () => (
@@ -17,8 +17,10 @@ const Home: FunctionComponent = () => (
           <span>I</span> <span>make</span> <span>websites</span>
         </Heading>
         <Text variant="introDescription" sx={{ maxWidth: 'contentMaxWidth' }}>
-          ..and other tools for web developers. I’m a little bit obsessed with
-          design systems and have a few too many side-projects on the go.
+          &hellip;and web apps, and{' '}
+          <Link href="https://github.com/mrmartineau">other things</Link> for
+          the web. I’m a little bit obsessed with design systems and am trying
+          to curb my side-project addiction.
         </Text>
       </Box>
     </section>
