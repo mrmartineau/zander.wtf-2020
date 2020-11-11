@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { Box } from 'theme-ui'
 import { alpha } from '@theme-ui/color'
 import { Tabs, TabList, TabPanel, TabPanels, Tab } from '@reach/tabs'
-import { PinboardFeed } from '../PinboardFeed'
+import { Feed } from '../Feed'
 
 export const Feeds: FunctionComponent = () => {
   return (
@@ -38,10 +38,10 @@ export const Feeds: FunctionComponent = () => {
         </TabList>
         <TabPanels>
           <TabPanel>
-            <PinboardFeed tag="zm:reading" title="Reading" />
+            <Feed tag="Reading" title="Reading" />
           </TabPanel>
           <TabPanel>
-            <PinboardFeed tag="zm:link" title="Bookmarks" />
+            <Feed tag="Link" title="Bookmarks" />
           </TabPanel>
         </TabPanels>
       </Tabs>
