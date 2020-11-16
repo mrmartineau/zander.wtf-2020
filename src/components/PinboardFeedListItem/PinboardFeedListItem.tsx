@@ -20,7 +20,9 @@ export const PinboardFeedListItem: FunctionComponent<PinboardFeedListItemProps> 
   }
 
   const filteredTags = tags.filter(item => {
-    if (item === 'IFTTT' || item === 'TwitterLike' || item === 'Instapaper') {
+    if (
+      ['IFTTT', 'TwitterLike', 'Instapaper', 'Link', 'Reading'].includes(item)
+    ) {
       return false
     }
     return true
@@ -33,7 +35,7 @@ export const PinboardFeedListItem: FunctionComponent<PinboardFeedListItemProps> 
         {desc && <Text variant="pinboardListItemDescription">{desc}</Text>}
         <Box sx={{ mt: 1, display: 'flex', flexWrap: 'wrap' }}>
           <Text variant="pinboardListItemUrl">{urlString}</Text>{' '}
-          {filteredTags.length && (
+          {filteredTags.length > 0 && (
             <Fragment>
               <Box sx={{ mx: 2, opacity: 0.6 }}>•</Box>
               {filteredTags.map((item, index) => (
