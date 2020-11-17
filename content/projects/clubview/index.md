@@ -1,8 +1,10 @@
 ---
 title: ClubView
 date: 2020-09-03
-link: https://clubview.io
 info:
+  - key: Website
+    value: clubview.io
+    link: https://clubview.io
   - key: Team
     value: Josué Vázquez Rendo, Itziar Urbieta
 logo: ./clubview-logo.png

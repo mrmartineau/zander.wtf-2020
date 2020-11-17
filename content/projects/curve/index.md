@@ -7,7 +7,7 @@ info:
   - key: Samsung Pay Card announcement
     value: techcrunch.com/samsung-pay-card-powered-by-curve/
     link: https://techcrunch.com/2020/06/24/samsung-pay-card-powered-by-curve/
-logo: ./curve-logo.png
+logo: ./curve-logo.pending
 ---
 
 I joined Curve to work on a greenfield project in partnership with Samsung. I developed a small, but important web application that was part of the wider user journey for the integration with the new Samsung Pay Card product. This application used Next.js with an Express.js back-end and integrated with various APIs from Samsung and internal Curve APIs.
@@ -18,6 +18,6 @@ The final project at Curve was to redevelop [curve.com](https://curve.com), the 
 
 #### Notable Projects
 
-- Samsung Pay Card integration (unreleased)
+- Samsung Pay Card integration
 - Curve's design-system (private)
-- New version of [curve.com](https://curve.com) (unreleased)
+- New version of [curve.com](https://curve.com)
