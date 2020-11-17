@@ -3,7 +3,7 @@ slug: jargon-busting
 title: Jargon busting
 subtitle: Jargon plagues most industries. Software development is no different. Here are some of my favourites.
 date: 2018-08-11
-modified: 2018-08-27
+modified: 2020-11-17
 ---
 
 In our industry there's a shitload of jargon. There are terms for how people behave, how they think, how the world works and even for quirky software development practices. It is easy to forget them, so I thought I would record the most useful (to me) here.
@@ -121,3 +121,11 @@ Doxxing is the Internet-based practice of researching and broadcasting private o
 **Phishing** is the fraudulent attempt to obtain [sensitive information](https://en.wikipedia.org/wiki/Information_sensitivity) such as usernames, passwords, and [credit card](https://en.wikipedia.org/wiki/Credit_card) details (and [money](https://en.wikipedia.org/wiki/Money)), often for [malicious](https://en.wikipedia.org/wiki/Black_hat) reasons, by disguising as a trustworthy entity in an [electronic communication](https://en.wikipedia.org/wiki/Electronic_communication).
 
 [Wikipedia link](https://en.wikipedia.org/wiki/Phishing)
+
+### Birthday problem
+
+In probability theory, the birthday problem or birthday paradox concerns the probability that, in a set of n randomly chosen people, some pair of them will have the same birthday. By the pigeonhole principle, the probability reaches 100% when the number of people reaches 367 (since there are only 366 possible birthdays, including February 29). However, 99.9% probability is reached with just 70 people, and 50% probability with 23 people. These conclusions are based on the assumption that each day of the year (excluding February 29) is equally probable for a birthday.
+
+Actual birth records show that different numbers of people are born on different days. In this case, it can be shown that the number of people required to reach the 50% threshold is 23 or fewer. For example, if half the people were born on one day and the other half on another day, then any two people would have a 50% chance of sharing a birthday.
+
+[Wikipedia link](https://en.wikipedia.org/wiki/Birthday_problem)
