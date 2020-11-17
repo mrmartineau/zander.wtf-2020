@@ -1,14 +1,15 @@
-import React, { FunctionComponent } from 'react'
-import { Heading, Link, Box } from 'theme-ui'
-import useRequest from '../../utils/useRequest'
-// import { Separator } from '../Separator'
+import React, { FunctionComponent, useEffect, useState } from 'react'
+import { Link, Box } from 'theme-ui'
+import axios from 'axios'
 import { PinboardFeedListItem } from '../PinboardFeedListItem'
+import { Separator } from '../Separator'
 
 interface PinboardFeedProps {
   tag: string
   title?: string
   subtitle?: string
   count?: number
+  link?: string
 }
 
 interface FeedResponse {
@@ -26,26 +27,32 @@ interface FeedResponse {
 }
 
 export const Feed: FunctionComponent<PinboardFeedProps> = ({
-  subtitle,
   tag,
   count = 10,
+  link,
 }) => {
   const FEED_PATH = `/api/airtable?tag=${tag}&count=${count}`
-  const { data, error } = useRequest<FeedResponse>({
-    url: FEED_PATH,
-  })
+  const [data, setData] = useState<FeedResponse>()
+  const [error, setError] = useState<any>()
+
+  useEffect(() => {
+    axios({
+      url: FEED_PATH,
+      method: 'GET',
+    })
+      .then(response => {
+        setData(response.data)
+      })
+      .catch(error => {
+        setError(error)
+      })
+  }, [])
 
   if (error) return <Box sx={{ textAlign: 'center', p: 4 }}>failed to load</Box>
   if (!data) return <Box sx={{ textAlign: 'center', p: 4 }}>loading...</Box>
 
   return (
     <Box>
-      {!!subtitle && (
-        <Heading>
-          {subtitle}{' '}
-          {/* <Link href={`${PINBOARD_PATH}u:MrMartineau/t:${tag}`}>[i]</Link> */}
-        </Heading>
-      )}
       <Box
         as="ul"
         sx={{
@@ -65,15 +72,17 @@ export const Feed: FunctionComponent<PinboardFeedProps> = ({
         })}
       </Box>
 
-      {/* <Box sx={{ p: 'padding' }}>
-        <Separator sx={{ mt: 0 }} />
-        <Link href={`${PINBOARD_PATH}u:MrMartineau/t:${tag}`}>
-          See all{' '}
-          <span role="img" aria-label="Right pointing hand emoji">
-            👉
-          </span>
-        </Link>
-      </Box> */}
+      {link && (
+        <Box sx={{ p: 'padding' }}>
+          <Separator sx={{ mt: 0 }} />
+          <Link href={link}>
+            See all{' '}
+            <span role="img" aria-label="Right pointing hand emoji">
+              👉
+            </span>
+          </Link>
+        </Box>
+      )}
     </Box>
   )
 }

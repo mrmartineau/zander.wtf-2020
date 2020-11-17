@@ -38,10 +38,18 @@ export const Feeds: FunctionComponent = () => {
         </TabList>
         <TabPanels>
           <TabPanel>
-            <Feed tag="Reading" title="Reading" />
+            <Feed
+              tag="Reading"
+              title="Reading"
+              link="https://airtable.com/shrvWOJbwHBfO7rlk"
+            />
           </TabPanel>
           <TabPanel>
-            <Feed tag="Link" title="Bookmarks" />
+            <Feed
+              tag="Link"
+              title="Bookmarks"
+              link="https://airtable.com/shrr6a2QGbtNGY82m"
+            />
           </TabPanel>
         </TabPanels>
       </Tabs>
