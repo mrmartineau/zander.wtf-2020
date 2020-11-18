@@ -41,14 +41,14 @@ export const Feeds: FunctionComponent = () => {
             <Feed
               tag="Reading"
               title="Reading"
-              link="https://airtable.com/shrvWOJbwHBfO7rlk"
+              link="https://airtable.com/shr3JVvWlIA6Bg64o"
             />
           </TabPanel>
           <TabPanel>
             <Feed
               tag="Link"
               title="Bookmarks"
-              link="https://airtable.com/shrr6a2QGbtNGY82m"
+              link="https://airtable.com/shr562fVbWvw728yv"
             />
           </TabPanel>
         </TabPanels>
