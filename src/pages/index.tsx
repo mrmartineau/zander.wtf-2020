@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { Box, Text, Heading, Link } from 'theme-ui'
 import { Layout } from '../components/Layout'
+import { Link as GatsbyLink } from 'gatsby'
 
 const Home: FunctionComponent = () => (
   <Layout
@@ -17,10 +18,20 @@ const Home: FunctionComponent = () => (
           <span>I</span> <span>make</span> <span>websites</span>
         </Heading>
         <Text variant="introDescription" sx={{ maxWidth: 'contentMaxWidth' }}>
-          &hellip;and web apps, and{' '}
+          &hellip;and{' '}
           <Link href="https://github.com/mrmartineau">other things</Link> for
-          the web. I’m a little bit obsessed with design systems and am trying
-          to curb my side-project addiction.
+          the web. I deal with design systems by day and one too many
+          side-projects by night. Feel free to say{' '}
+          <Link href="mailto:hi@zander.wtf?subject=Hi&body=Hi%20Zander...">
+            hello
+          </Link>
+          , fork my <Link href="https://github.com/mrmartineau">code</Link>,
+          read my{' '}
+          <Link href="/blog" as={GatsbyLink}>
+            blog
+          </Link>{' '}
+          or share my <Link href="https://twitter.com/mrmartineau">tweets</Link>
+          .
         </Text>
       </Box>
     </section>

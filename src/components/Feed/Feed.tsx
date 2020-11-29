@@ -1,11 +1,10 @@
 import React, { FunctionComponent, useEffect, useState } from 'react'
-import { Link, Box } from 'theme-ui'
+import { Link, Box, Grid } from 'theme-ui'
 import axios from 'axios'
 import { PinboardFeedListItem } from '../PinboardFeedListItem'
 import { Separator } from '../Separator'
 
 interface PinboardFeedProps {
-  tag: string
   title?: string
   subtitle?: string
   count?: number
@@ -20,18 +19,18 @@ interface FeedResponse {
       URL: string
       Description: string
       Tags: string[]
-      Date: Date
+      Created: string
+      Type: string
     }
     createdTime: Date
   }[]
 }
 
 export const Feed: FunctionComponent<PinboardFeedProps> = ({
-  tag,
-  count = 10,
+  count = 50,
   link,
 }) => {
-  const FEED_PATH = `/api/airtable?tag=${tag}&count=${count}`
+  const FEED_PATH = `/api/airtable?count=${count}`
   const [data, setData] = useState<FeedResponse>()
   const [error, setError] = useState<any>()
 
@@ -53,7 +52,9 @@ export const Feed: FunctionComponent<PinboardFeedProps> = ({
 
   return (
     <Box>
-      <Box
+      <Grid
+        columns={1}
+        gap={0}
         as="ul"
         sx={{
           listStyleType: 'none',
@@ -62,15 +63,17 @@ export const Feed: FunctionComponent<PinboardFeedProps> = ({
         {data.records.map(({ fields }, index) => {
           return (
             <PinboardFeedListItem
-              key={`feedItem-${tag}-${index}`}
+              key={`feedItem-${index}`}
               tags={fields.Tags}
               url={fields.URL}
               title={fields.Title}
               desc={fields.Description}
+              date={fields.Created}
+              type={fields.Type}
             />
           )
         })}
-      </Box>
+      </Grid>
 
       {link && (
         <Box sx={{ p: 'padding' }}>

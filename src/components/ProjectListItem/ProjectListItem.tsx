@@ -18,15 +18,16 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
     <Box
       as="details"
       sx={{
-        borderBottom: theme => `2px solid ${theme.colors.text}`,
+        borderBottom: '1px solid',
+        borderBottomColor: 'text',
         '&:hover,&:focus': {
-          bg: 'primary',
+          color: 'primary',
         },
-        '&[open]:hover,&[open]:focus': {
+        '&[open]:hover,&[open]:focus-visible': {
+          color: 'text',
           bg: 'background',
         },
       }}
-      // open
     >
       <Box
         as="summary"
@@ -48,10 +49,15 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
           },
           '&:hover': {
             cursor: 'pointer',
+            color: 'primary',
           },
-          // ':not([open]) &:hover h3,:not([open]) &:focus h3': {
-          //   variant: 'text.projectListItemTitleActive',
-          // },
+          '&:focus-visible': {
+            outline: 0,
+            color: 'primary',
+          },
+          '&:focus': {
+            outline: 0,
+          },
         }}
       >
         <ProjectListItemTitle

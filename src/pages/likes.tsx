@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { Layout } from '../components/Layout'
-import { Feeds } from '../components/Feeds'
+import { Feed } from '../components/Feed'
 import { Heading } from 'theme-ui'
 
 const Writing: FunctionComponent = () => {
@@ -16,7 +16,7 @@ const Writing: FunctionComponent = () => {
         <Heading variant="pageHeading" as="h1">
           Likes
         </Heading>
-        <Feeds />
+        <Feed />
       </section>
     </Layout>
   )

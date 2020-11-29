@@ -52,13 +52,14 @@ export const links = {
   },
 
   pinboardListItemLink: {
+    position: 'relative',
     color: 'text',
     p: 'padding',
-    display: 'block',
     textDecoration: 'none',
+    borderBottom: '1px solid',
+    borderBottomColor: 'text',
     '&:hover,&:focus': {
-      color: 'articleListItemHoverText',
-      bg: 'primary',
+      color: 'primary',
     },
   },
 

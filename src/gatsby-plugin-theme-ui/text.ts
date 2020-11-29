@@ -72,7 +72,7 @@ export const text = {
   introDescription: {
     fontFamily: 'body',
     fontStyle: 'italic',
-    fontSize: [2, '2.2vw'],
+    fontSize: [2, '1.5vw'],
     opacity: '0.8',
   },
 
@@ -114,14 +114,10 @@ export const text = {
 
   // Projects
   projectListItemTitle: {
-    pl: '2rem',
     fontSize: [5, 8],
     fontFamily: 'title',
     textTransform: 'uppercase',
     lineHeight: 'none',
-    // '[open] &': {
-    //   variant: 'text.projectListItemTitleActive',
-    // },
   },
   projectListItemTitleActive: {
     color: transparentize('text', 0.99),
@@ -133,15 +129,20 @@ export const text = {
     WebkitTextStrokeWidth: '1px',
     textStrokeWidth: '1px',
   },
-  projectListItemTitleYear: {
+  verticalTag: {
     variant: 'text.monoVariant',
     fontSize: 0,
     textTransform: 'uppercase',
-    transform: 'rotate(-90deg)  translateX(-0.85rem)',
-    width: '0',
-    height: '0',
+    // width: '0',
+    // height: '0',
     textAlign: 'center',
-    lineHeight: '20px',
+    lineHeight: '1rem',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+
+    transform: 'translateX(-50%) translateY(-50%) rotate(-90deg)', //   translateX(-0.85rem)',
+    span: {},
   },
   projectListItemDescription: {
     fontFamily: 'body',
@@ -154,18 +155,17 @@ export const text = {
   // Feeds
   pinboardListItemTitle: {
     variant: 'text.monoVariantItalic',
-    fontSize: 3,
+    fontSize: 2,
     maxWidth: 'contentMaxWidth',
-    mb: 1,
   },
   pinboardListItemDescription: {
-    fontSize: [1, 2],
-    opacity: '0.8',
+    fontSize: 1,
+    opacity: 0.9,
     maxWidth: 'contentMaxWidth',
   },
   pinboardListItemUrl: {
     fontFamily: 'mono',
-    fontSize: 1,
-    opacity: '0.6',
+    fontSize: 0,
+    opacity: '0.8',
   },
 }

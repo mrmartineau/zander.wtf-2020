@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { Heading, Box, Text } from 'theme-ui'
+import { Heading, Box, Text, Grid } from 'theme-ui'
 
 interface ProjectListItemTitleProps {
   title: string
@@ -11,18 +11,14 @@ export const ProjectListItemTitle: FunctionComponent<ProjectListItemTitleProps> 
   year,
 }) => {
   return (
-    <Box
-      sx={{
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-      }}
-    >
-      <Text variant="projectListItemTitleYear">{year}</Text>
+    <Grid columns="1rem 1fr" gap="padding">
+      <Box sx={{ position: 'relative' }}>
+        <Text variant="verticalTag">{year}</Text>
+      </Box>
 
       <Heading variant="projectListItemTitle" as="h3">
         {title}
       </Heading>
-    </Box>
+    </Grid>
   )
 }
