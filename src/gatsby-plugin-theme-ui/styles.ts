@@ -42,6 +42,7 @@ export const styles = {
   },
   h3: {
     ...heading,
+    fontFamily: 'title',
     fontSize: 5,
   },
   h4: {
@@ -75,11 +76,13 @@ export const styles = {
     bg: 'primary',
   },
   inlineCode: {
-    bg: 'codeBackground',
-    p: '0.05em 0.5em 0.1em',
     fontSize: '1em',
     borderRadius: 'default',
-    fontWeight: 'inherit',
+    // fontWeight: 'inherit',
+    fontWeight: 'semibold',
+    '&::before, &::after': {
+      content: "'`'",
+    },
   },
   code: {
     m: 0,
