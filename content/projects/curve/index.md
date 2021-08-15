@@ -3,7 +3,7 @@ title: Curve
 date: 2020-03-03
 info:
   - key: Team
-    value: Bharat Jay, Matt Boyle, Connor Gettel, Diego Rivas, Andrea Medda, Filcho Dragunchev, Dimitry Theulings
+    value: Bharat Jay, Matt Boyle, Connor Gettel, Diego Rivas, Andrea Medda, Dimitry Theulings
   - key: Samsung Pay Card announcement
     value: techcrunch.com/samsung-pay-card-powered-by-curve/
     link: https://techcrunch.com/2020/06/24/samsung-pay-card-powered-by-curve/
