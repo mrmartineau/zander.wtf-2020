@@ -12,6 +12,10 @@
   ],
   "redirects": [
     {
+      "source": "/uses",
+      "destination": "/blog/uses"
+    },
+    {
       "source": "/writing/not-tracked-online",
       "destination": "/blog/not-tracked-online",
       "permanent": true
