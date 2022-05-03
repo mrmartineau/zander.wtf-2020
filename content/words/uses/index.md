@@ -63,7 +63,7 @@ I never need to worry about passwords anymore. It integrates with my browser (vi
 
 ### [DevUtils](https://devutils.app/?ref=zander)
 
-This app is a recent addition and is an indispensible too for my workflow.
+This app is a recent addition and is an indispensible tool for my workflow.
 
 ### [Notion](https://notion.so/)
 
