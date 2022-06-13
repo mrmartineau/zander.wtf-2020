@@ -1,31 +1,28 @@
-import React, { FunctionComponent, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { Link, Box, Text, Grid } from 'theme-ui'
 import { format } from 'date-fns'
+import { Bookmark } from '../Feed/Feed'
 
-interface PinboardFeedListItemProps {
-  url: string
-  title: string
-  desc: string
-  tags: string[]
-  date: string
-  type: string
-}
-
-export const PinboardFeedListItem: FunctionComponent<PinboardFeedListItemProps> = ({
+export const PinboardFeedListItem = ({
   url,
   title,
-  desc,
+  description,
   tags,
-  date,
+  created_at,
   type,
-}) => {
+  note,
+}: Bookmark) => {
+  if (!url) {
+    return null
+  }
+
   let urlString = url
   if ('URL' in window) {
     urlString = new URL(url).hostname.replace('www.', '')
   }
   let filteredTags: string[] = []
 
-  if (tags?.length > 0) {
+  if (tags && tags?.length > 0) {
     filteredTags = tags.filter(item => {
       if (
         [
@@ -50,20 +47,17 @@ export const PinboardFeedListItem: FunctionComponent<PinboardFeedListItemProps> 
           <Text variant="verticalTag">{type}</Text>
         </Box>
         <Box>
-          <Text variant="pinboardListItemTitle" className="feedBit">
-            {title}
-          </Text>
-          {desc && (
-            <Text variant="pinboardListItemDescription" className="feedBit">
-              {desc}
-            </Text>
-          )}
+          {title ? <Text variant="pinboardListItemTitle">{title}</Text> : null}
+          {description ? (
+            <Text variant="pinboardListItemDescription">{description}</Text>
+          ) : null}
+          {note ? <Text variant="pinboardListItemNote">💬 {note}</Text> : null}
           <Text
             variant="pinboardListItemUrl"
             sx={{ mt: 1, display: 'flex', flexWrap: 'wrap', fontSize: 0 }}
           >
             {urlString}
-            {filteredTags.length > 0 && (
+            {filteredTags?.length > 0 && (
               <Fragment>
                 <Box sx={{ ml: 2 }}>•</Box>
                 {filteredTags.map((item, index) => (
@@ -76,7 +70,7 @@ export const PinboardFeedListItem: FunctionComponent<PinboardFeedListItemProps> 
               </Fragment>
             )}
             <Box sx={{ mx: 2 }}>•</Box>
-            {format(new Date(date), 'PPP')}
+            {format(new Date(created_at), 'PPP')}
           </Text>
         </Box>
       </Grid>

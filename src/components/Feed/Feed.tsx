@@ -1,91 +1,101 @@
-import React, { FunctionComponent, useEffect, useState } from 'react'
-import { Link, Box, Grid } from 'theme-ui'
-import axios from 'axios'
+import React from 'react'
+import { Box, Grid } from 'theme-ui'
+import useAxios from 'axios-hooks'
 import { PinboardFeedListItem } from '../PinboardFeedListItem'
-import { Separator } from '../Separator'
 
-interface PinboardFeedProps {
+interface FeedProps {
   title?: string
   subtitle?: string
   count?: number
-  link?: string
+  tag?: string
 }
 
 interface FeedResponse {
-  records: {
-    id: string
-    fields: {
-      Title: string
-      URL: string
-      Description: string
-      Tags: string[]
-      Created: string
-      Type: string
+  body: {
+    offset: number
+    limit: number
+    count: number
+    _links: {
+      next: string | null
+      prev: string | null
     }
-    createdTime: Date
-  }[]
+    data: Bookmark[]
+  }
 }
 
-export const Feed: FunctionComponent<PinboardFeedProps> = ({
-  count = 50,
-  link,
-}) => {
-  const FEED_PATH = `/api/airtable?count=${count}`
-  const [data, setData] = useState<FeedResponse>()
-  const [error, setError] = useState<any>()
+export interface Bookmark {
+  title: string | null
+  url: string | null
+  description: string | null
+  tags: string[] | null
+  note: string | null
+  star: boolean
+  created_at: string
+  modified_at: string
+  key: string
+  click_count: number
+  type: BookmarkType
+  image: string
+  excerpt: string | null
+}
 
-  useEffect(() => {
-    axios({
-      url: FEED_PATH,
-      method: 'GET',
-    })
-      .then(response => {
-        setData(response.data)
-      })
-      .catch(error => {
-        setError(error)
-      })
-  }, [])
+export type BookmarkType =
+  | 'link'
+  | 'article'
+  | 'video'
+  | 'audio'
+  | 'recipe'
+  | 'image'
+  | 'document'
+  | 'product'
+  | 'game'
+  | 'note'
+  | 'event'
 
-  if (error) return <Box sx={{ textAlign: 'center', p: 4 }}>failed to load</Box>
-  if (!data) return <Box sx={{ textAlign: 'center', p: 4 }}>loading...</Box>
+export const Feed = ({ tag = 'zm:link', count = 50 }: FeedProps) => {
+  const FEED_PATH = `/api/otter?tag=${tag}&count=${count}`
+  const [{ data, loading, error }] = useAxios<FeedResponse>(FEED_PATH)
+  // const [data, setData] = useLocalStorageState<Bookmark[]>('zm-links', {
+  //   ssr: true,
+  //   defaultValue: [],
+  // })
+  // const [error, setError] = useState<any>()
 
+  // useEffect(() => {
+  //   axios
+  //     .get<any, FeedResponse>(FEED_PATH)
+  //     .then(({ data }) => {
+  //       console.log(`🚀 ~ useEffect ~ data`, data.body.data)
+  //       setData(data)
+  //     })
+  //     .catch(error => {
+  //       setError(error)
+  //     })
+  // }, [])
+
+  if (error) {
+    return <Box sx={{ textAlign: 'center', p: 4 }}>failed to load</Box>
+  }
+  if (loading) {
+    return <Box sx={{ textAlign: 'center', p: 4 }}>loading...</Box>
+  }
+  // return (
+  //   <Box sx={{ textAlign: 'center', p: 4 }}>
+  //     {JSON.stringify(data.body.data, null, 2)}
+  //   </Box>
+  // )
   return (
-    <Box>
-      <Grid
-        columns={1}
-        gap={0}
-        as="ul"
-        sx={{
-          listStyleType: 'none',
-        }}
-      >
-        {data.records.map(({ fields }, index) => {
-          return (
-            <PinboardFeedListItem
-              key={`feedItem-${index}`}
-              tags={fields.Tags}
-              url={fields.URL}
-              title={fields.Title}
-              desc={fields.Description}
-              date={fields.Created}
-              type={fields.Type}
-            />
-          )
-        })}
-      </Grid>
-
-      {link && (
-        <Box sx={{ p: 'padding' }}>
-          <Separator sx={{ mt: 0 }} />
-          <Link href={link}>
-            See all{' '}
-            <span role="img" aria-label="Right pointing hand emoji">
-              👉
-            </span>
-          </Link>
-        </Box>
-      )}
-    </Box>
+    <Grid
+      columns={1}
+      gap={0}
+      as="ul"
+      sx={{
+        listStyleType: 'none',
+      }}
+    >
+      {data?.body?.data.map(({ key, ...rest }) => {
+        return <PinboardFeedListItem key={`feedItem-${key}`} {...rest} />
+      })}
+    </Grid>
   )
 }

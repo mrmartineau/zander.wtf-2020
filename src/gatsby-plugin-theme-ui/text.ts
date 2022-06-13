@@ -163,6 +163,11 @@ export const text = {
     opacity: 0.9,
     maxWidth: 'contentMaxWidth',
   },
+  pinboardListItemNote: {
+    fontSize: 1,
+    opacity: 0.7,
+    maxWidth: 'contentMaxWidth',
+  },
   pinboardListItemUrl: {
     fontFamily: 'mono',
     fontSize: 0,
