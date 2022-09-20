@@ -54,24 +54,9 @@ export type BookmarkType =
 
 export const Feed = ({ tag = 'zm:link', count = 50 }: FeedProps) => {
   const FEED_PATH = `/api/otter?tag=${tag}&count=${count}`
-  const [{ data, loading, error }] = useAxios<FeedResponse>(FEED_PATH)
-  // const [data, setData] = useLocalStorageState<Bookmark[]>('zm-links', {
-  //   ssr: true,
-  //   defaultValue: [],
-  // })
-  // const [error, setError] = useState<any>()
-
-  // useEffect(() => {
-  //   axios
-  //     .get<any, FeedResponse>(FEED_PATH)
-  //     .then(({ data }) => {
-  //       console.log(`🚀 ~ useEffect ~ data`, data.body.data)
-  //       setData(data)
-  //     })
-  //     .catch(error => {
-  //       setError(error)
-  //     })
-  // }, [])
+  const [{ data, loading, error }] = useAxios<FeedResponse>(FEED_PATH, {
+    ssr: true,
+  })
 
   if (error) {
     return <Box sx={{ textAlign: 'center', p: 4 }}>failed to load</Box>
@@ -79,11 +64,7 @@ export const Feed = ({ tag = 'zm:link', count = 50 }: FeedProps) => {
   if (loading) {
     return <Box sx={{ textAlign: 'center', p: 4 }}>loading...</Box>
   }
-  // return (
-  //   <Box sx={{ textAlign: 'center', p: 4 }}>
-  //     {JSON.stringify(data.body.data, null, 2)}
-  //   </Box>
-  // )
+
   return (
     <Grid
       columns={1}
