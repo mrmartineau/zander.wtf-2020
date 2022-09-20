@@ -51,7 +51,6 @@ export const PinboardFeedListItem = ({
           {description ? (
             <Text variant="pinboardListItemDescription">{description}</Text>
           ) : null}
-          {note ? <Text variant="pinboardListItemNote">💬 {note}</Text> : null}
           <Text
             variant="pinboardListItemUrl"
             sx={{ mt: 1, display: 'flex', flexWrap: 'wrap', fontSize: 0 }}
