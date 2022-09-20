@@ -10,7 +10,6 @@ export const PinboardFeedListItem = ({
   tags,
   created_at,
   type,
-  note,
 }: Bookmark) => {
   if (!url) {
     return null

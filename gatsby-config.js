@@ -138,14 +138,5 @@ module.exports = {
         lang: 'en',
       },
     },
-    `gatsby-plugin-webpack-size`,
-    `gatsby-plugin-webpack-bundle-analyser-v2`,
-    {
-      resolve: `gatsby-plugin-plausible`,
-      options: {
-        domain: `zander.wtf`,
-        customDomain: `stats.zander.wtf`,
-      },
-    },
   ],
 }
