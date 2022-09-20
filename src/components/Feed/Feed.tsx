@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, Grid } from 'theme-ui'
 import useAxios from 'axios-hooks'
 import { PinboardFeedListItem } from '../PinboardFeedListItem'
+import axios from 'axios'
 
 interface FeedProps {
   title?: string
@@ -54,29 +55,34 @@ export type BookmarkType =
 
 export const Feed = ({ tag = 'zm:link', count = 50 }: FeedProps) => {
   const FEED_PATH = `/api/otter?tag=${tag}&count=${count}`
-  const [{ data, loading, error }] = useAxios<FeedResponse>(FEED_PATH, {
-    ssr: true,
-  })
+  const [likesData, setLikesData] = useState<Bookmark[]>([])
 
-  if (error) {
-    return <Box sx={{ textAlign: 'center', p: 4 }}>failed to load</Box>
-  }
-  if (loading) {
-    return <Box sx={{ textAlign: 'center', p: 4 }}>loading...</Box>
-  }
+  useEffect(() => {
+    const fetchLikes = async () => {
+      const { data } = await axios({
+        method: 'GET',
+        url: FEED_PATH,
+      })
+      setLikesData(data.body.data)
+    }
+    fetchLikes()
+  }, [])
 
-  return (
-    <Grid
-      columns={1}
-      gap={0}
-      as="ul"
-      sx={{
-        listStyleType: 'none',
-      }}
-    >
-      {data?.body?.data.map(({ key, ...rest }) => {
-        return <PinboardFeedListItem key={`feedItem-${key}`} {...rest} />
-      })}
-    </Grid>
-  )
+  if (likesData?.length) {
+    return (
+      <Grid
+        columns={1}
+        gap={0}
+        as="ul"
+        sx={{
+          listStyleType: 'none',
+        }}
+      >
+        {likesData.map(({ key, ...rest }) => {
+          return <PinboardFeedListItem key={`feedItem-${key}`} {...rest} />
+        })}
+      </Grid>
+    )
+  }
+  return <Box sx={{ textAlign: 'center', p: 4 }}>loading...</Box>
 }
