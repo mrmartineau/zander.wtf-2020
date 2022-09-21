@@ -37,15 +37,19 @@ export const ProjectListItem: FunctionComponent<WorkListItemProps> = ({
           // whiteSpace: ['unset', 'pre'],
           '&::-webkit-details-marker': {
             display: 'none',
+            content: "''",
           },
           '&::-moz-details-marker': {
             display: 'none',
+            content: "''",
           },
           '&::details-marker': {
             display: 'none',
+            content: "''",
           },
           '&::marker': {
             display: 'none',
+            content: "''",
           },
           '&:hover': {
             cursor: 'pointer',
