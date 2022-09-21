@@ -63,6 +63,7 @@
   },
   "devDependencies": {
     "@babel/helper-environment-visitor": "^7.18.2",
+    "@babel/preset-env": "^7.19.1",
     "@mdx-js/mdx": "^1.6.21",
     "@mrmartineau/scripts": "^0.0.0",
     "@now/node": "^1.8.4",
