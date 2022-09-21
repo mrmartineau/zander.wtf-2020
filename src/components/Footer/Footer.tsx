@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { Box, Link } from 'theme-ui'
+import { Box, Link, Image, Flex, Text } from 'theme-ui'
 import { Logo } from '../Logo'
 import { FiRss } from 'react-icons/fi'
 
@@ -30,7 +30,23 @@ const links = [
 
 export const Footer: FunctionComponent = () => {
   return (
-    <Box>
+    <Box sx={{ mt: 8 }}>
+      <Flex
+        sx={{
+          alignItems: 'center',
+          gap: 2,
+          flexDirection: 'column',
+          mb: 3,
+          maxWidth: 200,
+          mx: 'auto',
+        }}
+      >
+        <Image src="/avatar.jpg" sx={{ borderRadius: '999em', width: 100 }} />
+        <Text>Zander Martineau</Text>
+        <Text sx={{ opacity: 0.7 }}>@MrMartineau</Text>
+        <Text>🏌️‍♂️ • 🚵‍♂️ • 🍖🔥 • 🥁</Text>
+        <Box sx={{ fontSize: 1 }}>mister martin-oh</Box>
+      </Flex>
       <Box
         sx={{
           p: 'padding',
@@ -38,7 +54,6 @@ export const Footer: FunctionComponent = () => {
           flexWrap: 'wrap',
           alignItems: 'center',
           justifyContent: 'center',
-          mt: 8,
         }}
         as="header"
         role="banner"
