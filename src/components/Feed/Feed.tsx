@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Grid } from 'theme-ui'
-import useAxios from 'axios-hooks'
 import { PinboardFeedListItem } from '../PinboardFeedListItem'
 import axios from 'axios'
 
@@ -59,10 +58,7 @@ export const Feed = ({ tag = 'zm:link', count = 50 }: FeedProps) => {
 
   useEffect(() => {
     const fetchLikes = async () => {
-      const { data } = await axios({
-        method: 'GET',
-        url: FEED_PATH,
-      })
+      const { data } = await axios.get<FeedResponse>(FEED_PATH)
       setLikesData(data.body.data)
     }
     fetchLikes()
