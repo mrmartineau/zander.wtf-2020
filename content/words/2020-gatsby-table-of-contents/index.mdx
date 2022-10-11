@@ -105,12 +105,12 @@ const ContentsItem = ({ item }) => (
     <a href={item.url}>{item.title}</a>
 
     {/**
-      * conditionally render another `ContentsList` within this `<li>`
-      * if there is a `items` array within this `item`
-      */}
-    {item.items && item.items.length && (
+     * conditionally render another `ContentsList` within this `<li>`
+     * if there is a `items` array within this `item`
+     */}
+    {item?.items?.length ? (
       <ContentsList key={`${item.url}-list`} items={item.items} />
-    )}
+    ) : null}
   </li>
 )
 ```
@@ -128,7 +128,9 @@ Now we have the three components setup, all that's left is to add the `Contents`
 On reflection the `Contents` component could be removed if you conditionally render the `ContentsList` component — it depends what you prefer at this point:
 
 ```jsx
-{tableOfContents.items && <ContentsList items={tableOfContents.items} />}
+{
+  tableOfContents.items && <ContentsList items={tableOfContents.items} />
+}
 ```
 
 You can take a look at how my `Contents` component is used in gatsby-theme-code-notes [here](https://github.com/mrmartineau/gatsby-theme-code-notes/blob/master/gatsby-theme-code-notes/src/components/NotePage/NotePage.tsx).
