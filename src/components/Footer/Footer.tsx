@@ -17,10 +17,10 @@ const links = [
     text: 'Twitter',
     url: 'https://twitter.com/mrmartineau',
   },
-  {
-    text: 'npm',
-    url: 'https://www.npmjs.com/~mrmartineau',
-  },
+  // {
+  //   text: 'npm',
+  //   url: 'https://www.npmjs.com/~mrmartineau',
+  // },
   {
     text: 'RSS',
     url: '/atom.xml',
@@ -37,15 +37,14 @@ export const Footer: FunctionComponent = () => {
           gap: 2,
           flexDirection: 'column',
           mb: 3,
-          maxWidth: 200,
-          mx: 'auto',
+          textAlign: 'center',
         }}
       >
         <Image src="/avatar.jpg" sx={{ borderRadius: '999em', width: 100 }} />
         <Text>Zander Martineau</Text>
         <Text sx={{ opacity: 0.7 }}>@MrMartineau</Text>
-        <Text>🏌️‍♂️ • 🚵‍♂️ • 🍖🔥 • 🥁</Text>
-        <Box sx={{ fontSize: 1 }}>mister martin-oh</Box>
+        <Box sx={{ fontSize: 1 }}>(mister martin-oh)</Box>
+        <Text>🏌️‍♂️ • 🚵‍♂️ • 🍖🔥 • 🥁 • 🧗</Text>
       </Flex>
       <Box
         sx={{
