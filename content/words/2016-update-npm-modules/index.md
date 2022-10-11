@@ -3,8 +3,30 @@ slug: update-npm-modules
 title: Updating npm packages
 subtitle: Exploring the myriad of options to enable you to update with ease
 date: 2016-05-21
-modified: 2020-05-15
+modified: 2022-10-11
 ---
+
+#### Update 11/10/2022
+
+If you use [PNpM](https://pnpm.io/) they also have a command similar to Yarn:
+
+```sh
+pnpm up --interactive --latest
+```
+
+## taze
+
+[taze](https://github.com/antfu/taze) is new tool to update dependencies. It is interesting because by default, it will only bump versions in the ranges you specified in package.json (which is safe and the default behavior of npm install).
+
+```sh
+# check all changes and bump to the latest stable changes including majors (breaking changes)
+npx taze major -w
+
+# or bump to latest minor changes within the same major version
+npx taze minor -w
+```
+
+![](https://github.com/antfu/taze/raw/main/screenshots/default.png)
 
 #### Update 15/05/2020
 
@@ -252,9 +274,7 @@ $ npm-check -u
 
 ## Is there another way?
 
-Yes there is. A service called [Greenkeeper.io](https://greenkeeper.io/), which tracks your dependencies and applies an update to a branch for every new version coming in. Your test suite runs behind the scenes, and only if a dependency update breaks your software, we let you know in a Pull Request, including all the information you need to make an informed decision.
-
-By the way, it only works with Github so if you use any other service, you're out of luck.
+Yes there is. Using services like [Greenkeeper.io](https://greenkeeper.io/), Dependabot or Renovate which tracks your dependencies and applies an update to a branch for every new version coming in. Your test suite runs behind the scenes, and only if a dependency update breaks your software, we let you know in a Pull Request, including all the information you need to make an informed decision.
 
 ---
 
