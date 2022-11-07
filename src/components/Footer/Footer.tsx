@@ -14,17 +14,18 @@ const links = [
     url: 'https://github.com/mrmartineau',
   },
   {
+    text: 'Mastodon',
+    url: 'https://toot.cafe/@zander',
+    rel: 'me',
+  },
+  {
     text: 'Twitter',
     url: 'https://twitter.com/mrmartineau',
   },
-  // {
-  //   text: 'npm',
-  //   url: 'https://www.npmjs.com/~mrmartineau',
-  // },
   {
     text: 'RSS',
     url: '/atom.xml',
-    icon: <FiRss size="1.3rem" style={{ display: 'block' }} title="RSS" />,
+    icon: <FiRss size="1.3rem" title="RSS" />,
   },
 ]
 
@@ -58,13 +59,14 @@ export const Footer: FunctionComponent = () => {
         role="banner"
       >
         <Box sx={{ px: [2, 3], py: 1 }}>&copy; {new Date().getFullYear()}</Box>
-        {links.map(item => (
+        {links.map(({ url, text, icon, ...rest }) => (
           <Link
-            href={item.url}
+            href={url}
             sx={{ variant: 'links.footerNav' }}
-            key={item.text}
+            key={text}
+            {...rest}
           >
-            {item.icon ? item.icon : item.text}
+            {icon} {text}
           </Link>
         ))}
       </Box>

@@ -14,7 +14,15 @@
     "titleBar.activeBackground": "#93545e",
     "titleBar.activeForeground": "#e7e7e7",
     "titleBar.inactiveBackground": "#93545e99",
-    "titleBar.inactiveForeground": "#e7e7e799"
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "sash.hoverBorder": "#ac6e78",
+    "statusBarItem.remoteBackground": "#93545e",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799"
   },
-  "peacock.color": "#93545e"
+  "peacock.color": "#93545e",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.removeUnusedImports": false
+  }
 }
