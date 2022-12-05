@@ -19,13 +19,17 @@ const links = [
     rel: 'me',
   },
   {
-    text: 'Twitter',
-    url: 'https://twitter.com/mrmartineau',
+    text: 'CV',
+    url: 'https://read.cv/mrmartineau',
   },
   {
     text: 'RSS',
     url: '/atom.xml',
     icon: <FiRss size="1.3rem" title="RSS" />,
+  },
+  {
+    text: '/uses',
+    url: '/blog/uses',
   },
 ]
 
@@ -43,8 +47,6 @@ export const Footer: FunctionComponent = () => {
       >
         <Image src="/avatar.jpg" sx={{ borderRadius: '999em', width: 100 }} />
         <Text>Zander Martineau</Text>
-        <Text sx={{ opacity: 0.7 }}>@MrMartineau</Text>
-        <Box sx={{ fontSize: 1 }}>(mister martin-oh)</Box>
         <Text>🏌️‍♂️ • 🚵‍♂️ • 🍖🔥 • 🥁 • 🧗</Text>
       </Flex>
       <Box

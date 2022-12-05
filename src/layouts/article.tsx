@@ -3,7 +3,6 @@ import React, { FunctionComponent } from 'react'
 import { Heading, Box, Text, Container } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Layout } from '../components/Layout'
-import { Separator } from '../components/Separator'
 
 interface ArticleProps {
   data: {
@@ -87,22 +86,22 @@ const Article: FunctionComponent<ArticleProps> = ({ data, pageContext }) => {
           {subtitle}
         </Heading>
         <Text variant="articleMetadata">
-          <time dateTime={dateTimestamp}>{date}</time> · Reading time:{' '}
-          {timeToRead} minute{Number(timeToRead) > 1 && 's'} · {wordCount.words}{' '}
-          words
+          <time dateTime={dateTimestamp}>{date}</time>
+          {modified && (
+            <>
+              {' '}
+              ·{' '}
+              <span>
+                Updated <time dateTime={modifiedTimestamp}>{modified}</time>
+              </span>{' '}
+            </>
+          )}
+          · {timeToRead} minute{Number(timeToRead) > 1 && 's'} ·{' '}
+          {wordCount.words} words
         </Text>
       </Box>
       <Container as="article" sx={{ maxWidth: 'contentMaxWidth' }}>
         <MDXRenderer>{body}</MDXRenderer>
-
-        {modified && (
-          <Box as="footer" mt={8}>
-            <Text variant="articleListItemMetadata">
-              Article updated{' '}
-              <time dateTime={modifiedTimestamp}>{modified}</time>
-            </Text>
-          </Box>
-        )}
       </Container>
     </Layout>
   )
